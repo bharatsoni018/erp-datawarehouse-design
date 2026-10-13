@@ -1,0 +1,51 @@
+Enrollment_No,Subject,Internal_Marks,External_Marks,Total_Marks,Grade
+2026CSE001,Data Warehousing & Mining,28,64,92,A+
+2026CSE001,Machine Learning,27,62,89,A
+2026CSE001,Computer Networks,29,66,95,O
+2026CSE001,Cloud Computing,26,60,86,A
+2026CSE001,Software Engineering,29,65,94,A+
+2026CSE002,Data Warehousing & Mining,30,68,98,O
+2026CSE002,Machine Learning,29,67,96,O
+2026CSE002,Computer Networks,29,65,94,A+
+2026CSE002,Cloud Computing,30,66,96,O
+2026CSE002,Software Engineering,30,69,99,O
+2026CSE003,Data Warehousing & Mining,18,42,60,B
+2026CSE003,Machine Learning,16,38,54,C
+2026CSE003,Computer Networks,20,46,66,B
+2026CSE003,Cloud Computing,19,44,63,B
+2026CSE003,Software Engineering,17,40,57,C
+2026CSE004,Data Warehousing & Mining,26,58,84,A
+2026CSE004,Machine Learning,25,57,82,A
+2026CSE004,Computer Networks,27,60,87,A
+2026CSE004,Cloud Computing,26,59,85,A
+2026CSE004,Software Engineering,28,61,89,A
+2026ECE001,Digital Signal Processing,29,64,93,A+
+2026ECE001,VLSI Design,28,63,91,A+
+2026ECE001,Embedded Systems,29,65,94,A+
+2026ECE001,Wireless Communication,27,60,87,A
+2026ECE001,Microcontrollers & RTOS,30,66,96,O
+2026ECE002,Digital Signal Processing,22,48,70,B+
+2026ECE002,VLSI Design,24,51,75,B+
+2026ECE002,Embedded Systems,21,46,67,B
+2026ECE002,Wireless Communication,23,49,72,B+
+2026ECE002,Microcontrollers & RTOS,24,52,76,B+
+2026ECE003,Digital Signal Processing,27,59,86,A
+2026ECE003,VLSI Design,28,61,89,A
+2026ECE003,Embedded Systems,26,58,84,A
+2026ECE003,Wireless Communication,28,62,90,A+
+2026ECE003,Microcontrollers & RTOS,27,60,87,A
+2026EEE001,Power System Analysis,25,57,82,A
+2026EEE001,Control Systems,24,55,79,B+
+2026EEE001,Electrical Machines II,27,60,87,A
+2026EEE001,Power Electronics,26,58,84,A
+2026EEE001,Renewable Energy Systems,28,60,88,A
+2026EEE002,Power System Analysis,30,66,96,O
+2026EEE002,Control Systems,29,64,93,A+
+2026EEE002,Electrical Machines II,29,65,94,A+
+2026EEE002,Power Electronics,30,68,98,O
+2026EEE002,Renewable Energy Systems,29,64,93,A+
+2026EEE003,Power System Analysis,17,40,57,C
+2026EEE003,Control Systems,15,36,51,D
+2026EEE003,Electrical Machines II,18,43,61,B
+2026EEE003,Power Electronics,16,39,55,C
+2026EEE003,Renewable Energy Systems,18,41,59,C

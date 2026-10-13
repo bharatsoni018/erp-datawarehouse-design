@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block title %}All Students | IFHE Hyderabad{% endblock %}
+{% block page_title %}Student Management / All Students{% endblock %}
+
+{% block content %}
+<div>
+
+    <!-- Header & Action -->
+    <div class="d-flex justify-content-between align-items-center mb-2.5">
+        <div>
+            <h5 class="fw-bold text-dark mb-0">All Students</h5>
+            <div class="text-muted fs-xs">Student Information Dataset ({{ students|length }} records)</div>
+        </div>
+        <a href="{{ url_for('search_student_page') }}" class="btn btn-sm btn-outline-primary">
+            <i class="bi bi-search me-1"></i> Search by Enrollment No
+        </a>
+    </div>
+
+    <!-- Filters Row -->
+    <div class="card mb-2.5 bg-white p-2.5">
+        <form method="GET" action="{{ url_for('students_page') }}" class="row g-2 align-items-center">
+            
+            <div class="col-md-4">
+                <input type="text" name="q" class="form-control form-control-sm font-monospace" 
+                       placeholder="Search by Name or Enrollment No" value="{{ search_query }}">
+            </div>
+
+            <div class="col-md-3">
+                <select name="department" class="form-select form-select-sm" onchange="this.form.submit()">
+                    <option value="">All Departments</option>
+                    {% for dept in kpis.departments %}
+                        <option value="{{ dept }}" {% if selected_dept == dept %}selected{% endif %}>{{ dept }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <select name="section" class="form-select form-select-sm" onchange="this.form.submit()">
+                    <option value="">All Sections</option>
+                    {% for sec in kpis.sections %}
+                        <option value="{{ sec }}" {% if selected_sec == sec %}selected{% endif %}>Section {{ sec }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <select name="semester" class="form-select form-select-sm" onchange="this.form.submit()">
+                    <option value="">All Semesters</option>
+                    {% for sem in kpis.semesters %}
+                        <option value="{{ sem }}" {% if selected_sem == sem|string %}selected{% endif %}>Semester {{ sem }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-1">
+                <button type="submit" class="btn btn-primary btn-sm w-100">Filter</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Students Table -->
+    <div class="card">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0 text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>Enrollment No.</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Section</th>
+                            <th>Semester</th>
+                            <th>CGPA</th>
+                            <th class="text-end">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if students %}
+                            {% for student in students %}
+                                <tr class="student-row" onclick="window.location='{{ url_for('student_profile', enrollment_no=student.Enrollment_No) }}'">
+                                    <td>
+                                        <span class="badge bg-light text-dark font-monospace border">
+                                            {{ student.Enrollment_No }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="fw-semibold text-dark">{{ student.Name }}</div>
+                                        <div class="text-muted fs-xs">{{ student.Email }}</div>
+                                    </td>
+                                    <td>{{ student.Department }}</td>
+                                    <td>Sec {{ student.Section }}</td>
+                                    <td>Sem {{ student.Semester }}</td>
+                                    <td><span class="font-monospace fw-bold">{{ student.CGPA }}</span></td>
+                                    <td class="text-end" onclick="event.stopPropagation();">
+                                        <a href="{{ url_for('student_profile', enrollment_no=student.Enrollment_No) }}" 
+                                           class="btn btn-sm btn-outline-primary py-0.5 px-2 fs-xs">
+                                            View Profile
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        {% else %}
+                            <tr>
+                                <td colspan="7" class="text-center py-4 text-muted fs-xs">
+                                    No students matched the query filter.
+                                    <div class="mt-1"><a href="{{ url_for('students_page') }}">Reset Filters</a></div>
+                                </td>
+                            </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-footer py-1.5 px-3 fs-xs text-muted d-flex justify-content-between">
+            <span>Total Listed: <strong>{{ students|length }}</strong> students</span>
+            <span>Click any row to open unified profile</span>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

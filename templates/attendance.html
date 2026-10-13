@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+
+{% block title %}Attendance | IFHE Hyderabad{% endblock %}
+{% block page_title %}Academic Modules / Attendance{% endblock %}
+
+{% block content %}
+<div>
+
+    <!-- ============================================== -->
+    <!-- 1. PAGE HEADER                                 -->
+    <!-- ============================================== -->
+    <div class="mb-3">
+        <h5 class="fw-bold text-dark mb-0">Attendance</h5>
+        <div class="text-muted fs-xs">Student attendance overview and subject-wise records</div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. OVERALL ATTENDANCE SUMMARY (3 COMPACT CARDS)-->
+    <!-- ============================================== -->
+    <div class="row g-2.5 mb-3">
+        
+        <!-- Overall Attendance Card -->
+        <div class="col-sm-4">
+            <div class="card kpi-card h-100">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="kpi-label">Overall Attendance</div>
+                        <div class="kpi-value text-success font-monospace">{{ summary_stats.overall_avg }}%</div>
+                        <div class="text-muted fs-xs">Institutional Batch Average</div>
+                    </div>
+                    <div class="kpi-icon-small bg-success-subtle text-success">
+                        <i class="bi bi-calendar-check-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Students Card -->
+        <div class="col-sm-4">
+            <div class="card kpi-card h-100">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="kpi-label">Total Students</div>
+                        <div class="kpi-value font-monospace">{{ summary_stats.total_students }}</div>
+                        <div class="text-muted fs-xs">Enrolled Across Sections</div>
+                    </div>
+                    <div class="kpi-icon-small bg-primary-subtle text-primary">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Low Attendance Card -->
+        <div class="col-sm-4">
+            <div class="card kpi-card h-100">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="kpi-label">Low Attendance</div>
+                        <div class="kpi-value {% if summary_stats.low_attendance_count > 0 %}text-danger{% else %}text-success{% endif %} font-monospace">
+                            {{ summary_stats.low_attendance_count }} <span class="fs-sm fw-normal text-muted">Students</span>
+                        </div>
+                        <div class="text-muted fs-xs">Attendance Below 75% Threshold</div>
+                    </div>
+                    <div class="kpi-icon-small bg-danger-subtle text-danger">
+                        <i class="bi bi-exclamation-triangle-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================== -->
+    <!-- SEARCH & FILTERS BAR                           -->
+    <!-- ============================================== -->
+    <div class="card mb-4 bg-white p-2.5">
+        <form method="GET" action="{{ url_for('attendance_page') }}" class="row g-2 align-items-center">
+            
+            <div class="col-md-4">
+                <input type="text" name="q" class="form-control form-control-sm font-monospace" 
+                       placeholder="Search Student Name or Enrollment No" value="{{ search_query }}">
+            </div>
+
+            <div class="col-md-4">
+                <select name="section" class="form-select form-select-sm" onchange="this.form.submit()">
+                    <option value="">All Sections / Departments</option>
+                    <option value="A" {% if selected_sec == 'A' or selected_sec == 'CSE' %}selected{% endif %}>Section A — Computer Science &amp; Engineering (CSE)</option>
+                    <option value="B" {% if selected_sec == 'B' or selected_sec == 'ECE' %}selected{% endif %}>Section B — Electronics &amp; Communication (ECE)</option>
+                    <option value="C" {% if selected_sec == 'C' or selected_sec == 'EEE' %}selected{% endif %}>Section C — Electrical &amp; Electronics (EEE)</option>
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <select name="subject" class="form-select form-select-sm" onchange="this.form.submit()">
+                    <option value="">All Subjects</option>
+                    {% for subj in kpis.subjects %}
+                        <option value="{{ subj }}" {% if selected_subj == subj %}selected{% endif %}>{{ subj }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-1">
+                <button type="submit" class="btn btn-primary btn-sm w-100">Filter</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. SECTION → STUDENT → SUBJECT ATTENDANCE      -->
+    <!-- ============================================== -->
+    {% if sections_data %}
+        {% for sec in sections_data %}
+            
+            <!-- SECTION CONTAINER -->
+            <div class="attendance-section-group mb-4 pb-2">
+                
+                <!-- Section Header Banner -->
+                <div class="attendance-section-header d-flex flex-wrap justify-content-between align-items-center mb-3 pb-2.5 border-bottom">
+                    <div>
+                        <div class="d-flex align-items-center gap-2 mb-0.5">
+                            <span class="badge bg-dark text-white fs-xs px-2.5 py-1 fw-bold">SECTION {{ sec.letter }}</span>
+                            <span class="fw-bold text-dark fs-md">{{ sec.dept_name }}</span>
+                        </div>
+                    </div>
+                    <span class="text-muted fs-xs fw-medium">({{ sec.student_count }} Students Enrolled)</span>
+                </div>
+
+                <!-- Students in this Section -->
+                {% if sec.students %}
+                    <div class="d-flex flex-column gap-3">
+                        {% for item in sec.students %}
+                            {% set student = item.student %}
+                            {% set records = item.records %}
+                            {% set student_avg = item.average %}
+
+                            <!-- Individual Student Attendance Card -->
+                            <div class="card attendance-student-card">
+                                
+                                <!-- Student Header -->
+                                <div class="card-header bg-white py-2.5 px-3 border-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+                                    <div>
+                                        <div class="d-flex align-items-center gap-2 mb-0.5">
+                                            <span class="attendance-student-name fw-bold text-dark fs-md">{{ student.Name }}</span>
+                                            <span class="badge bg-light text-dark font-monospace border">{{ student.Enrollment_No }}</span>
+                                        </div>
+                                        <div class="attendance-student-meta text-muted fs-xs">
+                                            Section {{ item.section_letter }} &bull; Semester {{ item.semester }}
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="text-end">
+                                            <span class="fs-xs text-muted d-block" style="font-size: 10px;">AVERAGE ATTENDANCE</span>
+                                            <span class="font-monospace fw-bold fs-sm {% if student_avg >= 85 %}text-success{% elif student_avg >= 75 %}text-primary{% else %}text-danger{% endif %}">
+                                                {{ student_avg }}%
+                                            </span>
+                                        </div>
+                                        <a href="{{ url_for('student_profile', enrollment_no=student.Enrollment_No) }}" 
+                                           class="btn btn-sm btn-outline-primary py-1 px-2.5 fs-xs fw-semibold" 
+                                           title="View Unified Profile">
+                                            View Profile
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Subject-wise Attendance Table -->
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover align-middle mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 50%;">Subject</th>
+                                                    <th style="width: 32%;">Attendance</th>
+                                                    <th class="text-end" style="width: 18%;">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% if records %}
+                                                    {% for att in records %}
+                                                        <tr>
+                                                            <td class="fw-medium text-dark">{{ att.Subject }}</td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <span class="font-monospace fw-bold fs-sm" style="min-width: 44px;">
+                                                                        {{ att.Attendance_Percentage }}%
+                                                                    </span>
+                                                                    <div class="progress flex-grow-1" style="height: 6px; background-color: #e2e8f0; border-radius: 3px; max-width: 140px;">
+                                                                        <div class="progress-bar {% if att.Attendance_Percentage >= 85 %}bg-success{% elif att.Attendance_Percentage >= 75 %}bg-primary{% else %}bg-danger{% endif %}" 
+                                                                             role="progressbar" 
+                                                                             style="width: {{ att.Attendance_Percentage }}%; border-radius: 3px;" 
+                                                                             aria-valuenow="{{ att.Attendance_Percentage }}" 
+                                                                             aria-valuemin="0" 
+                                                                             aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                {% if att.Attendance_Percentage >= 85 %}
+                                                                    <span class="badge bg-success-subtle text-success border border-success-subtle">Good</span>
+                                                                {% elif att.Attendance_Percentage >= 75 %}
+                                                                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle">Average</span>
+                                                                {% else %}
+                                                                    <span class="badge bg-danger-subtle text-danger border border-danger-subtle">Low</span>
+                                                                {% endif %}
+                                                            </td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                {% else %}
+                                                    <tr>
+                                                        <td colspan="3" class="text-center py-3 text-muted fs-xs">No matching subject records found for this student.</td>
+                                                    </tr>
+                                                {% endif %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="p-3 bg-light rounded border text-muted fs-xs text-center">
+                        No students in Section {{ sec.letter }} matched the filter.
+                    </div>
+                {% endif %}
+
+            </div>
+
+        {% endfor %}
+    {% else %}
+        <div class="card p-4 text-center text-muted fs-xs">
+            <i class="bi bi-calendar-x fs-2 text-secondary mb-2"></i>
+            <div>No attendance records found matching the selected filters.</div>
+            <div class="mt-2"><a href="{{ url_for('attendance_page') }}" class="btn btn-sm btn-outline-primary">Reset Filters</a></div>
+        </div>
+    {% endif %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+
+{% block title %}Fees &amp; Payments | IFHE Hyderabad{% endblock %}
+{% block page_title %}Academic Modules / Fees &amp; Payments{% endblock %}
+
+{% block content %}
+<div>
+
+    <!-- ============================================== -->
+    <!-- 1. PAGE HEADER                                 -->
+    <!-- ============================================== -->
+    <div class="mb-3">
+        <h5 class="fw-bold text-dark mb-0">Fees &amp; Payments</h5>
+        <div class="text-muted fs-xs">Student fee details and payment status</div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. OVERALL FEES SUMMARY (4 COMPACT CARDS)      -->
+    <!-- ============================================== -->
+    <div class="row g-2.5 mb-3">
+        
+        <!-- Total Fees Card -->
+        <div class="col-sm-6 col-xl-3">
+            <div class="card kpi-card h-100">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="kpi-label">Total Fees</div>
+                        <div class="kpi-value text-dark font-monospace">₹{{ summary_stats.total_fees }}</div>
+                        <div class="text-muted fs-xs">Total Institutional Assessment</div>
+                    </div>
+                    <div class="kpi-icon-small bg-primary-subtle text-primary">
+                        <i class="bi bi-wallet2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Collected Card -->
+        <div class="col-sm-6 col-xl-3">
+            <div class="card kpi-card h-100">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="kpi-label">Total Collected</div>
+                        <div class="kpi-value text-success font-monospace">₹{{ summary_stats.total_collected }}</div>
+                        <div class="text-muted fs-xs">Paid Revenue to Date</div>
+                    </div>
+                    <div class="kpi-icon-small bg-success-subtle text-success">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Pending Card -->
+        <div class="col-sm-6 col-xl-3">
+            <div class="card kpi-card h-100">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="kpi-label">Total Pending</div>
+                        <div class="kpi-value text-danger font-monospace">₹{{ summary_stats.total_pending }}</div>
+                        <div class="text-muted fs-xs">Outstanding Dues</div>
+                    </div>
+                    <div class="kpi-icon-small bg-danger-subtle text-danger">
+                        <i class="bi bi-exclamation-circle-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pending Students Card -->
+        <div class="col-sm-6 col-xl-3">
+            <div class="card kpi-card h-100">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="kpi-label">Pending Students</div>
+                        <div class="kpi-value {% if summary_stats.pending_students > 0 %}text-danger{% else %}text-success{% endif %} font-monospace">
+                            {{ summary_stats.pending_students }} <span class="fs-sm fw-normal text-muted">Students</span>
+                        </div>
+                        <div class="text-muted fs-xs">Students with Dues</div>
+                    </div>
+                    <div class="kpi-icon-small bg-warning-subtle text-warning-emphasis">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================== -->
+    <!-- SEARCH & FILTERS BAR                           -->
+    <!-- ============================================== -->
+    <div class="card mb-4 bg-white p-2.5">
+        <form method="GET" action="{{ url_for('fees_page') }}" class="row g-2 align-items-center">
+            
+            <div class="col-md-5">
+                <input type="text" name="q" class="form-control form-control-sm font-monospace" 
+                       placeholder="Search Student Name or Enrollment No" value="{{ search_query }}">
+            </div>
+
+            <div class="col-md-4">
+                <select name="section" class="form-select form-select-sm" onchange="this.form.submit()">
+                    <option value="">All Sections / Departments</option>
+                    <option value="A" {% if selected_sec == 'A' or selected_sec == 'CSE' %}selected{% endif %}>Section A — Computer Science &amp; Engineering (CSE)</option>
+                    <option value="B" {% if selected_sec == 'B' or selected_sec == 'ECE' %}selected{% endif %}>Section B — Electronics &amp; Communication (ECE)</option>
+                    <option value="C" {% if selected_sec == 'C' or selected_sec == 'EEE' %}selected{% endif %}>Section C — Electrical &amp; Electronics (EEE)</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <select name="status" class="form-select form-select-sm" onchange="this.form.submit()">
+                    <option value="">All Payment Statuses</option>
+                    <option value="Paid" {% if selected_status == 'Paid' %}selected{% endif %}>Paid</option>
+                    <option value="Partial" {% if selected_status == 'Partial' %}selected{% endif %}>Partially Paid</option>
+                    <option value="Pending" {% if selected_status == 'Pending' %}selected{% endif %}>Pending</option>
+                </select>
+            </div>
+
+            <div class="col-md-1">
+                <button type="submit" class="btn btn-primary btn-sm w-100">Filter</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. SECTION → STUDENT → STUDENT FEE DETAILS     -->
+    <!-- ============================================== -->
+    {% if sections_data %}
+        {% for sec in sections_data %}
+            
+            <!-- SECTION CONTAINER -->
+            <div class="fees-section-group mb-4 pb-2">
+                
+                <!-- Section Header Banner -->
+                <div class="fees-section-header d-flex flex-wrap justify-content-between align-items-center mb-3 pb-2.5 border-bottom">
+                    <div>
+                        <div class="d-flex align-items-center gap-2 mb-0.5">
+                            <span class="badge bg-dark text-white fs-xs px-2.5 py-1 fw-bold">SECTION {{ sec.letter }}</span>
+                            <span class="fw-bold text-dark fs-md">{{ sec.dept_name }}</span>
+                        </div>
+                    </div>
+                    <span class="text-muted fs-xs fw-medium">({{ sec.student_count }} Students Enrolled)</span>
+                </div>
+
+                <!-- Students in this Section -->
+                {% if sec.students %}
+                    <div class="d-flex flex-column gap-3">
+                        {% for item in sec.students %}
+                            {% set student = item.student %}
+                            {% set fee = item.fee %}
+
+                            <!-- Individual Student Fee Card -->
+                            <div class="card fees-student-card">
+                                
+                                <!-- Student Header -->
+                                <div class="card-header bg-white py-2.5 px-3 border-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+                                    <div>
+                                        <div class="d-flex align-items-center gap-2 mb-0.5">
+                                            <span class="fees-student-name fw-bold text-dark fs-md">{{ student.Name }}</span>
+                                            <span class="badge bg-light text-dark font-monospace border">{{ student.Enrollment_No }}</span>
+                                        </div>
+                                        <div class="fees-student-meta text-muted fs-xs">
+                                            {{ student.Department }} &bull; Section {{ item.section_letter }} &bull; Semester {{ item.semester }}
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        {% if fee.Payment_Status == 'Paid' %}
+                                            <span class="badge bg-success font-monospace py-1 px-2">Paid</span>
+                                        {% elif fee.Payment_Status == 'Partial' %}
+                                            <span class="badge bg-warning text-dark font-monospace py-1 px-2">Partially Paid</span>
+                                        {% elif fee.Payment_Status == 'Pending' %}
+                                            <span class="badge bg-danger font-monospace py-1 px-2">Pending</span>
+                                        {% else %}
+                                            <span class="badge bg-secondary font-monospace py-1 px-2">{{ fee.Payment_Status }}</span>
+                                        {% endif %}
+                                        <a href="{{ url_for('student_profile', enrollment_no=student.Enrollment_No) }}" 
+                                           class="btn btn-sm btn-outline-primary py-1 px-2.5 fs-xs fw-semibold" 
+                                           title="View Unified Profile">
+                                            View Profile
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Fee Details Table -->
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover align-middle mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 25%;">Total Fees</th>
+                                                    <th style="width: 25%;">Paid Amount</th>
+                                                    <th style="width: 25%;">Pending Amount</th>
+                                                    <th class="text-end" style="width: 25%;">Payment Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="font-monospace fw-semibold text-dark fs-sm">₹{{ "{:,}".format(fee.Total_Fees) }}</td>
+                                                    <td class="font-monospace fw-bold text-success fs-sm">₹{{ "{:,}".format(fee.Paid_Amount) }}</td>
+                                                    <td class="font-monospace fw-bold {% if fee.Pending_Amount > 0 %}text-danger{% else %}text-muted{% endif %} fs-sm">
+                                                        ₹{{ "{:,}".format(fee.Pending_Amount) }}
+                                                    </td>
+                                                    <td class="text-end">
+                                                        {% if fee.Payment_Status == 'Paid' %}
+                                                            <span class="badge bg-success-subtle text-success border border-success-subtle font-monospace">Paid</span>
+                                                        {% elif fee.Payment_Status == 'Partial' %}
+                                                            <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle font-monospace">Partially Paid</span>
+                                                        {% elif fee.Payment_Status == 'Pending' %}
+                                                            <span class="badge bg-danger-subtle text-danger border border-danger-subtle font-monospace">Pending</span>
+                                                        {% else %}
+                                                            <span class="badge bg-secondary-subtle text-secondary font-monospace">{{ fee.Payment_Status }}</span>
+                                                        {% endif %}
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="p-3 bg-light rounded border text-muted fs-xs text-center">
+                        No students in Section {{ sec.letter }} matched the filter.
+                    </div>
+                {% endif %}
+
+            </div>
+
+        {% endfor %}
+    {% else %}
+        <div class="card p-4 text-center text-muted fs-xs">
+            <i class="bi bi-credit-card-2-front fs-2 text-secondary mb-2"></i>
+            <div>No fee records found matching the selected filters.</div>
+            <div class="mt-2"><a href="{{ url_for('fees_page') }}" class="btn btn-sm btn-outline-primary">Reset Filters</a></div>
+        </div>
+    {% endif %}
+
+</div>
+{% endblock %}

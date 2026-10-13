@@ -1,0 +1,225 @@
+{% extends "base.html" %}
+
+{% block title %}Examination | IFHE Hyderabad{% endblock %}
+{% block page_title %}Academic Modules / Examination{% endblock %}
+
+{% block content %}
+<div>
+
+    <!-- ============================================== -->
+    <!-- 1. PAGE HEADER                                 -->
+    <!-- ============================================== -->
+    <div class="mb-3">
+        <h5 class="fw-bold text-dark mb-0">Examination</h5>
+        <div class="text-muted fs-xs">Student examination results and subject-wise performance</div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. OVERALL EXAMINATION SUMMARY (3 COMPACT CARDS)-->
+    <!-- ============================================== -->
+    <div class="row g-2.5 mb-3">
+        
+        <!-- Average Marks Card -->
+        <div class="col-sm-4">
+            <div class="card kpi-card h-100">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="kpi-label">Average Marks</div>
+                        <div class="kpi-value text-primary font-monospace">{{ summary_stats.overall_avg }}</div>
+                        <div class="text-muted fs-xs">Institutional Batch Average</div>
+                    </div>
+                    <div class="kpi-icon-small bg-primary-subtle text-primary">
+                        <i class="bi bi-award-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Highest Marks Card -->
+        <div class="col-sm-4">
+            <div class="card kpi-card h-100">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="kpi-label">Highest Marks</div>
+                        <div class="kpi-value text-success font-monospace">{{ summary_stats.highest_marks }}</div>
+                        <div class="text-muted fs-xs">Peak Subject Score</div>
+                    </div>
+                    <div class="kpi-icon-small bg-success-subtle text-success">
+                        <i class="bi bi-trophy-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subjects Appeared Card -->
+        <div class="col-sm-4">
+            <div class="card kpi-card h-100">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="kpi-label">Subjects Appeared</div>
+                        <div class="kpi-value font-monospace">{{ summary_stats.subjects_count }}</div>
+                        <div class="text-muted fs-xs">Evaluated Curriculum Courses</div>
+                    </div>
+                    <div class="kpi-icon-small bg-info-subtle text-info-emphasis">
+                        <i class="bi bi-journal-check"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================== -->
+    <!-- SEARCH & FILTERS BAR                           -->
+    <!-- ============================================== -->
+    <div class="card mb-4 bg-white p-2.5">
+        <form method="GET" action="{{ url_for('examination_page') }}" class="row g-2 align-items-center">
+            
+            <div class="col-md-4">
+                <input type="text" name="q" class="form-control form-control-sm font-monospace" 
+                       placeholder="Search Student Name or Enrollment No" value="{{ search_query }}">
+            </div>
+
+            <div class="col-md-4">
+                <select name="section" class="form-select form-select-sm" onchange="this.form.submit()">
+                    <option value="">All Sections / Departments</option>
+                    <option value="A" {% if selected_sec == 'A' or selected_sec == 'CSE' %}selected{% endif %}>Section A — Computer Science &amp; Engineering (CSE)</option>
+                    <option value="B" {% if selected_sec == 'B' or selected_sec == 'ECE' %}selected{% endif %}>Section B — Electronics &amp; Communication (ECE)</option>
+                    <option value="C" {% if selected_sec == 'C' or selected_sec == 'EEE' %}selected{% endif %}>Section C — Electrical &amp; Electronics (EEE)</option>
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <select name="subject" class="form-select form-select-sm" onchange="this.form.submit()">
+                    <option value="">All Subjects</option>
+                    {% for subj in kpis.subjects %}
+                        <option value="{{ subj }}" {% if selected_subj == subj %}selected{% endif %}>{{ subj }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-1">
+                <button type="submit" class="btn btn-primary btn-sm w-100">Filter</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. SECTION → STUDENT → SUBJECT EXAMINATION     -->
+    <!-- ============================================== -->
+    {% if sections_data %}
+        {% for sec in sections_data %}
+            
+            <!-- SECTION CONTAINER -->
+            <div class="examination-section-group mb-4 pb-2">
+                
+                <!-- Section Header Banner -->
+                <div class="examination-section-header d-flex flex-wrap justify-content-between align-items-center mb-3 pb-2.5 border-bottom">
+                    <div>
+                        <div class="d-flex align-items-center gap-2 mb-0.5">
+                            <span class="badge bg-dark text-white fs-xs px-2.5 py-1 fw-bold">SECTION {{ sec.letter }}</span>
+                            <span class="fw-bold text-dark fs-md">{{ sec.dept_name }}</span>
+                        </div>
+                    </div>
+                    <span class="text-muted fs-xs fw-medium">({{ sec.student_count }} Students Enrolled)</span>
+                </div>
+
+                <!-- Students in this Section -->
+                {% if sec.students %}
+                    <div class="d-flex flex-column gap-3">
+                        {% for item in sec.students %}
+                            {% set student = item.student %}
+                            {% set records = item.records %}
+                            {% set student_avg = item.average %}
+
+                            <!-- Individual Student Examination Card -->
+                            <div class="card examination-student-card">
+                                
+                                <!-- Student Header -->
+                                <div class="card-header bg-white py-2.5 px-3 border-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+                                    <div>
+                                        <div class="d-flex align-items-center gap-2 mb-0.5">
+                                            <span class="examination-student-name fw-bold text-dark fs-md">{{ student.Name }}</span>
+                                            <span class="badge bg-light text-dark font-monospace border">{{ student.Enrollment_No }}</span>
+                                        </div>
+                                        <div class="examination-student-meta text-muted fs-xs">
+                                            {{ student.Department }} &bull; Section {{ item.section_letter }} &bull; Semester {{ item.semester }}
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="text-end">
+                                            <span class="fs-xs text-muted d-block" style="font-size: 10px;">AVERAGE MARKS</span>
+                                            <span class="font-monospace fw-bold fs-sm text-primary">
+                                                {{ student_avg }}
+                                            </span>
+                                        </div>
+                                        <a href="{{ url_for('student_profile', enrollment_no=student.Enrollment_No) }}" 
+                                           class="btn btn-sm btn-outline-primary py-1 px-2.5 fs-xs fw-semibold" 
+                                           title="View Unified Profile">
+                                            View Profile
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Subject-wise Examination Table -->
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover align-middle mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 44%;">Subject</th>
+                                                    <th class="text-center" style="width: 14%;">Internal</th>
+                                                    <th class="text-center" style="width: 14%;">External</th>
+                                                    <th class="text-center" style="width: 14%;">Total</th>
+                                                    <th class="text-end" style="width: 14%;">Grade</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% if records %}
+                                                    {% for exam in records %}
+                                                        <tr>
+                                                            <td class="fw-medium text-dark">{{ exam.Subject }}</td>
+                                                            <td class="text-center font-monospace text-secondary">{{ exam.Internal_Marks }}</td>
+                                                            <td class="text-center font-monospace text-secondary">{{ exam.External_Marks }}</td>
+                                                            <td class="text-center font-monospace fw-bold text-dark">{{ exam.Total_Marks }}</td>
+                                                            <td class="text-end">
+                                                                <span class="badge {% if exam.Grade in ['O', 'A+'] %}bg-success{% elif exam.Grade in ['A', 'B+'] %}bg-primary{% elif exam.Grade == 'B' %}bg-secondary{% else %}bg-warning text-dark{% endif %} font-monospace">
+                                                                    {{ exam.Grade }}
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                {% else %}
+                                                    <tr>
+                                                        <td colspan="5" class="text-center py-3 text-muted fs-xs">No matching examination records found for this student.</td>
+                                                    </tr>
+                                                {% endif %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="p-3 bg-light rounded border text-muted fs-xs text-center">
+                        No students in Section {{ sec.letter }} matched the filter.
+                    </div>
+                {% endif %}
+
+            </div>
+
+        {% endfor %}
+    {% else %}
+        <div class="card p-4 text-center text-muted fs-xs">
+            <i class="bi bi-journal-x fs-2 text-secondary mb-2"></i>
+            <div>No examination records found matching the selected filters.</div>
+            <div class="mt-2"><a href="{{ url_for('examination_page') }}" class="btn btn-sm btn-outline-primary">Reset Filters</a></div>
+        </div>
+    {% endif %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Search Student | IFHE Hyderabad{% endblock %}
+{% block page_title %}Student Management / Search Student{% endblock %}
+
+{% block content %}
+<div style="max-width: 680px; margin: 0 auto;">
+
+    <!-- Page Title & Subtitle -->
+    <div class="mb-3">
+        <h5 class="fw-bold text-dark mb-0">Search Student</h5>
+        <div class="text-muted fs-xs">Search using Enrollment Number</div>
+    </div>
+
+    <!-- Search Card -->
+    <div class="card mb-3 shadow-xs">
+        <div class="card-body p-3.5">
+            <form action="{{ url_for('search') }}" method="GET">
+                <label class="form-label fs-xs fw-semibold text-secondary mb-1.5">Enrollment Number</label>
+                <div class="input-group mb-2">
+                    <span class="input-group-text bg-light text-muted"><i class="bi bi-search"></i></span>
+                    <input type="text" name="enrollment_no" class="form-control font-monospace text-uppercase" 
+                           placeholder="Enter Enrollment Number (e.g. 2026CSE001)" required autofocus>
+                    <button class="btn btn-primary px-3 fw-semibold" type="submit">
+                        SEARCH
+                    </button>
+                </div>
+            </form>
+
+            <div class="d-flex flex-wrap align-items-center gap-1.5 pt-2 border-top fs-xs text-muted">
+                <span class="text-secondary fw-semibold">Quick Demo Searches:</span>
+                <a href="{{ url_for('student_profile', enrollment_no='2026CSE001') }}" class="badge bg-light text-primary border text-decoration-none font-monospace">2026CSE001</a>
+                <a href="{{ url_for('student_profile', enrollment_no='2026CSE002') }}" class="badge bg-light text-primary border text-decoration-none font-monospace">2026CSE002</a>
+                <a href="{{ url_for('student_profile', enrollment_no='2026ECE001') }}" class="badge bg-light text-primary border text-decoration-none font-monospace">2026ECE001</a>
+                <a href="{{ url_for('student_profile', enrollment_no='2026EEE001') }}" class="badge bg-light text-primary border text-decoration-none font-monospace">2026EEE001</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

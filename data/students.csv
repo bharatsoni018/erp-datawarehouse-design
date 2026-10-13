@@ -1,0 +1,11 @@
+Enrollment_No,Name,Phone_No,Email,Gender,Department,Section,Semester,Date_of_Birth,Address,Academic_Year,CGPA
+2026CSE001,Rahul Sharma,+91 98112 34501,rahul.sharma@ifheindia.org,Male,Computer Science & Engineering,A,6,2004-05-14,"Flat 402, Green Valley Apts, Sector 62, Noida, UP - 201309",2023-2027,9.14
+2026CSE002,Priya Patel,+91 98223 45602,priya.patel@ifheindia.org,Female,Computer Science & Engineering,A,6,2004-08-22,"15 Shanti Niketan Society, Navrangpura, Ahmedabad, Gujarat - 380009",2023-2027,9.82
+2026CSE003,Rohan Verma,+91 98334 56703,rohan.verma@ifheindia.org,Male,Computer Science & Engineering,B,6,2003-11-30,"H-24, Arera Colony, Near Bittan Market, Bhopal, MP - 462016",2023-2027,6.45
+2026CSE004,Sneha Reddy,+91 98445 67804,sneha.reddy@ifheindia.org,Female,Computer Science & Engineering,B,6,2004-03-19,"Plot 88, Jubilee Hills, Road No. 36, Hyderabad, Telangana - 500033",2023-2027,8.55
+2026ECE001,Ananya Iyer,+91 98556 78905,ananya.iyer@ifheindia.org,Female,Electronics & Communication Engineering,A,6,2004-01-10,"12 Kasturba Nagar, 3rd Cross Street, Adyar, Chennai, TN - 600020",2023-2027,9.35
+2026ECE002,Vikram Singh,+91 98667 89006,vikram.singh@ifheindia.org,Male,Electronics & Communication Engineering,A,6,2003-09-15,"Bungalow 7, Civil Lines, Near Raj Mandir, Jaipur, Rajasthan - 302006",2023-2027,7.42
+2026ECE003,Kavya Nair,+91 98778 90107,kavya.nair@ifheindia.org,Female,Electronics & Communication Engineering,B,6,2004-07-04,"Villa 34, Palm Meadows, Panampilly Nagar, Kochi, Kerala - 682036",2023-2027,8.78
+2026EEE001,Aditya Kulkarni,+91 98889 01208,aditya.kulkarni@ifheindia.org,Male,Electrical & Electronics Engineering,A,6,2003-12-25,"42/B Mayur Colony, Kothrud, Pune, Maharashtra - 411038",2023-2027,8.20
+2026EEE002,Meera Das,+91 98990 12309,meera.das@ifheindia.org,Female,Electrical & Electronics Engineering,A,6,2004-06-18,"Block CD-120, Sector 1, Salt Lake City, Kolkata, WB - 700064",2023-2027,9.60
+2026EEE003,Amit Gupta,+91 98101 23410,amit.gupta@ifheindia.org,Male,Electrical & Electronics Engineering,B,6,2004-02-28,"18/45 Hazratganj, Park Road, Lucknow, UP - 226001",2023-2027,6.18

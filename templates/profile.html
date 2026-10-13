@@ -1,0 +1,270 @@
+{% extends "base.html" %}
+
+{% block title %}{{ data.personal.Name }} ({{ data.personal.Enrollment_No }}) | Student Profile - IFHE Hyderabad{% endblock %}
+{% block page_title %}Student Profile / {{ data.personal.Enrollment_No }}{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+
+    <!-- ============================================== -->
+    <!-- 1. PAGE HEADER & NAVIGATION                     -->
+    <!-- ============================================== -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+        <a href="{{ url_for('students_page') }}" class="profile-back-link">
+            <i class="bi bi-arrow-left"></i> Back to Students
+        </a>
+
+        <!-- Quick Student Switcher Dropdown -->
+        <div class="d-flex align-items-center gap-2 fs-xs">
+            <span class="text-muted">Switch Student:</span>
+            <div class="dropdown">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle font-monospace py-1 px-2.5 fs-xs" type="button" data-bs-toggle="dropdown">
+                    {{ data.personal.Enrollment_No }}
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow-sm fs-xs font-monospace" style="max-height: 280px; overflow-y: auto;">
+                    {% for s in all_students %}
+                        <li>
+                            <a class="dropdown-item d-flex justify-content-between py-1.5 {% if s.Enrollment_No == data.personal.Enrollment_No %}active{% endif %}" 
+                               href="{{ url_for('student_profile', enrollment_no=s.Enrollment_No) }}">
+                                <span class="fw-semibold">{{ s.Enrollment_No }}</span>
+                                <span class="ms-3 text-muted">{{ s.Name }}</span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-3.5">
+        <h1 class="profile-header-title">STUDENT PROFILE</h1>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. STUDENT IDENTITY SECTION                     -->
+    <!-- ============================================== -->
+    <div class="profile-identity-card mb-4">
+        <div class="d-flex flex-wrap justify-content-between align-items-start gap-3">
+            <div>
+                <h2 class="profile-student-name">{{ data.personal.Name }}</h2>
+                <div class="mb-2">
+                    <span class="profile-enrollment-badge">{{ data.personal.Enrollment_No }}</span>
+                </div>
+                <div class="profile-meta-text">
+                    {{ data.personal.Department }} &bull; Section {{ data.personal.Section }} &bull; Semester {{ data.personal.Semester }}
+                </div>
+                <div class="profile-meta-sub mt-0.5">
+                    Academic Year {{ data.personal.Academic_Year }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. PERSONAL INFORMATION SECTION                 -->
+    <!-- ============================================== -->
+    <div class="mb-4">
+        <h3 class="profile-section-heading">Personal Information</h3>
+        <div class="card p-3.5">
+            <div class="profile-info-grid">
+                <div class="profile-info-item">
+                    <span class="profile-info-label">Phone Number</span>
+                    <span class="profile-info-value font-monospace">{{ data.personal.Phone_No }}</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="profile-info-label">Email</span>
+                    <span class="profile-info-value">{{ data.personal.Email }}</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="profile-info-label">Gender</span>
+                    <span class="profile-info-value">{{ data.personal.Gender }}</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="profile-info-label">Date of Birth</span>
+                    <span class="profile-info-value font-monospace">{{ data.personal.Date_of_Birth }}</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="profile-info-label">Address</span>
+                    <span class="profile-info-value">{{ data.personal.Address }}</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="profile-info-label">CGPA</span>
+                    <span class="profile-info-value font-monospace fw-bold text-primary">{{ data.personal.CGPA }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. ACADEMIC OVERVIEW SECTION                   -->
+    <!-- ============================================== -->
+    <div class="mb-4">
+        <h3 class="profile-section-heading">Academic Overview</h3>
+        <div class="row g-3">
+            
+            <!-- Overall Attendance Card -->
+            <div class="col-md-4">
+                <div class="academic-overview-card h-100">
+                    <div class="academic-overview-label">Attendance</div>
+                    <div class="academic-overview-value {% if data.attendance.average >= 85 %}text-success{% elif data.attendance.average >= 75 %}text-primary{% else %}text-danger{% endif %} font-monospace">
+                        {{ data.attendance.average }}%
+                    </div>
+                    <div class="academic-overview-desc">Overall attendance percentage</div>
+                </div>
+            </div>
+
+            <!-- Average Marks Card -->
+            <div class="col-md-4">
+                <div class="academic-overview-card h-100">
+                    <div class="academic-overview-label">Average Marks</div>
+                    <div class="academic-overview-value text-dark font-monospace">
+                        {{ data.examination.average }}
+                    </div>
+                    <div class="academic-overview-desc">Average examination score / 100</div>
+                </div>
+            </div>
+
+            <!-- CGPA Card -->
+            <div class="col-md-4">
+                <div class="academic-overview-card h-100">
+                    <div class="academic-overview-label">CGPA</div>
+                    <div class="academic-overview-value text-primary font-monospace">
+                        {{ data.personal.CGPA }}
+                    </div>
+                    <div class="academic-overview-desc">Cumulative Grade Point Average</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. ATTENDANCE SECTION                           -->
+    <!-- ============================================== -->
+    <div class="mb-4">
+        <h3 class="profile-section-heading">Attendance</h3>
+        <div class="card">
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th style="width: 55%;">Subject</th>
+                                <th class="text-center" style="width: 25%;">Attendance %</th>
+                                <th class="text-end" style="width: 20%;">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for att in data.attendance.records %}
+                                <tr>
+                                    <td class="fw-medium text-dark">{{ att.Subject }}</td>
+                                    <td class="text-center font-monospace fw-bold">{{ att.Attendance_Percentage }}%</td>
+                                    <td class="text-end">
+                                        {% if att.Attendance_Percentage >= 85 %}
+                                            <span class="badge bg-success-subtle text-success border border-success-subtle">Good</span>
+                                        {% elif att.Attendance_Percentage >= 75 %}
+                                            <span class="badge bg-primary-subtle text-primary border border-primary-subtle">Eligible</span>
+                                        {% else %}
+                                            <span class="badge bg-danger-subtle text-danger border border-danger-subtle">Shortage</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer py-2 px-3 fs-xs text-muted d-flex justify-content-between">
+                <span>Overall Batch Attendance: <strong class="font-monospace">{{ data.attendance.average }}%</strong></span>
+                <span><strong>{{ data.attendance.count }}</strong> Subjects Recorded</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. EXAMINATION SECTION                         -->
+    <!-- ============================================== -->
+    <div class="mb-4">
+        <h3 class="profile-section-heading">Examination</h3>
+        <div class="card">
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th style="width: 45%;">Subject</th>
+                                <th class="text-center" style="width: 14%;">Internal</th>
+                                <th class="text-center" style="width: 14%;">External</th>
+                                <th class="text-center" style="width: 14%;">Total</th>
+                                <th class="text-end" style="width: 13%;">Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for exam in data.examination.records %}
+                                <tr>
+                                    <td class="fw-medium text-dark">{{ exam.Subject }}</td>
+                                    <td class="text-center font-monospace text-secondary">{{ exam.Internal_Marks }}</td>
+                                    <td class="text-center font-monospace text-secondary">{{ exam.External_Marks }}</td>
+                                    <td class="text-center font-monospace fw-bold text-dark">{{ exam.Total_Marks }}</td>
+                                    <td class="text-end">
+                                        <span class="badge {% if exam.Grade in ['O', 'A+'] %}bg-success{% elif exam.Grade in ['A', 'B+'] %}bg-primary{% elif exam.Grade == 'B' %}bg-secondary{% else %}bg-warning text-dark{% endif %} font-monospace">
+                                            {{ exam.Grade }}
+                                        </span>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer py-2 px-3 fs-xs text-muted d-flex justify-content-between">
+                <span>Average Marks: <strong class="font-monospace">{{ data.examination.average }} / 100</strong></span>
+                <span><strong>{{ data.examination.count }}</strong> Subject Evaluations</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. FEES & PAYMENTS SECTION                     -->
+    <!-- ============================================== -->
+    <div class="mb-4">
+        <h3 class="profile-section-heading">Fees &amp; Payments</h3>
+        <div class="card p-3.5">
+            <div class="fees-summary-grid">
+                
+                <div class="p-2.5 bg-light rounded border">
+                    <div class="profile-info-label mb-1">Total Fees</div>
+                    <div class="fs-md fw-bold font-monospace text-dark">
+                        ₹{{ "{:,}".format(data.fees.Total_Fees) }}
+                    </div>
+                </div>
+
+                <div class="p-2.5 bg-success-subtle rounded border border-success-subtle">
+                    <div class="profile-info-label text-success mb-1">Paid Amount</div>
+                    <div class="fs-md fw-bold font-monospace text-success">
+                        ₹{{ "{:,}".format(data.fees.Paid_Amount) }}
+                    </div>
+                </div>
+
+                <div class="p-2.5 bg-danger-subtle rounded border border-danger-subtle">
+                    <div class="profile-info-label text-danger mb-1">Pending Amount</div>
+                    <div class="fs-md fw-bold font-monospace text-danger">
+                        ₹{{ "{:,}".format(data.fees.Pending_Amount) }}
+                    </div>
+                </div>
+
+                <div class="p-2.5 bg-light rounded border d-flex flex-column justify-content-center align-items-center">
+                    <div class="profile-info-label mb-1">Payment Status</div>
+                    <div>
+                        <span class="badge {% if data.fees.Payment_Status == 'Paid' %}bg-success{% elif data.fees.Payment_Status == 'Partial' %}bg-warning text-dark{% else %}bg-danger{% endif %} py-1 px-2.5">
+                            {{ data.fees.Payment_Status }}
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
