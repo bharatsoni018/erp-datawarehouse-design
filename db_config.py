@@ -26,6 +26,10 @@ MYSQL_PORT = int(os.environ.get("MYSQL_PORT", 3306))
 MYSQL_USER = os.environ.get("MYSQL_USER", "root")
 MYSQL_PASSWORD = os.environ.get("MYSQL_PASSWORD", "root")
 MYSQL_DATABASE = os.environ.get("MYSQL_DATABASE", "erp_academic_db")
+DATA_MODE = os.environ.get("DATA_MODE", "csv").strip().lower()
+
+if DATA_MODE not in {"csv", "mysql"}:
+    raise ValueError("DATA_MODE must be either 'csv' or 'mysql'")
 
 def get_db_config(include_db=True):
     config = {

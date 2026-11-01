@@ -14,26 +14,9 @@
             <i class="bi bi-arrow-left"></i> Back to Students
         </a>
 
-        <!-- Quick Student Switcher Dropdown -->
-        <div class="d-flex align-items-center gap-2 fs-xs">
-            <span class="text-muted">Switch Student:</span>
-            <div class="dropdown">
-                <button class="btn btn-sm btn-outline-secondary dropdown-toggle font-monospace py-1 px-2.5 fs-xs" type="button" data-bs-toggle="dropdown">
-                    {{ data.personal.Enrollment_No }}
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end shadow-sm fs-xs font-monospace" style="max-height: 280px; overflow-y: auto;">
-                    {% for s in all_students %}
-                        <li>
-                            <a class="dropdown-item d-flex justify-content-between py-1.5 {% if s.Enrollment_No == data.personal.Enrollment_No %}active{% endif %}" 
-                               href="{{ url_for('student_profile', enrollment_no=s.Enrollment_No) }}">
-                                <span class="fw-semibold">{{ s.Enrollment_No }}</span>
-                                <span class="ms-3 text-muted">{{ s.Name }}</span>
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+        <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('students_page') }}">
+            <i class="bi bi-people me-1"></i> Student directory
+        </a>
     </div>
 
     <div class="mb-3.5">

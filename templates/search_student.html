@@ -28,11 +28,10 @@
             </form>
 
             <div class="d-flex flex-wrap align-items-center gap-1.5 pt-2 border-top fs-xs text-muted">
-                <span class="text-secondary fw-semibold">Quick Demo Searches:</span>
-                <a href="{{ url_for('student_profile', enrollment_no='2026CSE001') }}" class="badge bg-light text-primary border text-decoration-none font-monospace">2026CSE001</a>
-                <a href="{{ url_for('student_profile', enrollment_no='2026CSE002') }}" class="badge bg-light text-primary border text-decoration-none font-monospace">2026CSE002</a>
-                <a href="{{ url_for('student_profile', enrollment_no='2026ECE001') }}" class="badge bg-light text-primary border text-decoration-none font-monospace">2026ECE001</a>
-                <a href="{{ url_for('student_profile', enrollment_no='2026EEE001') }}" class="badge bg-light text-primary border text-decoration-none font-monospace">2026EEE001</a>
+                <span class="text-secondary fw-semibold">Quick searches:</span>
+                {% for student in example_students %}
+                    <a href="{{ url_for('student_profile', enrollment_no=student.Enrollment_No) }}" class="badge bg-light text-primary border text-decoration-none font-monospace">{{ student.Enrollment_No }}</a>
+                {% endfor %}
             </div>
         </div>
     </div>
