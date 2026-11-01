@@ -1,0 +1,5001 @@
+Enrollment_No,Subject,Attendance_Percentage
+STU0001,Data Structures,83
+STU0001,Database Management Systems,85
+STU0001,Operating Systems,87
+STU0001,Computer Networks,89
+STU0001,Software Engineering,91
+STU0002,Digital Electronics,65
+STU0002,Signals and Systems,67
+STU0002,Analog Circuits,69
+STU0002,Communication Systems,71
+STU0002,Microprocessors,73
+STU0003,Electrical Machines,60
+STU0003,Power Systems,62
+STU0003,Control Systems,64
+STU0003,Circuit Theory,66
+STU0003,Power Electronics,68
+STU0004,Web Technologies,79
+STU0004,Cloud Computing,81
+STU0004,Data Management,83
+STU0004,Computer Networks,85
+STU0004,Software Engineering,87
+STU0005,Statistics for AI,70
+STU0005,Machine Learning,72
+STU0005,Data Mining,74
+STU0005,Python for Data Science,76
+STU0005,Database Management Systems,78
+STU0006,Artificial Intelligence,90
+STU0006,Machine Learning,92
+STU0006,Deep Learning,94
+STU0006,Natural Language Processing,96
+STU0006,Data Structures,98
+STU0007,Data Structures,72
+STU0007,Database Management Systems,74
+STU0007,Operating Systems,76
+STU0007,Computer Networks,78
+STU0007,Software Engineering,80
+STU0008,Digital Electronics,70
+STU0008,Signals and Systems,72
+STU0008,Analog Circuits,74
+STU0008,Communication Systems,76
+STU0008,Microprocessors,78
+STU0009,Electrical Machines,71
+STU0009,Power Systems,73
+STU0009,Control Systems,75
+STU0009,Circuit Theory,77
+STU0009,Power Electronics,79
+STU0010,Web Technologies,73
+STU0010,Cloud Computing,75
+STU0010,Data Management,77
+STU0010,Computer Networks,79
+STU0010,Software Engineering,81
+STU0011,Statistics for AI,86
+STU0011,Machine Learning,88
+STU0011,Data Mining,90
+STU0011,Python for Data Science,92
+STU0011,Database Management Systems,94
+STU0012,Artificial Intelligence,66
+STU0012,Machine Learning,68
+STU0012,Deep Learning,70
+STU0012,Natural Language Processing,72
+STU0012,Data Structures,74
+STU0013,Data Structures,95
+STU0013,Database Management Systems,97
+STU0013,Operating Systems,99
+STU0013,Computer Networks,100
+STU0013,Software Engineering,100
+STU0014,Digital Electronics,76
+STU0014,Signals and Systems,78
+STU0014,Analog Circuits,80
+STU0014,Communication Systems,82
+STU0014,Microprocessors,84
+STU0015,Electrical Machines,67
+STU0015,Power Systems,69
+STU0015,Control Systems,71
+STU0015,Circuit Theory,73
+STU0015,Power Electronics,75
+STU0016,Web Technologies,72
+STU0016,Cloud Computing,74
+STU0016,Data Management,76
+STU0016,Computer Networks,78
+STU0016,Software Engineering,80
+STU0017,Statistics for AI,63
+STU0017,Machine Learning,65
+STU0017,Data Mining,67
+STU0017,Python for Data Science,69
+STU0017,Database Management Systems,71
+STU0018,Artificial Intelligence,75
+STU0018,Machine Learning,77
+STU0018,Deep Learning,79
+STU0018,Natural Language Processing,81
+STU0018,Data Structures,83
+STU0019,Data Structures,68
+STU0019,Database Management Systems,70
+STU0019,Operating Systems,72
+STU0019,Computer Networks,74
+STU0019,Software Engineering,76
+STU0020,Digital Electronics,90
+STU0020,Signals and Systems,92
+STU0020,Analog Circuits,94
+STU0020,Communication Systems,96
+STU0020,Microprocessors,98
+STU0021,Electrical Machines,93
+STU0021,Power Systems,95
+STU0021,Control Systems,97
+STU0021,Circuit Theory,99
+STU0021,Power Electronics,100
+STU0022,Web Technologies,74
+STU0022,Cloud Computing,76
+STU0022,Data Management,78
+STU0022,Computer Networks,80
+STU0022,Software Engineering,82
+STU0023,Statistics for AI,74
+STU0023,Machine Learning,76
+STU0023,Data Mining,78
+STU0023,Python for Data Science,80
+STU0023,Database Management Systems,82
+STU0024,Artificial Intelligence,80
+STU0024,Machine Learning,82
+STU0024,Deep Learning,84
+STU0024,Natural Language Processing,86
+STU0024,Data Structures,88
+STU0025,Data Structures,69
+STU0025,Database Management Systems,71
+STU0025,Operating Systems,73
+STU0025,Computer Networks,75
+STU0025,Software Engineering,77
+STU0026,Digital Electronics,89
+STU0026,Signals and Systems,91
+STU0026,Analog Circuits,93
+STU0026,Communication Systems,95
+STU0026,Microprocessors,97
+STU0027,Electrical Machines,83
+STU0027,Power Systems,85
+STU0027,Control Systems,87
+STU0027,Circuit Theory,89
+STU0027,Power Electronics,91
+STU0028,Web Technologies,67
+STU0028,Cloud Computing,69
+STU0028,Data Management,71
+STU0028,Computer Networks,73
+STU0028,Software Engineering,75
+STU0029,Statistics for AI,82
+STU0029,Machine Learning,84
+STU0029,Data Mining,86
+STU0029,Python for Data Science,88
+STU0029,Database Management Systems,90
+STU0030,Artificial Intelligence,91
+STU0030,Machine Learning,93
+STU0030,Deep Learning,95
+STU0030,Natural Language Processing,97
+STU0030,Data Structures,99
+STU0031,Data Structures,66
+STU0031,Database Management Systems,68
+STU0031,Operating Systems,70
+STU0031,Computer Networks,72
+STU0031,Software Engineering,74
+STU0032,Digital Electronics,76
+STU0032,Signals and Systems,78
+STU0032,Analog Circuits,80
+STU0032,Communication Systems,82
+STU0032,Microprocessors,84
+STU0033,Electrical Machines,72
+STU0033,Power Systems,74
+STU0033,Control Systems,76
+STU0033,Circuit Theory,78
+STU0033,Power Electronics,80
+STU0034,Web Technologies,88
+STU0034,Cloud Computing,90
+STU0034,Data Management,92
+STU0034,Computer Networks,94
+STU0034,Software Engineering,96
+STU0035,Statistics for AI,57
+STU0035,Machine Learning,59
+STU0035,Data Mining,61
+STU0035,Python for Data Science,63
+STU0035,Database Management Systems,65
+STU0036,Artificial Intelligence,92
+STU0036,Machine Learning,94
+STU0036,Deep Learning,96
+STU0036,Natural Language Processing,98
+STU0036,Data Structures,100
+STU0037,Data Structures,88
+STU0037,Database Management Systems,90
+STU0037,Operating Systems,92
+STU0037,Computer Networks,94
+STU0037,Software Engineering,96
+STU0038,Digital Electronics,86
+STU0038,Signals and Systems,88
+STU0038,Analog Circuits,90
+STU0038,Communication Systems,92
+STU0038,Microprocessors,94
+STU0039,Electrical Machines,62
+STU0039,Power Systems,64
+STU0039,Control Systems,66
+STU0039,Circuit Theory,68
+STU0039,Power Electronics,70
+STU0040,Web Technologies,72
+STU0040,Cloud Computing,74
+STU0040,Data Management,76
+STU0040,Computer Networks,78
+STU0040,Software Engineering,80
+STU0041,Statistics for AI,76
+STU0041,Machine Learning,78
+STU0041,Data Mining,80
+STU0041,Python for Data Science,82
+STU0041,Database Management Systems,84
+STU0042,Artificial Intelligence,92
+STU0042,Machine Learning,94
+STU0042,Deep Learning,96
+STU0042,Natural Language Processing,98
+STU0042,Data Structures,100
+STU0043,Data Structures,69
+STU0043,Database Management Systems,71
+STU0043,Operating Systems,73
+STU0043,Computer Networks,75
+STU0043,Software Engineering,77
+STU0044,Digital Electronics,87
+STU0044,Signals and Systems,89
+STU0044,Analog Circuits,91
+STU0044,Communication Systems,93
+STU0044,Microprocessors,95
+STU0045,Electrical Machines,75
+STU0045,Power Systems,77
+STU0045,Control Systems,79
+STU0045,Circuit Theory,81
+STU0045,Power Electronics,83
+STU0046,Web Technologies,59
+STU0046,Cloud Computing,61
+STU0046,Data Management,63
+STU0046,Computer Networks,65
+STU0046,Software Engineering,67
+STU0047,Statistics for AI,82
+STU0047,Machine Learning,84
+STU0047,Data Mining,86
+STU0047,Python for Data Science,88
+STU0047,Database Management Systems,90
+STU0048,Artificial Intelligence,73
+STU0048,Machine Learning,75
+STU0048,Deep Learning,77
+STU0048,Natural Language Processing,79
+STU0048,Data Structures,81
+STU0049,Data Structures,66
+STU0049,Database Management Systems,68
+STU0049,Operating Systems,70
+STU0049,Computer Networks,72
+STU0049,Software Engineering,74
+STU0050,Digital Electronics,91
+STU0050,Signals and Systems,93
+STU0050,Analog Circuits,95
+STU0050,Communication Systems,97
+STU0050,Microprocessors,99
+STU0051,Electrical Machines,74
+STU0051,Power Systems,76
+STU0051,Control Systems,78
+STU0051,Circuit Theory,80
+STU0051,Power Electronics,82
+STU0052,Web Technologies,70
+STU0052,Cloud Computing,72
+STU0052,Data Management,74
+STU0052,Computer Networks,76
+STU0052,Software Engineering,78
+STU0053,Statistics for AI,86
+STU0053,Machine Learning,88
+STU0053,Data Mining,90
+STU0053,Python for Data Science,92
+STU0053,Database Management Systems,94
+STU0054,Artificial Intelligence,95
+STU0054,Machine Learning,97
+STU0054,Deep Learning,99
+STU0054,Natural Language Processing,100
+STU0054,Data Structures,100
+STU0055,Data Structures,66
+STU0055,Database Management Systems,68
+STU0055,Operating Systems,70
+STU0055,Computer Networks,72
+STU0055,Software Engineering,74
+STU0056,Digital Electronics,59
+STU0056,Signals and Systems,61
+STU0056,Analog Circuits,63
+STU0056,Communication Systems,65
+STU0056,Microprocessors,67
+STU0057,Electrical Machines,94
+STU0057,Power Systems,96
+STU0057,Control Systems,98
+STU0057,Circuit Theory,100
+STU0057,Power Electronics,100
+STU0058,Web Technologies,68
+STU0058,Cloud Computing,70
+STU0058,Data Management,72
+STU0058,Computer Networks,74
+STU0058,Software Engineering,76
+STU0059,Statistics for AI,78
+STU0059,Machine Learning,80
+STU0059,Data Mining,82
+STU0059,Python for Data Science,84
+STU0059,Database Management Systems,86
+STU0060,Artificial Intelligence,75
+STU0060,Machine Learning,77
+STU0060,Deep Learning,79
+STU0060,Natural Language Processing,81
+STU0060,Data Structures,83
+STU0061,Data Structures,57
+STU0061,Database Management Systems,59
+STU0061,Operating Systems,61
+STU0061,Computer Networks,63
+STU0061,Software Engineering,65
+STU0062,Digital Electronics,81
+STU0062,Signals and Systems,83
+STU0062,Analog Circuits,85
+STU0062,Communication Systems,87
+STU0062,Microprocessors,89
+STU0063,Electrical Machines,68
+STU0063,Power Systems,70
+STU0063,Control Systems,72
+STU0063,Circuit Theory,74
+STU0063,Power Electronics,76
+STU0064,Web Technologies,72
+STU0064,Cloud Computing,74
+STU0064,Data Management,76
+STU0064,Computer Networks,78
+STU0064,Software Engineering,80
+STU0065,Statistics for AI,61
+STU0065,Machine Learning,63
+STU0065,Data Mining,65
+STU0065,Python for Data Science,67
+STU0065,Database Management Systems,69
+STU0066,Artificial Intelligence,82
+STU0066,Machine Learning,84
+STU0066,Deep Learning,86
+STU0066,Natural Language Processing,88
+STU0066,Data Structures,90
+STU0067,Data Structures,93
+STU0067,Database Management Systems,95
+STU0067,Operating Systems,97
+STU0067,Computer Networks,99
+STU0067,Software Engineering,100
+STU0068,Digital Electronics,90
+STU0068,Signals and Systems,92
+STU0068,Analog Circuits,94
+STU0068,Communication Systems,96
+STU0068,Microprocessors,98
+STU0069,Electrical Machines,91
+STU0069,Power Systems,93
+STU0069,Control Systems,95
+STU0069,Circuit Theory,97
+STU0069,Power Electronics,99
+STU0070,Web Technologies,76
+STU0070,Cloud Computing,78
+STU0070,Data Management,80
+STU0070,Computer Networks,82
+STU0070,Software Engineering,84
+STU0071,Statistics for AI,59
+STU0071,Machine Learning,61
+STU0071,Data Mining,63
+STU0071,Python for Data Science,65
+STU0071,Database Management Systems,67
+STU0072,Artificial Intelligence,81
+STU0072,Machine Learning,83
+STU0072,Deep Learning,85
+STU0072,Natural Language Processing,87
+STU0072,Data Structures,89
+STU0073,Data Structures,84
+STU0073,Database Management Systems,86
+STU0073,Operating Systems,88
+STU0073,Computer Networks,90
+STU0073,Software Engineering,92
+STU0074,Digital Electronics,63
+STU0074,Signals and Systems,65
+STU0074,Analog Circuits,67
+STU0074,Communication Systems,69
+STU0074,Microprocessors,71
+STU0075,Electrical Machines,92
+STU0075,Power Systems,94
+STU0075,Control Systems,96
+STU0075,Circuit Theory,98
+STU0075,Power Electronics,100
+STU0076,Web Technologies,64
+STU0076,Cloud Computing,66
+STU0076,Data Management,68
+STU0076,Computer Networks,70
+STU0076,Software Engineering,72
+STU0077,Statistics for AI,67
+STU0077,Machine Learning,69
+STU0077,Data Mining,71
+STU0077,Python for Data Science,73
+STU0077,Database Management Systems,75
+STU0078,Artificial Intelligence,81
+STU0078,Machine Learning,83
+STU0078,Deep Learning,85
+STU0078,Natural Language Processing,87
+STU0078,Data Structures,89
+STU0079,Data Structures,63
+STU0079,Database Management Systems,65
+STU0079,Operating Systems,67
+STU0079,Computer Networks,69
+STU0079,Software Engineering,71
+STU0080,Digital Electronics,94
+STU0080,Signals and Systems,96
+STU0080,Analog Circuits,98
+STU0080,Communication Systems,100
+STU0080,Microprocessors,100
+STU0081,Electrical Machines,79
+STU0081,Power Systems,81
+STU0081,Control Systems,83
+STU0081,Circuit Theory,85
+STU0081,Power Electronics,87
+STU0082,Web Technologies,81
+STU0082,Cloud Computing,83
+STU0082,Data Management,85
+STU0082,Computer Networks,87
+STU0082,Software Engineering,89
+STU0083,Statistics for AI,72
+STU0083,Machine Learning,74
+STU0083,Data Mining,76
+STU0083,Python for Data Science,78
+STU0083,Database Management Systems,80
+STU0084,Artificial Intelligence,65
+STU0084,Machine Learning,67
+STU0084,Deep Learning,69
+STU0084,Natural Language Processing,71
+STU0084,Data Structures,73
+STU0085,Data Structures,82
+STU0085,Database Management Systems,84
+STU0085,Operating Systems,86
+STU0085,Computer Networks,88
+STU0085,Software Engineering,90
+STU0086,Digital Electronics,76
+STU0086,Signals and Systems,78
+STU0086,Analog Circuits,80
+STU0086,Communication Systems,82
+STU0086,Microprocessors,84
+STU0087,Electrical Machines,61
+STU0087,Power Systems,63
+STU0087,Control Systems,65
+STU0087,Circuit Theory,67
+STU0087,Power Electronics,69
+STU0088,Web Technologies,75
+STU0088,Cloud Computing,77
+STU0088,Data Management,79
+STU0088,Computer Networks,81
+STU0088,Software Engineering,83
+STU0089,Statistics for AI,58
+STU0089,Machine Learning,60
+STU0089,Data Mining,62
+STU0089,Python for Data Science,64
+STU0089,Database Management Systems,66
+STU0090,Artificial Intelligence,67
+STU0090,Machine Learning,69
+STU0090,Deep Learning,71
+STU0090,Natural Language Processing,73
+STU0090,Data Structures,75
+STU0091,Data Structures,73
+STU0091,Database Management Systems,75
+STU0091,Operating Systems,77
+STU0091,Computer Networks,79
+STU0091,Software Engineering,81
+STU0092,Digital Electronics,84
+STU0092,Signals and Systems,86
+STU0092,Analog Circuits,88
+STU0092,Communication Systems,90
+STU0092,Microprocessors,92
+STU0093,Electrical Machines,72
+STU0093,Power Systems,74
+STU0093,Control Systems,76
+STU0093,Circuit Theory,78
+STU0093,Power Electronics,80
+STU0094,Web Technologies,65
+STU0094,Cloud Computing,67
+STU0094,Data Management,69
+STU0094,Computer Networks,71
+STU0094,Software Engineering,73
+STU0095,Statistics for AI,57
+STU0095,Machine Learning,59
+STU0095,Data Mining,61
+STU0095,Python for Data Science,63
+STU0095,Database Management Systems,65
+STU0096,Artificial Intelligence,86
+STU0096,Machine Learning,88
+STU0096,Deep Learning,90
+STU0096,Natural Language Processing,92
+STU0096,Data Structures,94
+STU0097,Data Structures,91
+STU0097,Database Management Systems,93
+STU0097,Operating Systems,95
+STU0097,Computer Networks,97
+STU0097,Software Engineering,99
+STU0098,Digital Electronics,70
+STU0098,Signals and Systems,72
+STU0098,Analog Circuits,74
+STU0098,Communication Systems,76
+STU0098,Microprocessors,78
+STU0099,Electrical Machines,87
+STU0099,Power Systems,89
+STU0099,Control Systems,91
+STU0099,Circuit Theory,93
+STU0099,Power Electronics,95
+STU0100,Web Technologies,90
+STU0100,Cloud Computing,92
+STU0100,Data Management,94
+STU0100,Computer Networks,96
+STU0100,Software Engineering,98
+STU0101,Statistics for AI,72
+STU0101,Machine Learning,74
+STU0101,Data Mining,76
+STU0101,Python for Data Science,78
+STU0101,Database Management Systems,80
+STU0102,Artificial Intelligence,86
+STU0102,Machine Learning,88
+STU0102,Deep Learning,90
+STU0102,Natural Language Processing,92
+STU0102,Data Structures,94
+STU0103,Data Structures,62
+STU0103,Database Management Systems,64
+STU0103,Operating Systems,66
+STU0103,Computer Networks,68
+STU0103,Software Engineering,70
+STU0104,Digital Electronics,76
+STU0104,Signals and Systems,78
+STU0104,Analog Circuits,80
+STU0104,Communication Systems,82
+STU0104,Microprocessors,84
+STU0105,Electrical Machines,68
+STU0105,Power Systems,70
+STU0105,Control Systems,72
+STU0105,Circuit Theory,74
+STU0105,Power Electronics,76
+STU0106,Web Technologies,74
+STU0106,Cloud Computing,76
+STU0106,Data Management,78
+STU0106,Computer Networks,80
+STU0106,Software Engineering,82
+STU0107,Statistics for AI,76
+STU0107,Machine Learning,78
+STU0107,Data Mining,80
+STU0107,Python for Data Science,82
+STU0107,Database Management Systems,84
+STU0108,Artificial Intelligence,88
+STU0108,Machine Learning,90
+STU0108,Deep Learning,92
+STU0108,Natural Language Processing,94
+STU0108,Data Structures,96
+STU0109,Data Structures,79
+STU0109,Database Management Systems,81
+STU0109,Operating Systems,83
+STU0109,Computer Networks,85
+STU0109,Software Engineering,87
+STU0110,Digital Electronics,82
+STU0110,Signals and Systems,84
+STU0110,Analog Circuits,86
+STU0110,Communication Systems,88
+STU0110,Microprocessors,90
+STU0111,Electrical Machines,68
+STU0111,Power Systems,70
+STU0111,Control Systems,72
+STU0111,Circuit Theory,74
+STU0111,Power Electronics,76
+STU0112,Web Technologies,58
+STU0112,Cloud Computing,60
+STU0112,Data Management,62
+STU0112,Computer Networks,64
+STU0112,Software Engineering,66
+STU0113,Statistics for AI,83
+STU0113,Machine Learning,85
+STU0113,Data Mining,87
+STU0113,Python for Data Science,89
+STU0113,Database Management Systems,91
+STU0114,Artificial Intelligence,82
+STU0114,Machine Learning,84
+STU0114,Deep Learning,86
+STU0114,Natural Language Processing,88
+STU0114,Data Structures,90
+STU0115,Data Structures,94
+STU0115,Database Management Systems,96
+STU0115,Operating Systems,98
+STU0115,Computer Networks,100
+STU0115,Software Engineering,100
+STU0116,Digital Electronics,57
+STU0116,Signals and Systems,59
+STU0116,Analog Circuits,61
+STU0116,Communication Systems,63
+STU0116,Microprocessors,65
+STU0117,Electrical Machines,74
+STU0117,Power Systems,76
+STU0117,Control Systems,78
+STU0117,Circuit Theory,80
+STU0117,Power Electronics,82
+STU0118,Web Technologies,68
+STU0118,Cloud Computing,70
+STU0118,Data Management,72
+STU0118,Computer Networks,74
+STU0118,Software Engineering,76
+STU0119,Statistics for AI,68
+STU0119,Machine Learning,70
+STU0119,Data Mining,72
+STU0119,Python for Data Science,74
+STU0119,Database Management Systems,76
+STU0120,Artificial Intelligence,58
+STU0120,Machine Learning,60
+STU0120,Deep Learning,62
+STU0120,Natural Language Processing,64
+STU0120,Data Structures,66
+STU0121,Data Structures,70
+STU0121,Database Management Systems,72
+STU0121,Operating Systems,74
+STU0121,Computer Networks,76
+STU0121,Software Engineering,78
+STU0122,Digital Electronics,64
+STU0122,Signals and Systems,66
+STU0122,Analog Circuits,68
+STU0122,Communication Systems,70
+STU0122,Microprocessors,72
+STU0123,Electrical Machines,67
+STU0123,Power Systems,69
+STU0123,Control Systems,71
+STU0123,Circuit Theory,73
+STU0123,Power Electronics,75
+STU0124,Web Technologies,76
+STU0124,Cloud Computing,78
+STU0124,Data Management,80
+STU0124,Computer Networks,82
+STU0124,Software Engineering,84
+STU0125,Statistics for AI,69
+STU0125,Machine Learning,71
+STU0125,Data Mining,73
+STU0125,Python for Data Science,75
+STU0125,Database Management Systems,77
+STU0126,Artificial Intelligence,59
+STU0126,Machine Learning,61
+STU0126,Deep Learning,63
+STU0126,Natural Language Processing,65
+STU0126,Data Structures,67
+STU0127,Data Structures,94
+STU0127,Database Management Systems,96
+STU0127,Operating Systems,98
+STU0127,Computer Networks,100
+STU0127,Software Engineering,100
+STU0128,Digital Electronics,66
+STU0128,Signals and Systems,68
+STU0128,Analog Circuits,70
+STU0128,Communication Systems,72
+STU0128,Microprocessors,74
+STU0129,Electrical Machines,84
+STU0129,Power Systems,86
+STU0129,Control Systems,88
+STU0129,Circuit Theory,90
+STU0129,Power Electronics,92
+STU0130,Web Technologies,84
+STU0130,Cloud Computing,86
+STU0130,Data Management,88
+STU0130,Computer Networks,90
+STU0130,Software Engineering,92
+STU0131,Statistics for AI,57
+STU0131,Machine Learning,59
+STU0131,Data Mining,61
+STU0131,Python for Data Science,63
+STU0131,Database Management Systems,65
+STU0132,Artificial Intelligence,61
+STU0132,Machine Learning,63
+STU0132,Deep Learning,65
+STU0132,Natural Language Processing,67
+STU0132,Data Structures,69
+STU0133,Data Structures,89
+STU0133,Database Management Systems,91
+STU0133,Operating Systems,93
+STU0133,Computer Networks,95
+STU0133,Software Engineering,97
+STU0134,Digital Electronics,61
+STU0134,Signals and Systems,63
+STU0134,Analog Circuits,65
+STU0134,Communication Systems,67
+STU0134,Microprocessors,69
+STU0135,Electrical Machines,89
+STU0135,Power Systems,91
+STU0135,Control Systems,93
+STU0135,Circuit Theory,95
+STU0135,Power Electronics,97
+STU0136,Web Technologies,88
+STU0136,Cloud Computing,90
+STU0136,Data Management,92
+STU0136,Computer Networks,94
+STU0136,Software Engineering,96
+STU0137,Statistics for AI,68
+STU0137,Machine Learning,70
+STU0137,Data Mining,72
+STU0137,Python for Data Science,74
+STU0137,Database Management Systems,76
+STU0138,Artificial Intelligence,74
+STU0138,Machine Learning,76
+STU0138,Deep Learning,78
+STU0138,Natural Language Processing,80
+STU0138,Data Structures,82
+STU0139,Data Structures,76
+STU0139,Database Management Systems,78
+STU0139,Operating Systems,80
+STU0139,Computer Networks,82
+STU0139,Software Engineering,84
+STU0140,Digital Electronics,67
+STU0140,Signals and Systems,69
+STU0140,Analog Circuits,71
+STU0140,Communication Systems,73
+STU0140,Microprocessors,75
+STU0141,Electrical Machines,72
+STU0141,Power Systems,74
+STU0141,Control Systems,76
+STU0141,Circuit Theory,78
+STU0141,Power Electronics,80
+STU0142,Web Technologies,72
+STU0142,Cloud Computing,74
+STU0142,Data Management,76
+STU0142,Computer Networks,78
+STU0142,Software Engineering,80
+STU0143,Statistics for AI,88
+STU0143,Machine Learning,90
+STU0143,Data Mining,92
+STU0143,Python for Data Science,94
+STU0143,Database Management Systems,96
+STU0144,Artificial Intelligence,76
+STU0144,Machine Learning,78
+STU0144,Deep Learning,80
+STU0144,Natural Language Processing,82
+STU0144,Data Structures,84
+STU0145,Data Structures,80
+STU0145,Database Management Systems,82
+STU0145,Operating Systems,84
+STU0145,Computer Networks,86
+STU0145,Software Engineering,88
+STU0146,Digital Electronics,57
+STU0146,Signals and Systems,59
+STU0146,Analog Circuits,61
+STU0146,Communication Systems,63
+STU0146,Microprocessors,65
+STU0147,Electrical Machines,91
+STU0147,Power Systems,93
+STU0147,Control Systems,95
+STU0147,Circuit Theory,97
+STU0147,Power Electronics,99
+STU0148,Web Technologies,78
+STU0148,Cloud Computing,80
+STU0148,Data Management,82
+STU0148,Computer Networks,84
+STU0148,Software Engineering,86
+STU0149,Statistics for AI,84
+STU0149,Machine Learning,86
+STU0149,Data Mining,88
+STU0149,Python for Data Science,90
+STU0149,Database Management Systems,92
+STU0150,Artificial Intelligence,68
+STU0150,Machine Learning,70
+STU0150,Deep Learning,72
+STU0150,Natural Language Processing,74
+STU0150,Data Structures,76
+STU0151,Data Structures,62
+STU0151,Database Management Systems,64
+STU0151,Operating Systems,66
+STU0151,Computer Networks,68
+STU0151,Software Engineering,70
+STU0152,Digital Electronics,85
+STU0152,Signals and Systems,87
+STU0152,Analog Circuits,89
+STU0152,Communication Systems,91
+STU0152,Microprocessors,93
+STU0153,Electrical Machines,82
+STU0153,Power Systems,84
+STU0153,Control Systems,86
+STU0153,Circuit Theory,88
+STU0153,Power Electronics,90
+STU0154,Web Technologies,91
+STU0154,Cloud Computing,93
+STU0154,Data Management,95
+STU0154,Computer Networks,97
+STU0154,Software Engineering,99
+STU0155,Statistics for AI,88
+STU0155,Machine Learning,90
+STU0155,Data Mining,92
+STU0155,Python for Data Science,94
+STU0155,Database Management Systems,96
+STU0156,Artificial Intelligence,89
+STU0156,Machine Learning,91
+STU0156,Deep Learning,93
+STU0156,Natural Language Processing,95
+STU0156,Data Structures,97
+STU0157,Data Structures,86
+STU0157,Database Management Systems,88
+STU0157,Operating Systems,90
+STU0157,Computer Networks,92
+STU0157,Software Engineering,94
+STU0158,Digital Electronics,83
+STU0158,Signals and Systems,85
+STU0158,Analog Circuits,87
+STU0158,Communication Systems,89
+STU0158,Microprocessors,91
+STU0159,Electrical Machines,73
+STU0159,Power Systems,75
+STU0159,Control Systems,77
+STU0159,Circuit Theory,79
+STU0159,Power Electronics,81
+STU0160,Web Technologies,79
+STU0160,Cloud Computing,81
+STU0160,Data Management,83
+STU0160,Computer Networks,85
+STU0160,Software Engineering,87
+STU0161,Statistics for AI,76
+STU0161,Machine Learning,78
+STU0161,Data Mining,80
+STU0161,Python for Data Science,82
+STU0161,Database Management Systems,84
+STU0162,Artificial Intelligence,70
+STU0162,Machine Learning,72
+STU0162,Deep Learning,74
+STU0162,Natural Language Processing,76
+STU0162,Data Structures,78
+STU0163,Data Structures,74
+STU0163,Database Management Systems,76
+STU0163,Operating Systems,78
+STU0163,Computer Networks,80
+STU0163,Software Engineering,82
+STU0164,Digital Electronics,89
+STU0164,Signals and Systems,91
+STU0164,Analog Circuits,93
+STU0164,Communication Systems,95
+STU0164,Microprocessors,97
+STU0165,Electrical Machines,57
+STU0165,Power Systems,59
+STU0165,Control Systems,61
+STU0165,Circuit Theory,63
+STU0165,Power Electronics,65
+STU0166,Web Technologies,72
+STU0166,Cloud Computing,74
+STU0166,Data Management,76
+STU0166,Computer Networks,78
+STU0166,Software Engineering,80
+STU0167,Statistics for AI,91
+STU0167,Machine Learning,93
+STU0167,Data Mining,95
+STU0167,Python for Data Science,97
+STU0167,Database Management Systems,99
+STU0168,Artificial Intelligence,78
+STU0168,Machine Learning,80
+STU0168,Deep Learning,82
+STU0168,Natural Language Processing,84
+STU0168,Data Structures,86
+STU0169,Data Structures,68
+STU0169,Database Management Systems,70
+STU0169,Operating Systems,72
+STU0169,Computer Networks,74
+STU0169,Software Engineering,76
+STU0170,Digital Electronics,82
+STU0170,Signals and Systems,84
+STU0170,Analog Circuits,86
+STU0170,Communication Systems,88
+STU0170,Microprocessors,90
+STU0171,Electrical Machines,88
+STU0171,Power Systems,90
+STU0171,Control Systems,92
+STU0171,Circuit Theory,94
+STU0171,Power Electronics,96
+STU0172,Web Technologies,86
+STU0172,Cloud Computing,88
+STU0172,Data Management,90
+STU0172,Computer Networks,92
+STU0172,Software Engineering,94
+STU0173,Statistics for AI,70
+STU0173,Machine Learning,72
+STU0173,Data Mining,74
+STU0173,Python for Data Science,76
+STU0173,Database Management Systems,78
+STU0174,Artificial Intelligence,57
+STU0174,Machine Learning,59
+STU0174,Deep Learning,61
+STU0174,Natural Language Processing,63
+STU0174,Data Structures,65
+STU0175,Data Structures,66
+STU0175,Database Management Systems,68
+STU0175,Operating Systems,70
+STU0175,Computer Networks,72
+STU0175,Software Engineering,74
+STU0176,Digital Electronics,90
+STU0176,Signals and Systems,92
+STU0176,Analog Circuits,94
+STU0176,Communication Systems,96
+STU0176,Microprocessors,98
+STU0177,Electrical Machines,81
+STU0177,Power Systems,83
+STU0177,Control Systems,85
+STU0177,Circuit Theory,87
+STU0177,Power Electronics,89
+STU0178,Web Technologies,57
+STU0178,Cloud Computing,59
+STU0178,Data Management,61
+STU0178,Computer Networks,63
+STU0178,Software Engineering,65
+STU0179,Statistics for AI,88
+STU0179,Machine Learning,90
+STU0179,Data Mining,92
+STU0179,Python for Data Science,94
+STU0179,Database Management Systems,96
+STU0180,Artificial Intelligence,71
+STU0180,Machine Learning,73
+STU0180,Deep Learning,75
+STU0180,Natural Language Processing,77
+STU0180,Data Structures,79
+STU0181,Data Structures,65
+STU0181,Database Management Systems,67
+STU0181,Operating Systems,69
+STU0181,Computer Networks,71
+STU0181,Software Engineering,73
+STU0182,Digital Electronics,57
+STU0182,Signals and Systems,59
+STU0182,Analog Circuits,61
+STU0182,Communication Systems,63
+STU0182,Microprocessors,65
+STU0183,Electrical Machines,71
+STU0183,Power Systems,73
+STU0183,Control Systems,75
+STU0183,Circuit Theory,77
+STU0183,Power Electronics,79
+STU0184,Web Technologies,95
+STU0184,Cloud Computing,97
+STU0184,Data Management,99
+STU0184,Computer Networks,100
+STU0184,Software Engineering,100
+STU0185,Statistics for AI,88
+STU0185,Machine Learning,90
+STU0185,Data Mining,92
+STU0185,Python for Data Science,94
+STU0185,Database Management Systems,96
+STU0186,Artificial Intelligence,94
+STU0186,Machine Learning,96
+STU0186,Deep Learning,98
+STU0186,Natural Language Processing,100
+STU0186,Data Structures,100
+STU0187,Data Structures,60
+STU0187,Database Management Systems,62
+STU0187,Operating Systems,64
+STU0187,Computer Networks,66
+STU0187,Software Engineering,68
+STU0188,Digital Electronics,83
+STU0188,Signals and Systems,85
+STU0188,Analog Circuits,87
+STU0188,Communication Systems,89
+STU0188,Microprocessors,91
+STU0189,Electrical Machines,70
+STU0189,Power Systems,72
+STU0189,Control Systems,74
+STU0189,Circuit Theory,76
+STU0189,Power Electronics,78
+STU0190,Web Technologies,69
+STU0190,Cloud Computing,71
+STU0190,Data Management,73
+STU0190,Computer Networks,75
+STU0190,Software Engineering,77
+STU0191,Statistics for AI,95
+STU0191,Machine Learning,97
+STU0191,Data Mining,99
+STU0191,Python for Data Science,100
+STU0191,Database Management Systems,100
+STU0192,Artificial Intelligence,94
+STU0192,Machine Learning,96
+STU0192,Deep Learning,98
+STU0192,Natural Language Processing,100
+STU0192,Data Structures,100
+STU0193,Data Structures,66
+STU0193,Database Management Systems,68
+STU0193,Operating Systems,70
+STU0193,Computer Networks,72
+STU0193,Software Engineering,74
+STU0194,Digital Electronics,88
+STU0194,Signals and Systems,90
+STU0194,Analog Circuits,92
+STU0194,Communication Systems,94
+STU0194,Microprocessors,96
+STU0195,Electrical Machines,60
+STU0195,Power Systems,62
+STU0195,Control Systems,64
+STU0195,Circuit Theory,66
+STU0195,Power Electronics,68
+STU0196,Web Technologies,75
+STU0196,Cloud Computing,77
+STU0196,Data Management,79
+STU0196,Computer Networks,81
+STU0196,Software Engineering,83
+STU0197,Statistics for AI,60
+STU0197,Machine Learning,62
+STU0197,Data Mining,64
+STU0197,Python for Data Science,66
+STU0197,Database Management Systems,68
+STU0198,Artificial Intelligence,77
+STU0198,Machine Learning,79
+STU0198,Deep Learning,81
+STU0198,Natural Language Processing,83
+STU0198,Data Structures,85
+STU0199,Data Structures,74
+STU0199,Database Management Systems,76
+STU0199,Operating Systems,78
+STU0199,Computer Networks,80
+STU0199,Software Engineering,82
+STU0200,Digital Electronics,64
+STU0200,Signals and Systems,66
+STU0200,Analog Circuits,68
+STU0200,Communication Systems,70
+STU0200,Microprocessors,72
+STU0201,Electrical Machines,88
+STU0201,Power Systems,90
+STU0201,Control Systems,92
+STU0201,Circuit Theory,94
+STU0201,Power Electronics,96
+STU0202,Web Technologies,73
+STU0202,Cloud Computing,75
+STU0202,Data Management,77
+STU0202,Computer Networks,79
+STU0202,Software Engineering,81
+STU0203,Statistics for AI,62
+STU0203,Machine Learning,64
+STU0203,Data Mining,66
+STU0203,Python for Data Science,68
+STU0203,Database Management Systems,70
+STU0204,Artificial Intelligence,73
+STU0204,Machine Learning,75
+STU0204,Deep Learning,77
+STU0204,Natural Language Processing,79
+STU0204,Data Structures,81
+STU0205,Data Structures,79
+STU0205,Database Management Systems,81
+STU0205,Operating Systems,83
+STU0205,Computer Networks,85
+STU0205,Software Engineering,87
+STU0206,Digital Electronics,78
+STU0206,Signals and Systems,80
+STU0206,Analog Circuits,82
+STU0206,Communication Systems,84
+STU0206,Microprocessors,86
+STU0207,Electrical Machines,88
+STU0207,Power Systems,90
+STU0207,Control Systems,92
+STU0207,Circuit Theory,94
+STU0207,Power Electronics,96
+STU0208,Web Technologies,69
+STU0208,Cloud Computing,71
+STU0208,Data Management,73
+STU0208,Computer Networks,75
+STU0208,Software Engineering,77
+STU0209,Statistics for AI,66
+STU0209,Machine Learning,68
+STU0209,Data Mining,70
+STU0209,Python for Data Science,72
+STU0209,Database Management Systems,74
+STU0210,Artificial Intelligence,81
+STU0210,Machine Learning,83
+STU0210,Deep Learning,85
+STU0210,Natural Language Processing,87
+STU0210,Data Structures,89
+STU0211,Data Structures,85
+STU0211,Database Management Systems,87
+STU0211,Operating Systems,89
+STU0211,Computer Networks,91
+STU0211,Software Engineering,93
+STU0212,Digital Electronics,78
+STU0212,Signals and Systems,80
+STU0212,Analog Circuits,82
+STU0212,Communication Systems,84
+STU0212,Microprocessors,86
+STU0213,Electrical Machines,56
+STU0213,Power Systems,58
+STU0213,Control Systems,60
+STU0213,Circuit Theory,62
+STU0213,Power Electronics,64
+STU0214,Web Technologies,58
+STU0214,Cloud Computing,60
+STU0214,Data Management,62
+STU0214,Computer Networks,64
+STU0214,Software Engineering,66
+STU0215,Statistics for AI,77
+STU0215,Machine Learning,79
+STU0215,Data Mining,81
+STU0215,Python for Data Science,83
+STU0215,Database Management Systems,85
+STU0216,Artificial Intelligence,60
+STU0216,Machine Learning,62
+STU0216,Deep Learning,64
+STU0216,Natural Language Processing,66
+STU0216,Data Structures,68
+STU0217,Data Structures,85
+STU0217,Database Management Systems,87
+STU0217,Operating Systems,89
+STU0217,Computer Networks,91
+STU0217,Software Engineering,93
+STU0218,Digital Electronics,69
+STU0218,Signals and Systems,71
+STU0218,Analog Circuits,73
+STU0218,Communication Systems,75
+STU0218,Microprocessors,77
+STU0219,Electrical Machines,86
+STU0219,Power Systems,88
+STU0219,Control Systems,90
+STU0219,Circuit Theory,92
+STU0219,Power Electronics,94
+STU0220,Web Technologies,61
+STU0220,Cloud Computing,63
+STU0220,Data Management,65
+STU0220,Computer Networks,67
+STU0220,Software Engineering,69
+STU0221,Statistics for AI,93
+STU0221,Machine Learning,95
+STU0221,Data Mining,97
+STU0221,Python for Data Science,99
+STU0221,Database Management Systems,100
+STU0222,Artificial Intelligence,68
+STU0222,Machine Learning,70
+STU0222,Deep Learning,72
+STU0222,Natural Language Processing,74
+STU0222,Data Structures,76
+STU0223,Data Structures,59
+STU0223,Database Management Systems,61
+STU0223,Operating Systems,63
+STU0223,Computer Networks,65
+STU0223,Software Engineering,67
+STU0224,Digital Electronics,77
+STU0224,Signals and Systems,79
+STU0224,Analog Circuits,81
+STU0224,Communication Systems,83
+STU0224,Microprocessors,85
+STU0225,Electrical Machines,67
+STU0225,Power Systems,69
+STU0225,Control Systems,71
+STU0225,Circuit Theory,73
+STU0225,Power Electronics,75
+STU0226,Web Technologies,66
+STU0226,Cloud Computing,68
+STU0226,Data Management,70
+STU0226,Computer Networks,72
+STU0226,Software Engineering,74
+STU0227,Statistics for AI,93
+STU0227,Machine Learning,95
+STU0227,Data Mining,97
+STU0227,Python for Data Science,99
+STU0227,Database Management Systems,100
+STU0228,Artificial Intelligence,61
+STU0228,Machine Learning,63
+STU0228,Deep Learning,65
+STU0228,Natural Language Processing,67
+STU0228,Data Structures,69
+STU0229,Data Structures,78
+STU0229,Database Management Systems,80
+STU0229,Operating Systems,82
+STU0229,Computer Networks,84
+STU0229,Software Engineering,86
+STU0230,Digital Electronics,62
+STU0230,Signals and Systems,64
+STU0230,Analog Circuits,66
+STU0230,Communication Systems,68
+STU0230,Microprocessors,70
+STU0231,Electrical Machines,77
+STU0231,Power Systems,79
+STU0231,Control Systems,81
+STU0231,Circuit Theory,83
+STU0231,Power Electronics,85
+STU0232,Web Technologies,74
+STU0232,Cloud Computing,76
+STU0232,Data Management,78
+STU0232,Computer Networks,80
+STU0232,Software Engineering,82
+STU0233,Statistics for AI,66
+STU0233,Machine Learning,68
+STU0233,Data Mining,70
+STU0233,Python for Data Science,72
+STU0233,Database Management Systems,74
+STU0234,Artificial Intelligence,63
+STU0234,Machine Learning,65
+STU0234,Deep Learning,67
+STU0234,Natural Language Processing,69
+STU0234,Data Structures,71
+STU0235,Data Structures,89
+STU0235,Database Management Systems,91
+STU0235,Operating Systems,93
+STU0235,Computer Networks,95
+STU0235,Software Engineering,97
+STU0236,Digital Electronics,57
+STU0236,Signals and Systems,59
+STU0236,Analog Circuits,61
+STU0236,Communication Systems,63
+STU0236,Microprocessors,65
+STU0237,Electrical Machines,89
+STU0237,Power Systems,91
+STU0237,Control Systems,93
+STU0237,Circuit Theory,95
+STU0237,Power Electronics,97
+STU0238,Web Technologies,61
+STU0238,Cloud Computing,63
+STU0238,Data Management,65
+STU0238,Computer Networks,67
+STU0238,Software Engineering,69
+STU0239,Statistics for AI,67
+STU0239,Machine Learning,69
+STU0239,Data Mining,71
+STU0239,Python for Data Science,73
+STU0239,Database Management Systems,75
+STU0240,Artificial Intelligence,62
+STU0240,Machine Learning,64
+STU0240,Deep Learning,66
+STU0240,Natural Language Processing,68
+STU0240,Data Structures,70
+STU0241,Data Structures,63
+STU0241,Database Management Systems,65
+STU0241,Operating Systems,67
+STU0241,Computer Networks,69
+STU0241,Software Engineering,71
+STU0242,Digital Electronics,67
+STU0242,Signals and Systems,69
+STU0242,Analog Circuits,71
+STU0242,Communication Systems,73
+STU0242,Microprocessors,75
+STU0243,Electrical Machines,84
+STU0243,Power Systems,86
+STU0243,Control Systems,88
+STU0243,Circuit Theory,90
+STU0243,Power Electronics,92
+STU0244,Web Technologies,57
+STU0244,Cloud Computing,59
+STU0244,Data Management,61
+STU0244,Computer Networks,63
+STU0244,Software Engineering,65
+STU0245,Statistics for AI,94
+STU0245,Machine Learning,96
+STU0245,Data Mining,98
+STU0245,Python for Data Science,100
+STU0245,Database Management Systems,100
+STU0246,Artificial Intelligence,63
+STU0246,Machine Learning,65
+STU0246,Deep Learning,67
+STU0246,Natural Language Processing,69
+STU0246,Data Structures,71
+STU0247,Data Structures,90
+STU0247,Database Management Systems,92
+STU0247,Operating Systems,94
+STU0247,Computer Networks,96
+STU0247,Software Engineering,98
+STU0248,Digital Electronics,86
+STU0248,Signals and Systems,88
+STU0248,Analog Circuits,90
+STU0248,Communication Systems,92
+STU0248,Microprocessors,94
+STU0249,Electrical Machines,76
+STU0249,Power Systems,78
+STU0249,Control Systems,80
+STU0249,Circuit Theory,82
+STU0249,Power Electronics,84
+STU0250,Web Technologies,88
+STU0250,Cloud Computing,90
+STU0250,Data Management,92
+STU0250,Computer Networks,94
+STU0250,Software Engineering,96
+STU0251,Statistics for AI,63
+STU0251,Machine Learning,65
+STU0251,Data Mining,67
+STU0251,Python for Data Science,69
+STU0251,Database Management Systems,71
+STU0252,Artificial Intelligence,62
+STU0252,Machine Learning,64
+STU0252,Deep Learning,66
+STU0252,Natural Language Processing,68
+STU0252,Data Structures,70
+STU0253,Data Structures,62
+STU0253,Database Management Systems,64
+STU0253,Operating Systems,66
+STU0253,Computer Networks,68
+STU0253,Software Engineering,70
+STU0254,Digital Electronics,90
+STU0254,Signals and Systems,92
+STU0254,Analog Circuits,94
+STU0254,Communication Systems,96
+STU0254,Microprocessors,98
+STU0255,Electrical Machines,74
+STU0255,Power Systems,76
+STU0255,Control Systems,78
+STU0255,Circuit Theory,80
+STU0255,Power Electronics,82
+STU0256,Web Technologies,95
+STU0256,Cloud Computing,97
+STU0256,Data Management,99
+STU0256,Computer Networks,100
+STU0256,Software Engineering,100
+STU0257,Statistics for AI,76
+STU0257,Machine Learning,78
+STU0257,Data Mining,80
+STU0257,Python for Data Science,82
+STU0257,Database Management Systems,84
+STU0258,Artificial Intelligence,64
+STU0258,Machine Learning,66
+STU0258,Deep Learning,68
+STU0258,Natural Language Processing,70
+STU0258,Data Structures,72
+STU0259,Data Structures,93
+STU0259,Database Management Systems,95
+STU0259,Operating Systems,97
+STU0259,Computer Networks,99
+STU0259,Software Engineering,100
+STU0260,Digital Electronics,87
+STU0260,Signals and Systems,89
+STU0260,Analog Circuits,91
+STU0260,Communication Systems,93
+STU0260,Microprocessors,95
+STU0261,Electrical Machines,62
+STU0261,Power Systems,64
+STU0261,Control Systems,66
+STU0261,Circuit Theory,68
+STU0261,Power Electronics,70
+STU0262,Web Technologies,89
+STU0262,Cloud Computing,91
+STU0262,Data Management,93
+STU0262,Computer Networks,95
+STU0262,Software Engineering,97
+STU0263,Statistics for AI,80
+STU0263,Machine Learning,82
+STU0263,Data Mining,84
+STU0263,Python for Data Science,86
+STU0263,Database Management Systems,88
+STU0264,Artificial Intelligence,84
+STU0264,Machine Learning,86
+STU0264,Deep Learning,88
+STU0264,Natural Language Processing,90
+STU0264,Data Structures,92
+STU0265,Data Structures,67
+STU0265,Database Management Systems,69
+STU0265,Operating Systems,71
+STU0265,Computer Networks,73
+STU0265,Software Engineering,75
+STU0266,Digital Electronics,70
+STU0266,Signals and Systems,72
+STU0266,Analog Circuits,74
+STU0266,Communication Systems,76
+STU0266,Microprocessors,78
+STU0267,Electrical Machines,83
+STU0267,Power Systems,85
+STU0267,Control Systems,87
+STU0267,Circuit Theory,89
+STU0267,Power Electronics,91
+STU0268,Web Technologies,80
+STU0268,Cloud Computing,82
+STU0268,Data Management,84
+STU0268,Computer Networks,86
+STU0268,Software Engineering,88
+STU0269,Statistics for AI,56
+STU0269,Machine Learning,58
+STU0269,Data Mining,60
+STU0269,Python for Data Science,62
+STU0269,Database Management Systems,64
+STU0270,Artificial Intelligence,82
+STU0270,Machine Learning,84
+STU0270,Deep Learning,86
+STU0270,Natural Language Processing,88
+STU0270,Data Structures,90
+STU0271,Data Structures,83
+STU0271,Database Management Systems,85
+STU0271,Operating Systems,87
+STU0271,Computer Networks,89
+STU0271,Software Engineering,91
+STU0272,Digital Electronics,84
+STU0272,Signals and Systems,86
+STU0272,Analog Circuits,88
+STU0272,Communication Systems,90
+STU0272,Microprocessors,92
+STU0273,Electrical Machines,85
+STU0273,Power Systems,87
+STU0273,Control Systems,89
+STU0273,Circuit Theory,91
+STU0273,Power Electronics,93
+STU0274,Web Technologies,79
+STU0274,Cloud Computing,81
+STU0274,Data Management,83
+STU0274,Computer Networks,85
+STU0274,Software Engineering,87
+STU0275,Statistics for AI,72
+STU0275,Machine Learning,74
+STU0275,Data Mining,76
+STU0275,Python for Data Science,78
+STU0275,Database Management Systems,80
+STU0276,Artificial Intelligence,69
+STU0276,Machine Learning,71
+STU0276,Deep Learning,73
+STU0276,Natural Language Processing,75
+STU0276,Data Structures,77
+STU0277,Data Structures,61
+STU0277,Database Management Systems,63
+STU0277,Operating Systems,65
+STU0277,Computer Networks,67
+STU0277,Software Engineering,69
+STU0278,Digital Electronics,86
+STU0278,Signals and Systems,88
+STU0278,Analog Circuits,90
+STU0278,Communication Systems,92
+STU0278,Microprocessors,94
+STU0279,Electrical Machines,89
+STU0279,Power Systems,91
+STU0279,Control Systems,93
+STU0279,Circuit Theory,95
+STU0279,Power Electronics,97
+STU0280,Web Technologies,57
+STU0280,Cloud Computing,59
+STU0280,Data Management,61
+STU0280,Computer Networks,63
+STU0280,Software Engineering,65
+STU0281,Statistics for AI,87
+STU0281,Machine Learning,89
+STU0281,Data Mining,91
+STU0281,Python for Data Science,93
+STU0281,Database Management Systems,95
+STU0282,Artificial Intelligence,64
+STU0282,Machine Learning,66
+STU0282,Deep Learning,68
+STU0282,Natural Language Processing,70
+STU0282,Data Structures,72
+STU0283,Data Structures,76
+STU0283,Database Management Systems,78
+STU0283,Operating Systems,80
+STU0283,Computer Networks,82
+STU0283,Software Engineering,84
+STU0284,Digital Electronics,68
+STU0284,Signals and Systems,70
+STU0284,Analog Circuits,72
+STU0284,Communication Systems,74
+STU0284,Microprocessors,76
+STU0285,Electrical Machines,62
+STU0285,Power Systems,64
+STU0285,Control Systems,66
+STU0285,Circuit Theory,68
+STU0285,Power Electronics,70
+STU0286,Web Technologies,91
+STU0286,Cloud Computing,93
+STU0286,Data Management,95
+STU0286,Computer Networks,97
+STU0286,Software Engineering,99
+STU0287,Statistics for AI,92
+STU0287,Machine Learning,94
+STU0287,Data Mining,96
+STU0287,Python for Data Science,98
+STU0287,Database Management Systems,100
+STU0288,Artificial Intelligence,88
+STU0288,Machine Learning,90
+STU0288,Deep Learning,92
+STU0288,Natural Language Processing,94
+STU0288,Data Structures,96
+STU0289,Data Structures,63
+STU0289,Database Management Systems,65
+STU0289,Operating Systems,67
+STU0289,Computer Networks,69
+STU0289,Software Engineering,71
+STU0290,Digital Electronics,56
+STU0290,Signals and Systems,58
+STU0290,Analog Circuits,60
+STU0290,Communication Systems,62
+STU0290,Microprocessors,64
+STU0291,Electrical Machines,56
+STU0291,Power Systems,58
+STU0291,Control Systems,60
+STU0291,Circuit Theory,62
+STU0291,Power Electronics,64
+STU0292,Web Technologies,78
+STU0292,Cloud Computing,80
+STU0292,Data Management,82
+STU0292,Computer Networks,84
+STU0292,Software Engineering,86
+STU0293,Statistics for AI,95
+STU0293,Machine Learning,97
+STU0293,Data Mining,99
+STU0293,Python for Data Science,100
+STU0293,Database Management Systems,100
+STU0294,Artificial Intelligence,82
+STU0294,Machine Learning,84
+STU0294,Deep Learning,86
+STU0294,Natural Language Processing,88
+STU0294,Data Structures,90
+STU0295,Data Structures,61
+STU0295,Database Management Systems,63
+STU0295,Operating Systems,65
+STU0295,Computer Networks,67
+STU0295,Software Engineering,69
+STU0296,Digital Electronics,76
+STU0296,Signals and Systems,78
+STU0296,Analog Circuits,80
+STU0296,Communication Systems,82
+STU0296,Microprocessors,84
+STU0297,Electrical Machines,89
+STU0297,Power Systems,91
+STU0297,Control Systems,93
+STU0297,Circuit Theory,95
+STU0297,Power Electronics,97
+STU0298,Web Technologies,77
+STU0298,Cloud Computing,79
+STU0298,Data Management,81
+STU0298,Computer Networks,83
+STU0298,Software Engineering,85
+STU0299,Statistics for AI,73
+STU0299,Machine Learning,75
+STU0299,Data Mining,77
+STU0299,Python for Data Science,79
+STU0299,Database Management Systems,81
+STU0300,Artificial Intelligence,84
+STU0300,Machine Learning,86
+STU0300,Deep Learning,88
+STU0300,Natural Language Processing,90
+STU0300,Data Structures,92
+STU0301,Data Structures,76
+STU0301,Database Management Systems,78
+STU0301,Operating Systems,80
+STU0301,Computer Networks,82
+STU0301,Software Engineering,84
+STU0302,Digital Electronics,77
+STU0302,Signals and Systems,79
+STU0302,Analog Circuits,81
+STU0302,Communication Systems,83
+STU0302,Microprocessors,85
+STU0303,Electrical Machines,64
+STU0303,Power Systems,66
+STU0303,Control Systems,68
+STU0303,Circuit Theory,70
+STU0303,Power Electronics,72
+STU0304,Web Technologies,93
+STU0304,Cloud Computing,95
+STU0304,Data Management,97
+STU0304,Computer Networks,99
+STU0304,Software Engineering,100
+STU0305,Statistics for AI,87
+STU0305,Machine Learning,89
+STU0305,Data Mining,91
+STU0305,Python for Data Science,93
+STU0305,Database Management Systems,95
+STU0306,Artificial Intelligence,78
+STU0306,Machine Learning,80
+STU0306,Deep Learning,82
+STU0306,Natural Language Processing,84
+STU0306,Data Structures,86
+STU0307,Data Structures,76
+STU0307,Database Management Systems,78
+STU0307,Operating Systems,80
+STU0307,Computer Networks,82
+STU0307,Software Engineering,84
+STU0308,Digital Electronics,65
+STU0308,Signals and Systems,67
+STU0308,Analog Circuits,69
+STU0308,Communication Systems,71
+STU0308,Microprocessors,73
+STU0309,Electrical Machines,74
+STU0309,Power Systems,76
+STU0309,Control Systems,78
+STU0309,Circuit Theory,80
+STU0309,Power Electronics,82
+STU0310,Web Technologies,77
+STU0310,Cloud Computing,79
+STU0310,Data Management,81
+STU0310,Computer Networks,83
+STU0310,Software Engineering,85
+STU0311,Statistics for AI,64
+STU0311,Machine Learning,66
+STU0311,Data Mining,68
+STU0311,Python for Data Science,70
+STU0311,Database Management Systems,72
+STU0312,Artificial Intelligence,85
+STU0312,Machine Learning,87
+STU0312,Deep Learning,89
+STU0312,Natural Language Processing,91
+STU0312,Data Structures,93
+STU0313,Data Structures,81
+STU0313,Database Management Systems,83
+STU0313,Operating Systems,85
+STU0313,Computer Networks,87
+STU0313,Software Engineering,89
+STU0314,Digital Electronics,68
+STU0314,Signals and Systems,70
+STU0314,Analog Circuits,72
+STU0314,Communication Systems,74
+STU0314,Microprocessors,76
+STU0315,Electrical Machines,62
+STU0315,Power Systems,64
+STU0315,Control Systems,66
+STU0315,Circuit Theory,68
+STU0315,Power Electronics,70
+STU0316,Web Technologies,56
+STU0316,Cloud Computing,58
+STU0316,Data Management,60
+STU0316,Computer Networks,62
+STU0316,Software Engineering,64
+STU0317,Statistics for AI,65
+STU0317,Machine Learning,67
+STU0317,Data Mining,69
+STU0317,Python for Data Science,71
+STU0317,Database Management Systems,73
+STU0318,Artificial Intelligence,64
+STU0318,Machine Learning,66
+STU0318,Deep Learning,68
+STU0318,Natural Language Processing,70
+STU0318,Data Structures,72
+STU0319,Data Structures,74
+STU0319,Database Management Systems,76
+STU0319,Operating Systems,78
+STU0319,Computer Networks,80
+STU0319,Software Engineering,82
+STU0320,Digital Electronics,67
+STU0320,Signals and Systems,69
+STU0320,Analog Circuits,71
+STU0320,Communication Systems,73
+STU0320,Microprocessors,75
+STU0321,Electrical Machines,90
+STU0321,Power Systems,92
+STU0321,Control Systems,94
+STU0321,Circuit Theory,96
+STU0321,Power Electronics,98
+STU0322,Web Technologies,92
+STU0322,Cloud Computing,94
+STU0322,Data Management,96
+STU0322,Computer Networks,98
+STU0322,Software Engineering,100
+STU0323,Statistics for AI,76
+STU0323,Machine Learning,78
+STU0323,Data Mining,80
+STU0323,Python for Data Science,82
+STU0323,Database Management Systems,84
+STU0324,Artificial Intelligence,85
+STU0324,Machine Learning,87
+STU0324,Deep Learning,89
+STU0324,Natural Language Processing,91
+STU0324,Data Structures,93
+STU0325,Data Structures,72
+STU0325,Database Management Systems,74
+STU0325,Operating Systems,76
+STU0325,Computer Networks,78
+STU0325,Software Engineering,80
+STU0326,Digital Electronics,71
+STU0326,Signals and Systems,73
+STU0326,Analog Circuits,75
+STU0326,Communication Systems,77
+STU0326,Microprocessors,79
+STU0327,Electrical Machines,92
+STU0327,Power Systems,94
+STU0327,Control Systems,96
+STU0327,Circuit Theory,98
+STU0327,Power Electronics,100
+STU0328,Web Technologies,70
+STU0328,Cloud Computing,72
+STU0328,Data Management,74
+STU0328,Computer Networks,76
+STU0328,Software Engineering,78
+STU0329,Statistics for AI,57
+STU0329,Machine Learning,59
+STU0329,Data Mining,61
+STU0329,Python for Data Science,63
+STU0329,Database Management Systems,65
+STU0330,Artificial Intelligence,80
+STU0330,Machine Learning,82
+STU0330,Deep Learning,84
+STU0330,Natural Language Processing,86
+STU0330,Data Structures,88
+STU0331,Data Structures,88
+STU0331,Database Management Systems,90
+STU0331,Operating Systems,92
+STU0331,Computer Networks,94
+STU0331,Software Engineering,96
+STU0332,Digital Electronics,71
+STU0332,Signals and Systems,73
+STU0332,Analog Circuits,75
+STU0332,Communication Systems,77
+STU0332,Microprocessors,79
+STU0333,Electrical Machines,60
+STU0333,Power Systems,62
+STU0333,Control Systems,64
+STU0333,Circuit Theory,66
+STU0333,Power Electronics,68
+STU0334,Web Technologies,80
+STU0334,Cloud Computing,82
+STU0334,Data Management,84
+STU0334,Computer Networks,86
+STU0334,Software Engineering,88
+STU0335,Statistics for AI,66
+STU0335,Machine Learning,68
+STU0335,Data Mining,70
+STU0335,Python for Data Science,72
+STU0335,Database Management Systems,74
+STU0336,Artificial Intelligence,82
+STU0336,Machine Learning,84
+STU0336,Deep Learning,86
+STU0336,Natural Language Processing,88
+STU0336,Data Structures,90
+STU0337,Data Structures,78
+STU0337,Database Management Systems,80
+STU0337,Operating Systems,82
+STU0337,Computer Networks,84
+STU0337,Software Engineering,86
+STU0338,Digital Electronics,76
+STU0338,Signals and Systems,78
+STU0338,Analog Circuits,80
+STU0338,Communication Systems,82
+STU0338,Microprocessors,84
+STU0339,Electrical Machines,60
+STU0339,Power Systems,62
+STU0339,Control Systems,64
+STU0339,Circuit Theory,66
+STU0339,Power Electronics,68
+STU0340,Web Technologies,74
+STU0340,Cloud Computing,76
+STU0340,Data Management,78
+STU0340,Computer Networks,80
+STU0340,Software Engineering,82
+STU0341,Statistics for AI,82
+STU0341,Machine Learning,84
+STU0341,Data Mining,86
+STU0341,Python for Data Science,88
+STU0341,Database Management Systems,90
+STU0342,Artificial Intelligence,93
+STU0342,Machine Learning,95
+STU0342,Deep Learning,97
+STU0342,Natural Language Processing,99
+STU0342,Data Structures,100
+STU0343,Data Structures,76
+STU0343,Database Management Systems,78
+STU0343,Operating Systems,80
+STU0343,Computer Networks,82
+STU0343,Software Engineering,84
+STU0344,Digital Electronics,95
+STU0344,Signals and Systems,97
+STU0344,Analog Circuits,99
+STU0344,Communication Systems,100
+STU0344,Microprocessors,100
+STU0345,Electrical Machines,59
+STU0345,Power Systems,61
+STU0345,Control Systems,63
+STU0345,Circuit Theory,65
+STU0345,Power Electronics,67
+STU0346,Web Technologies,60
+STU0346,Cloud Computing,62
+STU0346,Data Management,64
+STU0346,Computer Networks,66
+STU0346,Software Engineering,68
+STU0347,Statistics for AI,76
+STU0347,Machine Learning,78
+STU0347,Data Mining,80
+STU0347,Python for Data Science,82
+STU0347,Database Management Systems,84
+STU0348,Artificial Intelligence,61
+STU0348,Machine Learning,63
+STU0348,Deep Learning,65
+STU0348,Natural Language Processing,67
+STU0348,Data Structures,69
+STU0349,Data Structures,95
+STU0349,Database Management Systems,97
+STU0349,Operating Systems,99
+STU0349,Computer Networks,100
+STU0349,Software Engineering,100
+STU0350,Digital Electronics,72
+STU0350,Signals and Systems,74
+STU0350,Analog Circuits,76
+STU0350,Communication Systems,78
+STU0350,Microprocessors,80
+STU0351,Electrical Machines,80
+STU0351,Power Systems,82
+STU0351,Control Systems,84
+STU0351,Circuit Theory,86
+STU0351,Power Electronics,88
+STU0352,Web Technologies,71
+STU0352,Cloud Computing,73
+STU0352,Data Management,75
+STU0352,Computer Networks,77
+STU0352,Software Engineering,79
+STU0353,Statistics for AI,88
+STU0353,Machine Learning,90
+STU0353,Data Mining,92
+STU0353,Python for Data Science,94
+STU0353,Database Management Systems,96
+STU0354,Artificial Intelligence,66
+STU0354,Machine Learning,68
+STU0354,Deep Learning,70
+STU0354,Natural Language Processing,72
+STU0354,Data Structures,74
+STU0355,Data Structures,66
+STU0355,Database Management Systems,68
+STU0355,Operating Systems,70
+STU0355,Computer Networks,72
+STU0355,Software Engineering,74
+STU0356,Digital Electronics,69
+STU0356,Signals and Systems,71
+STU0356,Analog Circuits,73
+STU0356,Communication Systems,75
+STU0356,Microprocessors,77
+STU0357,Electrical Machines,73
+STU0357,Power Systems,75
+STU0357,Control Systems,77
+STU0357,Circuit Theory,79
+STU0357,Power Electronics,81
+STU0358,Web Technologies,67
+STU0358,Cloud Computing,69
+STU0358,Data Management,71
+STU0358,Computer Networks,73
+STU0358,Software Engineering,75
+STU0359,Statistics for AI,94
+STU0359,Machine Learning,96
+STU0359,Data Mining,98
+STU0359,Python for Data Science,100
+STU0359,Database Management Systems,100
+STU0360,Artificial Intelligence,60
+STU0360,Machine Learning,62
+STU0360,Deep Learning,64
+STU0360,Natural Language Processing,66
+STU0360,Data Structures,68
+STU0361,Data Structures,82
+STU0361,Database Management Systems,84
+STU0361,Operating Systems,86
+STU0361,Computer Networks,88
+STU0361,Software Engineering,90
+STU0362,Digital Electronics,77
+STU0362,Signals and Systems,79
+STU0362,Analog Circuits,81
+STU0362,Communication Systems,83
+STU0362,Microprocessors,85
+STU0363,Electrical Machines,56
+STU0363,Power Systems,58
+STU0363,Control Systems,60
+STU0363,Circuit Theory,62
+STU0363,Power Electronics,64
+STU0364,Web Technologies,88
+STU0364,Cloud Computing,90
+STU0364,Data Management,92
+STU0364,Computer Networks,94
+STU0364,Software Engineering,96
+STU0365,Statistics for AI,66
+STU0365,Machine Learning,68
+STU0365,Data Mining,70
+STU0365,Python for Data Science,72
+STU0365,Database Management Systems,74
+STU0366,Artificial Intelligence,81
+STU0366,Machine Learning,83
+STU0366,Deep Learning,85
+STU0366,Natural Language Processing,87
+STU0366,Data Structures,89
+STU0367,Data Structures,61
+STU0367,Database Management Systems,63
+STU0367,Operating Systems,65
+STU0367,Computer Networks,67
+STU0367,Software Engineering,69
+STU0368,Digital Electronics,84
+STU0368,Signals and Systems,86
+STU0368,Analog Circuits,88
+STU0368,Communication Systems,90
+STU0368,Microprocessors,92
+STU0369,Electrical Machines,61
+STU0369,Power Systems,63
+STU0369,Control Systems,65
+STU0369,Circuit Theory,67
+STU0369,Power Electronics,69
+STU0370,Web Technologies,83
+STU0370,Cloud Computing,85
+STU0370,Data Management,87
+STU0370,Computer Networks,89
+STU0370,Software Engineering,91
+STU0371,Statistics for AI,95
+STU0371,Machine Learning,97
+STU0371,Data Mining,99
+STU0371,Python for Data Science,100
+STU0371,Database Management Systems,100
+STU0372,Artificial Intelligence,84
+STU0372,Machine Learning,86
+STU0372,Deep Learning,88
+STU0372,Natural Language Processing,90
+STU0372,Data Structures,92
+STU0373,Data Structures,82
+STU0373,Database Management Systems,84
+STU0373,Operating Systems,86
+STU0373,Computer Networks,88
+STU0373,Software Engineering,90
+STU0374,Digital Electronics,57
+STU0374,Signals and Systems,59
+STU0374,Analog Circuits,61
+STU0374,Communication Systems,63
+STU0374,Microprocessors,65
+STU0375,Electrical Machines,78
+STU0375,Power Systems,80
+STU0375,Control Systems,82
+STU0375,Circuit Theory,84
+STU0375,Power Electronics,86
+STU0376,Web Technologies,87
+STU0376,Cloud Computing,89
+STU0376,Data Management,91
+STU0376,Computer Networks,93
+STU0376,Software Engineering,95
+STU0377,Statistics for AI,87
+STU0377,Machine Learning,89
+STU0377,Data Mining,91
+STU0377,Python for Data Science,93
+STU0377,Database Management Systems,95
+STU0378,Artificial Intelligence,64
+STU0378,Machine Learning,66
+STU0378,Deep Learning,68
+STU0378,Natural Language Processing,70
+STU0378,Data Structures,72
+STU0379,Data Structures,82
+STU0379,Database Management Systems,84
+STU0379,Operating Systems,86
+STU0379,Computer Networks,88
+STU0379,Software Engineering,90
+STU0380,Digital Electronics,77
+STU0380,Signals and Systems,79
+STU0380,Analog Circuits,81
+STU0380,Communication Systems,83
+STU0380,Microprocessors,85
+STU0381,Electrical Machines,79
+STU0381,Power Systems,81
+STU0381,Control Systems,83
+STU0381,Circuit Theory,85
+STU0381,Power Electronics,87
+STU0382,Web Technologies,78
+STU0382,Cloud Computing,80
+STU0382,Data Management,82
+STU0382,Computer Networks,84
+STU0382,Software Engineering,86
+STU0383,Statistics for AI,80
+STU0383,Machine Learning,82
+STU0383,Data Mining,84
+STU0383,Python for Data Science,86
+STU0383,Database Management Systems,88
+STU0384,Artificial Intelligence,77
+STU0384,Machine Learning,79
+STU0384,Deep Learning,81
+STU0384,Natural Language Processing,83
+STU0384,Data Structures,85
+STU0385,Data Structures,74
+STU0385,Database Management Systems,76
+STU0385,Operating Systems,78
+STU0385,Computer Networks,80
+STU0385,Software Engineering,82
+STU0386,Digital Electronics,85
+STU0386,Signals and Systems,87
+STU0386,Analog Circuits,89
+STU0386,Communication Systems,91
+STU0386,Microprocessors,93
+STU0387,Electrical Machines,73
+STU0387,Power Systems,75
+STU0387,Control Systems,77
+STU0387,Circuit Theory,79
+STU0387,Power Electronics,81
+STU0388,Web Technologies,62
+STU0388,Cloud Computing,64
+STU0388,Data Management,66
+STU0388,Computer Networks,68
+STU0388,Software Engineering,70
+STU0389,Statistics for AI,79
+STU0389,Machine Learning,81
+STU0389,Data Mining,83
+STU0389,Python for Data Science,85
+STU0389,Database Management Systems,87
+STU0390,Artificial Intelligence,76
+STU0390,Machine Learning,78
+STU0390,Deep Learning,80
+STU0390,Natural Language Processing,82
+STU0390,Data Structures,84
+STU0391,Data Structures,73
+STU0391,Database Management Systems,75
+STU0391,Operating Systems,77
+STU0391,Computer Networks,79
+STU0391,Software Engineering,81
+STU0392,Digital Electronics,64
+STU0392,Signals and Systems,66
+STU0392,Analog Circuits,68
+STU0392,Communication Systems,70
+STU0392,Microprocessors,72
+STU0393,Electrical Machines,75
+STU0393,Power Systems,77
+STU0393,Control Systems,79
+STU0393,Circuit Theory,81
+STU0393,Power Electronics,83
+STU0394,Web Technologies,66
+STU0394,Cloud Computing,68
+STU0394,Data Management,70
+STU0394,Computer Networks,72
+STU0394,Software Engineering,74
+STU0395,Statistics for AI,68
+STU0395,Machine Learning,70
+STU0395,Data Mining,72
+STU0395,Python for Data Science,74
+STU0395,Database Management Systems,76
+STU0396,Artificial Intelligence,78
+STU0396,Machine Learning,80
+STU0396,Deep Learning,82
+STU0396,Natural Language Processing,84
+STU0396,Data Structures,86
+STU0397,Data Structures,65
+STU0397,Database Management Systems,67
+STU0397,Operating Systems,69
+STU0397,Computer Networks,71
+STU0397,Software Engineering,73
+STU0398,Digital Electronics,60
+STU0398,Signals and Systems,62
+STU0398,Analog Circuits,64
+STU0398,Communication Systems,66
+STU0398,Microprocessors,68
+STU0399,Electrical Machines,64
+STU0399,Power Systems,66
+STU0399,Control Systems,68
+STU0399,Circuit Theory,70
+STU0399,Power Electronics,72
+STU0400,Web Technologies,69
+STU0400,Cloud Computing,71
+STU0400,Data Management,73
+STU0400,Computer Networks,75
+STU0400,Software Engineering,77
+STU0401,Statistics for AI,86
+STU0401,Machine Learning,88
+STU0401,Data Mining,90
+STU0401,Python for Data Science,92
+STU0401,Database Management Systems,94
+STU0402,Artificial Intelligence,80
+STU0402,Machine Learning,82
+STU0402,Deep Learning,84
+STU0402,Natural Language Processing,86
+STU0402,Data Structures,88
+STU0403,Data Structures,76
+STU0403,Database Management Systems,78
+STU0403,Operating Systems,80
+STU0403,Computer Networks,82
+STU0403,Software Engineering,84
+STU0404,Digital Electronics,63
+STU0404,Signals and Systems,65
+STU0404,Analog Circuits,67
+STU0404,Communication Systems,69
+STU0404,Microprocessors,71
+STU0405,Electrical Machines,72
+STU0405,Power Systems,74
+STU0405,Control Systems,76
+STU0405,Circuit Theory,78
+STU0405,Power Electronics,80
+STU0406,Web Technologies,78
+STU0406,Cloud Computing,80
+STU0406,Data Management,82
+STU0406,Computer Networks,84
+STU0406,Software Engineering,86
+STU0407,Statistics for AI,73
+STU0407,Machine Learning,75
+STU0407,Data Mining,77
+STU0407,Python for Data Science,79
+STU0407,Database Management Systems,81
+STU0408,Artificial Intelligence,69
+STU0408,Machine Learning,71
+STU0408,Deep Learning,73
+STU0408,Natural Language Processing,75
+STU0408,Data Structures,77
+STU0409,Data Structures,60
+STU0409,Database Management Systems,62
+STU0409,Operating Systems,64
+STU0409,Computer Networks,66
+STU0409,Software Engineering,68
+STU0410,Digital Electronics,62
+STU0410,Signals and Systems,64
+STU0410,Analog Circuits,66
+STU0410,Communication Systems,68
+STU0410,Microprocessors,70
+STU0411,Electrical Machines,81
+STU0411,Power Systems,83
+STU0411,Control Systems,85
+STU0411,Circuit Theory,87
+STU0411,Power Electronics,89
+STU0412,Web Technologies,74
+STU0412,Cloud Computing,76
+STU0412,Data Management,78
+STU0412,Computer Networks,80
+STU0412,Software Engineering,82
+STU0413,Statistics for AI,83
+STU0413,Machine Learning,85
+STU0413,Data Mining,87
+STU0413,Python for Data Science,89
+STU0413,Database Management Systems,91
+STU0414,Artificial Intelligence,93
+STU0414,Machine Learning,95
+STU0414,Deep Learning,97
+STU0414,Natural Language Processing,99
+STU0414,Data Structures,100
+STU0415,Data Structures,84
+STU0415,Database Management Systems,86
+STU0415,Operating Systems,88
+STU0415,Computer Networks,90
+STU0415,Software Engineering,92
+STU0416,Digital Electronics,73
+STU0416,Signals and Systems,75
+STU0416,Analog Circuits,77
+STU0416,Communication Systems,79
+STU0416,Microprocessors,81
+STU0417,Electrical Machines,95
+STU0417,Power Systems,97
+STU0417,Control Systems,99
+STU0417,Circuit Theory,100
+STU0417,Power Electronics,100
+STU0418,Web Technologies,84
+STU0418,Cloud Computing,86
+STU0418,Data Management,88
+STU0418,Computer Networks,90
+STU0418,Software Engineering,92
+STU0419,Statistics for AI,69
+STU0419,Machine Learning,71
+STU0419,Data Mining,73
+STU0419,Python for Data Science,75
+STU0419,Database Management Systems,77
+STU0420,Artificial Intelligence,93
+STU0420,Machine Learning,95
+STU0420,Deep Learning,97
+STU0420,Natural Language Processing,99
+STU0420,Data Structures,100
+STU0421,Data Structures,67
+STU0421,Database Management Systems,69
+STU0421,Operating Systems,71
+STU0421,Computer Networks,73
+STU0421,Software Engineering,75
+STU0422,Digital Electronics,67
+STU0422,Signals and Systems,69
+STU0422,Analog Circuits,71
+STU0422,Communication Systems,73
+STU0422,Microprocessors,75
+STU0423,Electrical Machines,92
+STU0423,Power Systems,94
+STU0423,Control Systems,96
+STU0423,Circuit Theory,98
+STU0423,Power Electronics,100
+STU0424,Web Technologies,87
+STU0424,Cloud Computing,89
+STU0424,Data Management,91
+STU0424,Computer Networks,93
+STU0424,Software Engineering,95
+STU0425,Statistics for AI,69
+STU0425,Machine Learning,71
+STU0425,Data Mining,73
+STU0425,Python for Data Science,75
+STU0425,Database Management Systems,77
+STU0426,Artificial Intelligence,87
+STU0426,Machine Learning,89
+STU0426,Deep Learning,91
+STU0426,Natural Language Processing,93
+STU0426,Data Structures,95
+STU0427,Data Structures,78
+STU0427,Database Management Systems,80
+STU0427,Operating Systems,82
+STU0427,Computer Networks,84
+STU0427,Software Engineering,86
+STU0428,Digital Electronics,75
+STU0428,Signals and Systems,77
+STU0428,Analog Circuits,79
+STU0428,Communication Systems,81
+STU0428,Microprocessors,83
+STU0429,Electrical Machines,68
+STU0429,Power Systems,70
+STU0429,Control Systems,72
+STU0429,Circuit Theory,74
+STU0429,Power Electronics,76
+STU0430,Web Technologies,94
+STU0430,Cloud Computing,96
+STU0430,Data Management,98
+STU0430,Computer Networks,100
+STU0430,Software Engineering,100
+STU0431,Statistics for AI,60
+STU0431,Machine Learning,62
+STU0431,Data Mining,64
+STU0431,Python for Data Science,66
+STU0431,Database Management Systems,68
+STU0432,Artificial Intelligence,88
+STU0432,Machine Learning,90
+STU0432,Deep Learning,92
+STU0432,Natural Language Processing,94
+STU0432,Data Structures,96
+STU0433,Data Structures,87
+STU0433,Database Management Systems,89
+STU0433,Operating Systems,91
+STU0433,Computer Networks,93
+STU0433,Software Engineering,95
+STU0434,Digital Electronics,69
+STU0434,Signals and Systems,71
+STU0434,Analog Circuits,73
+STU0434,Communication Systems,75
+STU0434,Microprocessors,77
+STU0435,Electrical Machines,82
+STU0435,Power Systems,84
+STU0435,Control Systems,86
+STU0435,Circuit Theory,88
+STU0435,Power Electronics,90
+STU0436,Web Technologies,83
+STU0436,Cloud Computing,85
+STU0436,Data Management,87
+STU0436,Computer Networks,89
+STU0436,Software Engineering,91
+STU0437,Statistics for AI,71
+STU0437,Machine Learning,73
+STU0437,Data Mining,75
+STU0437,Python for Data Science,77
+STU0437,Database Management Systems,79
+STU0438,Artificial Intelligence,84
+STU0438,Machine Learning,86
+STU0438,Deep Learning,88
+STU0438,Natural Language Processing,90
+STU0438,Data Structures,92
+STU0439,Data Structures,68
+STU0439,Database Management Systems,70
+STU0439,Operating Systems,72
+STU0439,Computer Networks,74
+STU0439,Software Engineering,76
+STU0440,Digital Electronics,82
+STU0440,Signals and Systems,84
+STU0440,Analog Circuits,86
+STU0440,Communication Systems,88
+STU0440,Microprocessors,90
+STU0441,Electrical Machines,80
+STU0441,Power Systems,82
+STU0441,Control Systems,84
+STU0441,Circuit Theory,86
+STU0441,Power Electronics,88
+STU0442,Web Technologies,60
+STU0442,Cloud Computing,62
+STU0442,Data Management,64
+STU0442,Computer Networks,66
+STU0442,Software Engineering,68
+STU0443,Statistics for AI,81
+STU0443,Machine Learning,83
+STU0443,Data Mining,85
+STU0443,Python for Data Science,87
+STU0443,Database Management Systems,89
+STU0444,Artificial Intelligence,73
+STU0444,Machine Learning,75
+STU0444,Deep Learning,77
+STU0444,Natural Language Processing,79
+STU0444,Data Structures,81
+STU0445,Data Structures,79
+STU0445,Database Management Systems,81
+STU0445,Operating Systems,83
+STU0445,Computer Networks,85
+STU0445,Software Engineering,87
+STU0446,Digital Electronics,81
+STU0446,Signals and Systems,83
+STU0446,Analog Circuits,85
+STU0446,Communication Systems,87
+STU0446,Microprocessors,89
+STU0447,Electrical Machines,75
+STU0447,Power Systems,77
+STU0447,Control Systems,79
+STU0447,Circuit Theory,81
+STU0447,Power Electronics,83
+STU0448,Web Technologies,85
+STU0448,Cloud Computing,87
+STU0448,Data Management,89
+STU0448,Computer Networks,91
+STU0448,Software Engineering,93
+STU0449,Statistics for AI,71
+STU0449,Machine Learning,73
+STU0449,Data Mining,75
+STU0449,Python for Data Science,77
+STU0449,Database Management Systems,79
+STU0450,Artificial Intelligence,60
+STU0450,Machine Learning,62
+STU0450,Deep Learning,64
+STU0450,Natural Language Processing,66
+STU0450,Data Structures,68
+STU0451,Data Structures,85
+STU0451,Database Management Systems,87
+STU0451,Operating Systems,89
+STU0451,Computer Networks,91
+STU0451,Software Engineering,93
+STU0452,Digital Electronics,77
+STU0452,Signals and Systems,79
+STU0452,Analog Circuits,81
+STU0452,Communication Systems,83
+STU0452,Microprocessors,85
+STU0453,Electrical Machines,84
+STU0453,Power Systems,86
+STU0453,Control Systems,88
+STU0453,Circuit Theory,90
+STU0453,Power Electronics,92
+STU0454,Web Technologies,93
+STU0454,Cloud Computing,95
+STU0454,Data Management,97
+STU0454,Computer Networks,99
+STU0454,Software Engineering,100
+STU0455,Statistics for AI,94
+STU0455,Machine Learning,96
+STU0455,Data Mining,98
+STU0455,Python for Data Science,100
+STU0455,Database Management Systems,100
+STU0456,Artificial Intelligence,65
+STU0456,Machine Learning,67
+STU0456,Deep Learning,69
+STU0456,Natural Language Processing,71
+STU0456,Data Structures,73
+STU0457,Data Structures,62
+STU0457,Database Management Systems,64
+STU0457,Operating Systems,66
+STU0457,Computer Networks,68
+STU0457,Software Engineering,70
+STU0458,Digital Electronics,72
+STU0458,Signals and Systems,74
+STU0458,Analog Circuits,76
+STU0458,Communication Systems,78
+STU0458,Microprocessors,80
+STU0459,Electrical Machines,72
+STU0459,Power Systems,74
+STU0459,Control Systems,76
+STU0459,Circuit Theory,78
+STU0459,Power Electronics,80
+STU0460,Web Technologies,95
+STU0460,Cloud Computing,97
+STU0460,Data Management,99
+STU0460,Computer Networks,100
+STU0460,Software Engineering,100
+STU0461,Statistics for AI,64
+STU0461,Machine Learning,66
+STU0461,Data Mining,68
+STU0461,Python for Data Science,70
+STU0461,Database Management Systems,72
+STU0462,Artificial Intelligence,70
+STU0462,Machine Learning,72
+STU0462,Deep Learning,74
+STU0462,Natural Language Processing,76
+STU0462,Data Structures,78
+STU0463,Data Structures,93
+STU0463,Database Management Systems,95
+STU0463,Operating Systems,97
+STU0463,Computer Networks,99
+STU0463,Software Engineering,100
+STU0464,Digital Electronics,92
+STU0464,Signals and Systems,94
+STU0464,Analog Circuits,96
+STU0464,Communication Systems,98
+STU0464,Microprocessors,100
+STU0465,Electrical Machines,73
+STU0465,Power Systems,75
+STU0465,Control Systems,77
+STU0465,Circuit Theory,79
+STU0465,Power Electronics,81
+STU0466,Web Technologies,69
+STU0466,Cloud Computing,71
+STU0466,Data Management,73
+STU0466,Computer Networks,75
+STU0466,Software Engineering,77
+STU0467,Statistics for AI,88
+STU0467,Machine Learning,90
+STU0467,Data Mining,92
+STU0467,Python for Data Science,94
+STU0467,Database Management Systems,96
+STU0468,Artificial Intelligence,84
+STU0468,Machine Learning,86
+STU0468,Deep Learning,88
+STU0468,Natural Language Processing,90
+STU0468,Data Structures,92
+STU0469,Data Structures,81
+STU0469,Database Management Systems,83
+STU0469,Operating Systems,85
+STU0469,Computer Networks,87
+STU0469,Software Engineering,89
+STU0470,Digital Electronics,67
+STU0470,Signals and Systems,69
+STU0470,Analog Circuits,71
+STU0470,Communication Systems,73
+STU0470,Microprocessors,75
+STU0471,Electrical Machines,73
+STU0471,Power Systems,75
+STU0471,Control Systems,77
+STU0471,Circuit Theory,79
+STU0471,Power Electronics,81
+STU0472,Web Technologies,59
+STU0472,Cloud Computing,61
+STU0472,Data Management,63
+STU0472,Computer Networks,65
+STU0472,Software Engineering,67
+STU0473,Statistics for AI,91
+STU0473,Machine Learning,93
+STU0473,Data Mining,95
+STU0473,Python for Data Science,97
+STU0473,Database Management Systems,99
+STU0474,Artificial Intelligence,71
+STU0474,Machine Learning,73
+STU0474,Deep Learning,75
+STU0474,Natural Language Processing,77
+STU0474,Data Structures,79
+STU0475,Data Structures,74
+STU0475,Database Management Systems,76
+STU0475,Operating Systems,78
+STU0475,Computer Networks,80
+STU0475,Software Engineering,82
+STU0476,Digital Electronics,90
+STU0476,Signals and Systems,92
+STU0476,Analog Circuits,94
+STU0476,Communication Systems,96
+STU0476,Microprocessors,98
+STU0477,Electrical Machines,93
+STU0477,Power Systems,95
+STU0477,Control Systems,97
+STU0477,Circuit Theory,99
+STU0477,Power Electronics,100
+STU0478,Web Technologies,66
+STU0478,Cloud Computing,68
+STU0478,Data Management,70
+STU0478,Computer Networks,72
+STU0478,Software Engineering,74
+STU0479,Statistics for AI,62
+STU0479,Machine Learning,64
+STU0479,Data Mining,66
+STU0479,Python for Data Science,68
+STU0479,Database Management Systems,70
+STU0480,Artificial Intelligence,71
+STU0480,Machine Learning,73
+STU0480,Deep Learning,75
+STU0480,Natural Language Processing,77
+STU0480,Data Structures,79
+STU0481,Data Structures,85
+STU0481,Database Management Systems,87
+STU0481,Operating Systems,89
+STU0481,Computer Networks,91
+STU0481,Software Engineering,93
+STU0482,Digital Electronics,78
+STU0482,Signals and Systems,80
+STU0482,Analog Circuits,82
+STU0482,Communication Systems,84
+STU0482,Microprocessors,86
+STU0483,Electrical Machines,69
+STU0483,Power Systems,71
+STU0483,Control Systems,73
+STU0483,Circuit Theory,75
+STU0483,Power Electronics,77
+STU0484,Web Technologies,74
+STU0484,Cloud Computing,76
+STU0484,Data Management,78
+STU0484,Computer Networks,80
+STU0484,Software Engineering,82
+STU0485,Statistics for AI,60
+STU0485,Machine Learning,62
+STU0485,Data Mining,64
+STU0485,Python for Data Science,66
+STU0485,Database Management Systems,68
+STU0486,Artificial Intelligence,68
+STU0486,Machine Learning,70
+STU0486,Deep Learning,72
+STU0486,Natural Language Processing,74
+STU0486,Data Structures,76
+STU0487,Data Structures,74
+STU0487,Database Management Systems,76
+STU0487,Operating Systems,78
+STU0487,Computer Networks,80
+STU0487,Software Engineering,82
+STU0488,Digital Electronics,67
+STU0488,Signals and Systems,69
+STU0488,Analog Circuits,71
+STU0488,Communication Systems,73
+STU0488,Microprocessors,75
+STU0489,Electrical Machines,74
+STU0489,Power Systems,76
+STU0489,Control Systems,78
+STU0489,Circuit Theory,80
+STU0489,Power Electronics,82
+STU0490,Web Technologies,72
+STU0490,Cloud Computing,74
+STU0490,Data Management,76
+STU0490,Computer Networks,78
+STU0490,Software Engineering,80
+STU0491,Statistics for AI,95
+STU0491,Machine Learning,97
+STU0491,Data Mining,99
+STU0491,Python for Data Science,100
+STU0491,Database Management Systems,100
+STU0492,Artificial Intelligence,68
+STU0492,Machine Learning,70
+STU0492,Deep Learning,72
+STU0492,Natural Language Processing,74
+STU0492,Data Structures,76
+STU0493,Data Structures,57
+STU0493,Database Management Systems,59
+STU0493,Operating Systems,61
+STU0493,Computer Networks,63
+STU0493,Software Engineering,65
+STU0494,Digital Electronics,72
+STU0494,Signals and Systems,74
+STU0494,Analog Circuits,76
+STU0494,Communication Systems,78
+STU0494,Microprocessors,80
+STU0495,Electrical Machines,86
+STU0495,Power Systems,88
+STU0495,Control Systems,90
+STU0495,Circuit Theory,92
+STU0495,Power Electronics,94
+STU0496,Web Technologies,75
+STU0496,Cloud Computing,77
+STU0496,Data Management,79
+STU0496,Computer Networks,81
+STU0496,Software Engineering,83
+STU0497,Statistics for AI,64
+STU0497,Machine Learning,66
+STU0497,Data Mining,68
+STU0497,Python for Data Science,70
+STU0497,Database Management Systems,72
+STU0498,Artificial Intelligence,76
+STU0498,Machine Learning,78
+STU0498,Deep Learning,80
+STU0498,Natural Language Processing,82
+STU0498,Data Structures,84
+STU0499,Data Structures,96
+STU0499,Database Management Systems,98
+STU0499,Operating Systems,100
+STU0499,Computer Networks,100
+STU0499,Software Engineering,100
+STU0500,Digital Electronics,79
+STU0500,Signals and Systems,81
+STU0500,Analog Circuits,83
+STU0500,Communication Systems,85
+STU0500,Microprocessors,87
+STU0501,Electrical Machines,68
+STU0501,Power Systems,70
+STU0501,Control Systems,72
+STU0501,Circuit Theory,74
+STU0501,Power Electronics,76
+STU0502,Web Technologies,60
+STU0502,Cloud Computing,62
+STU0502,Data Management,64
+STU0502,Computer Networks,66
+STU0502,Software Engineering,68
+STU0503,Statistics for AI,62
+STU0503,Machine Learning,64
+STU0503,Data Mining,66
+STU0503,Python for Data Science,68
+STU0503,Database Management Systems,70
+STU0504,Artificial Intelligence,84
+STU0504,Machine Learning,86
+STU0504,Deep Learning,88
+STU0504,Natural Language Processing,90
+STU0504,Data Structures,92
+STU0505,Data Structures,68
+STU0505,Database Management Systems,70
+STU0505,Operating Systems,72
+STU0505,Computer Networks,74
+STU0505,Software Engineering,76
+STU0506,Digital Electronics,75
+STU0506,Signals and Systems,77
+STU0506,Analog Circuits,79
+STU0506,Communication Systems,81
+STU0506,Microprocessors,83
+STU0507,Electrical Machines,57
+STU0507,Power Systems,59
+STU0507,Control Systems,61
+STU0507,Circuit Theory,63
+STU0507,Power Electronics,65
+STU0508,Web Technologies,77
+STU0508,Cloud Computing,79
+STU0508,Data Management,81
+STU0508,Computer Networks,83
+STU0508,Software Engineering,85
+STU0509,Statistics for AI,63
+STU0509,Machine Learning,65
+STU0509,Data Mining,67
+STU0509,Python for Data Science,69
+STU0509,Database Management Systems,71
+STU0510,Artificial Intelligence,76
+STU0510,Machine Learning,78
+STU0510,Deep Learning,80
+STU0510,Natural Language Processing,82
+STU0510,Data Structures,84
+STU0511,Data Structures,65
+STU0511,Database Management Systems,67
+STU0511,Operating Systems,69
+STU0511,Computer Networks,71
+STU0511,Software Engineering,73
+STU0512,Digital Electronics,77
+STU0512,Signals and Systems,79
+STU0512,Analog Circuits,81
+STU0512,Communication Systems,83
+STU0512,Microprocessors,85
+STU0513,Electrical Machines,80
+STU0513,Power Systems,82
+STU0513,Control Systems,84
+STU0513,Circuit Theory,86
+STU0513,Power Electronics,88
+STU0514,Web Technologies,83
+STU0514,Cloud Computing,85
+STU0514,Data Management,87
+STU0514,Computer Networks,89
+STU0514,Software Engineering,91
+STU0515,Statistics for AI,57
+STU0515,Machine Learning,59
+STU0515,Data Mining,61
+STU0515,Python for Data Science,63
+STU0515,Database Management Systems,65
+STU0516,Artificial Intelligence,86
+STU0516,Machine Learning,88
+STU0516,Deep Learning,90
+STU0516,Natural Language Processing,92
+STU0516,Data Structures,94
+STU0517,Data Structures,94
+STU0517,Database Management Systems,96
+STU0517,Operating Systems,98
+STU0517,Computer Networks,100
+STU0517,Software Engineering,100
+STU0518,Digital Electronics,91
+STU0518,Signals and Systems,93
+STU0518,Analog Circuits,95
+STU0518,Communication Systems,97
+STU0518,Microprocessors,99
+STU0519,Electrical Machines,76
+STU0519,Power Systems,78
+STU0519,Control Systems,80
+STU0519,Circuit Theory,82
+STU0519,Power Electronics,84
+STU0520,Web Technologies,87
+STU0520,Cloud Computing,89
+STU0520,Data Management,91
+STU0520,Computer Networks,93
+STU0520,Software Engineering,95
+STU0521,Statistics for AI,80
+STU0521,Machine Learning,82
+STU0521,Data Mining,84
+STU0521,Python for Data Science,86
+STU0521,Database Management Systems,88
+STU0522,Artificial Intelligence,67
+STU0522,Machine Learning,69
+STU0522,Deep Learning,71
+STU0522,Natural Language Processing,73
+STU0522,Data Structures,75
+STU0523,Data Structures,69
+STU0523,Database Management Systems,71
+STU0523,Operating Systems,73
+STU0523,Computer Networks,75
+STU0523,Software Engineering,77
+STU0524,Digital Electronics,68
+STU0524,Signals and Systems,70
+STU0524,Analog Circuits,72
+STU0524,Communication Systems,74
+STU0524,Microprocessors,76
+STU0525,Electrical Machines,70
+STU0525,Power Systems,72
+STU0525,Control Systems,74
+STU0525,Circuit Theory,76
+STU0525,Power Electronics,78
+STU0526,Web Technologies,83
+STU0526,Cloud Computing,85
+STU0526,Data Management,87
+STU0526,Computer Networks,89
+STU0526,Software Engineering,91
+STU0527,Statistics for AI,77
+STU0527,Machine Learning,79
+STU0527,Data Mining,81
+STU0527,Python for Data Science,83
+STU0527,Database Management Systems,85
+STU0528,Artificial Intelligence,82
+STU0528,Machine Learning,84
+STU0528,Deep Learning,86
+STU0528,Natural Language Processing,88
+STU0528,Data Structures,90
+STU0529,Data Structures,78
+STU0529,Database Management Systems,80
+STU0529,Operating Systems,82
+STU0529,Computer Networks,84
+STU0529,Software Engineering,86
+STU0530,Digital Electronics,82
+STU0530,Signals and Systems,84
+STU0530,Analog Circuits,86
+STU0530,Communication Systems,88
+STU0530,Microprocessors,90
+STU0531,Electrical Machines,72
+STU0531,Power Systems,74
+STU0531,Control Systems,76
+STU0531,Circuit Theory,78
+STU0531,Power Electronics,80
+STU0532,Web Technologies,66
+STU0532,Cloud Computing,68
+STU0532,Data Management,70
+STU0532,Computer Networks,72
+STU0532,Software Engineering,74
+STU0533,Statistics for AI,72
+STU0533,Machine Learning,74
+STU0533,Data Mining,76
+STU0533,Python for Data Science,78
+STU0533,Database Management Systems,80
+STU0534,Artificial Intelligence,75
+STU0534,Machine Learning,77
+STU0534,Deep Learning,79
+STU0534,Natural Language Processing,81
+STU0534,Data Structures,83
+STU0535,Data Structures,77
+STU0535,Database Management Systems,79
+STU0535,Operating Systems,81
+STU0535,Computer Networks,83
+STU0535,Software Engineering,85
+STU0536,Digital Electronics,91
+STU0536,Signals and Systems,93
+STU0536,Analog Circuits,95
+STU0536,Communication Systems,97
+STU0536,Microprocessors,99
+STU0537,Electrical Machines,91
+STU0537,Power Systems,93
+STU0537,Control Systems,95
+STU0537,Circuit Theory,97
+STU0537,Power Electronics,99
+STU0538,Web Technologies,86
+STU0538,Cloud Computing,88
+STU0538,Data Management,90
+STU0538,Computer Networks,92
+STU0538,Software Engineering,94
+STU0539,Statistics for AI,66
+STU0539,Machine Learning,68
+STU0539,Data Mining,70
+STU0539,Python for Data Science,72
+STU0539,Database Management Systems,74
+STU0540,Artificial Intelligence,59
+STU0540,Machine Learning,61
+STU0540,Deep Learning,63
+STU0540,Natural Language Processing,65
+STU0540,Data Structures,67
+STU0541,Data Structures,66
+STU0541,Database Management Systems,68
+STU0541,Operating Systems,70
+STU0541,Computer Networks,72
+STU0541,Software Engineering,74
+STU0542,Digital Electronics,87
+STU0542,Signals and Systems,89
+STU0542,Analog Circuits,91
+STU0542,Communication Systems,93
+STU0542,Microprocessors,95
+STU0543,Electrical Machines,73
+STU0543,Power Systems,75
+STU0543,Control Systems,77
+STU0543,Circuit Theory,79
+STU0543,Power Electronics,81
+STU0544,Web Technologies,92
+STU0544,Cloud Computing,94
+STU0544,Data Management,96
+STU0544,Computer Networks,98
+STU0544,Software Engineering,100
+STU0545,Statistics for AI,84
+STU0545,Machine Learning,86
+STU0545,Data Mining,88
+STU0545,Python for Data Science,90
+STU0545,Database Management Systems,92
+STU0546,Artificial Intelligence,56
+STU0546,Machine Learning,58
+STU0546,Deep Learning,60
+STU0546,Natural Language Processing,62
+STU0546,Data Structures,64
+STU0547,Data Structures,93
+STU0547,Database Management Systems,95
+STU0547,Operating Systems,97
+STU0547,Computer Networks,99
+STU0547,Software Engineering,100
+STU0548,Digital Electronics,93
+STU0548,Signals and Systems,95
+STU0548,Analog Circuits,97
+STU0548,Communication Systems,99
+STU0548,Microprocessors,100
+STU0549,Electrical Machines,62
+STU0549,Power Systems,64
+STU0549,Control Systems,66
+STU0549,Circuit Theory,68
+STU0549,Power Electronics,70
+STU0550,Web Technologies,70
+STU0550,Cloud Computing,72
+STU0550,Data Management,74
+STU0550,Computer Networks,76
+STU0550,Software Engineering,78
+STU0551,Statistics for AI,86
+STU0551,Machine Learning,88
+STU0551,Data Mining,90
+STU0551,Python for Data Science,92
+STU0551,Database Management Systems,94
+STU0552,Artificial Intelligence,83
+STU0552,Machine Learning,85
+STU0552,Deep Learning,87
+STU0552,Natural Language Processing,89
+STU0552,Data Structures,91
+STU0553,Data Structures,80
+STU0553,Database Management Systems,82
+STU0553,Operating Systems,84
+STU0553,Computer Networks,86
+STU0553,Software Engineering,88
+STU0554,Digital Electronics,78
+STU0554,Signals and Systems,80
+STU0554,Analog Circuits,82
+STU0554,Communication Systems,84
+STU0554,Microprocessors,86
+STU0555,Electrical Machines,67
+STU0555,Power Systems,69
+STU0555,Control Systems,71
+STU0555,Circuit Theory,73
+STU0555,Power Electronics,75
+STU0556,Web Technologies,89
+STU0556,Cloud Computing,91
+STU0556,Data Management,93
+STU0556,Computer Networks,95
+STU0556,Software Engineering,97
+STU0557,Statistics for AI,73
+STU0557,Machine Learning,75
+STU0557,Data Mining,77
+STU0557,Python for Data Science,79
+STU0557,Database Management Systems,81
+STU0558,Artificial Intelligence,68
+STU0558,Machine Learning,70
+STU0558,Deep Learning,72
+STU0558,Natural Language Processing,74
+STU0558,Data Structures,76
+STU0559,Data Structures,78
+STU0559,Database Management Systems,80
+STU0559,Operating Systems,82
+STU0559,Computer Networks,84
+STU0559,Software Engineering,86
+STU0560,Digital Electronics,79
+STU0560,Signals and Systems,81
+STU0560,Analog Circuits,83
+STU0560,Communication Systems,85
+STU0560,Microprocessors,87
+STU0561,Electrical Machines,86
+STU0561,Power Systems,88
+STU0561,Control Systems,90
+STU0561,Circuit Theory,92
+STU0561,Power Electronics,94
+STU0562,Web Technologies,56
+STU0562,Cloud Computing,58
+STU0562,Data Management,60
+STU0562,Computer Networks,62
+STU0562,Software Engineering,64
+STU0563,Statistics for AI,88
+STU0563,Machine Learning,90
+STU0563,Data Mining,92
+STU0563,Python for Data Science,94
+STU0563,Database Management Systems,96
+STU0564,Artificial Intelligence,73
+STU0564,Machine Learning,75
+STU0564,Deep Learning,77
+STU0564,Natural Language Processing,79
+STU0564,Data Structures,81
+STU0565,Data Structures,95
+STU0565,Database Management Systems,97
+STU0565,Operating Systems,99
+STU0565,Computer Networks,100
+STU0565,Software Engineering,100
+STU0566,Digital Electronics,95
+STU0566,Signals and Systems,97
+STU0566,Analog Circuits,99
+STU0566,Communication Systems,100
+STU0566,Microprocessors,100
+STU0567,Electrical Machines,77
+STU0567,Power Systems,79
+STU0567,Control Systems,81
+STU0567,Circuit Theory,83
+STU0567,Power Electronics,85
+STU0568,Web Technologies,57
+STU0568,Cloud Computing,59
+STU0568,Data Management,61
+STU0568,Computer Networks,63
+STU0568,Software Engineering,65
+STU0569,Statistics for AI,61
+STU0569,Machine Learning,63
+STU0569,Data Mining,65
+STU0569,Python for Data Science,67
+STU0569,Database Management Systems,69
+STU0570,Artificial Intelligence,61
+STU0570,Machine Learning,63
+STU0570,Deep Learning,65
+STU0570,Natural Language Processing,67
+STU0570,Data Structures,69
+STU0571,Data Structures,70
+STU0571,Database Management Systems,72
+STU0571,Operating Systems,74
+STU0571,Computer Networks,76
+STU0571,Software Engineering,78
+STU0572,Digital Electronics,96
+STU0572,Signals and Systems,98
+STU0572,Analog Circuits,100
+STU0572,Communication Systems,100
+STU0572,Microprocessors,100
+STU0573,Electrical Machines,94
+STU0573,Power Systems,96
+STU0573,Control Systems,98
+STU0573,Circuit Theory,100
+STU0573,Power Electronics,100
+STU0574,Web Technologies,84
+STU0574,Cloud Computing,86
+STU0574,Data Management,88
+STU0574,Computer Networks,90
+STU0574,Software Engineering,92
+STU0575,Statistics for AI,70
+STU0575,Machine Learning,72
+STU0575,Data Mining,74
+STU0575,Python for Data Science,76
+STU0575,Database Management Systems,78
+STU0576,Artificial Intelligence,72
+STU0576,Machine Learning,74
+STU0576,Deep Learning,76
+STU0576,Natural Language Processing,78
+STU0576,Data Structures,80
+STU0577,Data Structures,95
+STU0577,Database Management Systems,97
+STU0577,Operating Systems,99
+STU0577,Computer Networks,100
+STU0577,Software Engineering,100
+STU0578,Digital Electronics,91
+STU0578,Signals and Systems,93
+STU0578,Analog Circuits,95
+STU0578,Communication Systems,97
+STU0578,Microprocessors,99
+STU0579,Electrical Machines,74
+STU0579,Power Systems,76
+STU0579,Control Systems,78
+STU0579,Circuit Theory,80
+STU0579,Power Electronics,82
+STU0580,Web Technologies,77
+STU0580,Cloud Computing,79
+STU0580,Data Management,81
+STU0580,Computer Networks,83
+STU0580,Software Engineering,85
+STU0581,Statistics for AI,66
+STU0581,Machine Learning,68
+STU0581,Data Mining,70
+STU0581,Python for Data Science,72
+STU0581,Database Management Systems,74
+STU0582,Artificial Intelligence,74
+STU0582,Machine Learning,76
+STU0582,Deep Learning,78
+STU0582,Natural Language Processing,80
+STU0582,Data Structures,82
+STU0583,Data Structures,67
+STU0583,Database Management Systems,69
+STU0583,Operating Systems,71
+STU0583,Computer Networks,73
+STU0583,Software Engineering,75
+STU0584,Digital Electronics,62
+STU0584,Signals and Systems,64
+STU0584,Analog Circuits,66
+STU0584,Communication Systems,68
+STU0584,Microprocessors,70
+STU0585,Electrical Machines,80
+STU0585,Power Systems,82
+STU0585,Control Systems,84
+STU0585,Circuit Theory,86
+STU0585,Power Electronics,88
+STU0586,Web Technologies,75
+STU0586,Cloud Computing,77
+STU0586,Data Management,79
+STU0586,Computer Networks,81
+STU0586,Software Engineering,83
+STU0587,Statistics for AI,60
+STU0587,Machine Learning,62
+STU0587,Data Mining,64
+STU0587,Python for Data Science,66
+STU0587,Database Management Systems,68
+STU0588,Artificial Intelligence,87
+STU0588,Machine Learning,89
+STU0588,Deep Learning,91
+STU0588,Natural Language Processing,93
+STU0588,Data Structures,95
+STU0589,Data Structures,75
+STU0589,Database Management Systems,77
+STU0589,Operating Systems,79
+STU0589,Computer Networks,81
+STU0589,Software Engineering,83
+STU0590,Digital Electronics,62
+STU0590,Signals and Systems,64
+STU0590,Analog Circuits,66
+STU0590,Communication Systems,68
+STU0590,Microprocessors,70
+STU0591,Electrical Machines,82
+STU0591,Power Systems,84
+STU0591,Control Systems,86
+STU0591,Circuit Theory,88
+STU0591,Power Electronics,90
+STU0592,Web Technologies,86
+STU0592,Cloud Computing,88
+STU0592,Data Management,90
+STU0592,Computer Networks,92
+STU0592,Software Engineering,94
+STU0593,Statistics for AI,76
+STU0593,Machine Learning,78
+STU0593,Data Mining,80
+STU0593,Python for Data Science,82
+STU0593,Database Management Systems,84
+STU0594,Artificial Intelligence,67
+STU0594,Machine Learning,69
+STU0594,Deep Learning,71
+STU0594,Natural Language Processing,73
+STU0594,Data Structures,75
+STU0595,Data Structures,68
+STU0595,Database Management Systems,70
+STU0595,Operating Systems,72
+STU0595,Computer Networks,74
+STU0595,Software Engineering,76
+STU0596,Digital Electronics,94
+STU0596,Signals and Systems,96
+STU0596,Analog Circuits,98
+STU0596,Communication Systems,100
+STU0596,Microprocessors,100
+STU0597,Electrical Machines,66
+STU0597,Power Systems,68
+STU0597,Control Systems,70
+STU0597,Circuit Theory,72
+STU0597,Power Electronics,74
+STU0598,Web Technologies,87
+STU0598,Cloud Computing,89
+STU0598,Data Management,91
+STU0598,Computer Networks,93
+STU0598,Software Engineering,95
+STU0599,Statistics for AI,90
+STU0599,Machine Learning,92
+STU0599,Data Mining,94
+STU0599,Python for Data Science,96
+STU0599,Database Management Systems,98
+STU0600,Artificial Intelligence,76
+STU0600,Machine Learning,78
+STU0600,Deep Learning,80
+STU0600,Natural Language Processing,82
+STU0600,Data Structures,84
+STU0601,Data Structures,95
+STU0601,Database Management Systems,97
+STU0601,Operating Systems,99
+STU0601,Computer Networks,100
+STU0601,Software Engineering,100
+STU0602,Digital Electronics,80
+STU0602,Signals and Systems,82
+STU0602,Analog Circuits,84
+STU0602,Communication Systems,86
+STU0602,Microprocessors,88
+STU0603,Electrical Machines,83
+STU0603,Power Systems,85
+STU0603,Control Systems,87
+STU0603,Circuit Theory,89
+STU0603,Power Electronics,91
+STU0604,Web Technologies,65
+STU0604,Cloud Computing,67
+STU0604,Data Management,69
+STU0604,Computer Networks,71
+STU0604,Software Engineering,73
+STU0605,Statistics for AI,76
+STU0605,Machine Learning,78
+STU0605,Data Mining,80
+STU0605,Python for Data Science,82
+STU0605,Database Management Systems,84
+STU0606,Artificial Intelligence,82
+STU0606,Machine Learning,84
+STU0606,Deep Learning,86
+STU0606,Natural Language Processing,88
+STU0606,Data Structures,90
+STU0607,Data Structures,96
+STU0607,Database Management Systems,98
+STU0607,Operating Systems,100
+STU0607,Computer Networks,100
+STU0607,Software Engineering,100
+STU0608,Digital Electronics,83
+STU0608,Signals and Systems,85
+STU0608,Analog Circuits,87
+STU0608,Communication Systems,89
+STU0608,Microprocessors,91
+STU0609,Electrical Machines,59
+STU0609,Power Systems,61
+STU0609,Control Systems,63
+STU0609,Circuit Theory,65
+STU0609,Power Electronics,67
+STU0610,Web Technologies,73
+STU0610,Cloud Computing,75
+STU0610,Data Management,77
+STU0610,Computer Networks,79
+STU0610,Software Engineering,81
+STU0611,Statistics for AI,94
+STU0611,Machine Learning,96
+STU0611,Data Mining,98
+STU0611,Python for Data Science,100
+STU0611,Database Management Systems,100
+STU0612,Artificial Intelligence,87
+STU0612,Machine Learning,89
+STU0612,Deep Learning,91
+STU0612,Natural Language Processing,93
+STU0612,Data Structures,95
+STU0613,Data Structures,72
+STU0613,Database Management Systems,74
+STU0613,Operating Systems,76
+STU0613,Computer Networks,78
+STU0613,Software Engineering,80
+STU0614,Digital Electronics,74
+STU0614,Signals and Systems,76
+STU0614,Analog Circuits,78
+STU0614,Communication Systems,80
+STU0614,Microprocessors,82
+STU0615,Electrical Machines,70
+STU0615,Power Systems,72
+STU0615,Control Systems,74
+STU0615,Circuit Theory,76
+STU0615,Power Electronics,78
+STU0616,Web Technologies,68
+STU0616,Cloud Computing,70
+STU0616,Data Management,72
+STU0616,Computer Networks,74
+STU0616,Software Engineering,76
+STU0617,Statistics for AI,76
+STU0617,Machine Learning,78
+STU0617,Data Mining,80
+STU0617,Python for Data Science,82
+STU0617,Database Management Systems,84
+STU0618,Artificial Intelligence,84
+STU0618,Machine Learning,86
+STU0618,Deep Learning,88
+STU0618,Natural Language Processing,90
+STU0618,Data Structures,92
+STU0619,Data Structures,93
+STU0619,Database Management Systems,95
+STU0619,Operating Systems,97
+STU0619,Computer Networks,99
+STU0619,Software Engineering,100
+STU0620,Digital Electronics,63
+STU0620,Signals and Systems,65
+STU0620,Analog Circuits,67
+STU0620,Communication Systems,69
+STU0620,Microprocessors,71
+STU0621,Electrical Machines,58
+STU0621,Power Systems,60
+STU0621,Control Systems,62
+STU0621,Circuit Theory,64
+STU0621,Power Electronics,66
+STU0622,Web Technologies,90
+STU0622,Cloud Computing,92
+STU0622,Data Management,94
+STU0622,Computer Networks,96
+STU0622,Software Engineering,98
+STU0623,Statistics for AI,94
+STU0623,Machine Learning,96
+STU0623,Data Mining,98
+STU0623,Python for Data Science,100
+STU0623,Database Management Systems,100
+STU0624,Artificial Intelligence,69
+STU0624,Machine Learning,71
+STU0624,Deep Learning,73
+STU0624,Natural Language Processing,75
+STU0624,Data Structures,77
+STU0625,Data Structures,91
+STU0625,Database Management Systems,93
+STU0625,Operating Systems,95
+STU0625,Computer Networks,97
+STU0625,Software Engineering,99
+STU0626,Digital Electronics,63
+STU0626,Signals and Systems,65
+STU0626,Analog Circuits,67
+STU0626,Communication Systems,69
+STU0626,Microprocessors,71
+STU0627,Electrical Machines,92
+STU0627,Power Systems,94
+STU0627,Control Systems,96
+STU0627,Circuit Theory,98
+STU0627,Power Electronics,100
+STU0628,Web Technologies,61
+STU0628,Cloud Computing,63
+STU0628,Data Management,65
+STU0628,Computer Networks,67
+STU0628,Software Engineering,69
+STU0629,Statistics for AI,71
+STU0629,Machine Learning,73
+STU0629,Data Mining,75
+STU0629,Python for Data Science,77
+STU0629,Database Management Systems,79
+STU0630,Artificial Intelligence,87
+STU0630,Machine Learning,89
+STU0630,Deep Learning,91
+STU0630,Natural Language Processing,93
+STU0630,Data Structures,95
+STU0631,Data Structures,86
+STU0631,Database Management Systems,88
+STU0631,Operating Systems,90
+STU0631,Computer Networks,92
+STU0631,Software Engineering,94
+STU0632,Digital Electronics,89
+STU0632,Signals and Systems,91
+STU0632,Analog Circuits,93
+STU0632,Communication Systems,95
+STU0632,Microprocessors,97
+STU0633,Electrical Machines,70
+STU0633,Power Systems,72
+STU0633,Control Systems,74
+STU0633,Circuit Theory,76
+STU0633,Power Electronics,78
+STU0634,Web Technologies,68
+STU0634,Cloud Computing,70
+STU0634,Data Management,72
+STU0634,Computer Networks,74
+STU0634,Software Engineering,76
+STU0635,Statistics for AI,79
+STU0635,Machine Learning,81
+STU0635,Data Mining,83
+STU0635,Python for Data Science,85
+STU0635,Database Management Systems,87
+STU0636,Artificial Intelligence,69
+STU0636,Machine Learning,71
+STU0636,Deep Learning,73
+STU0636,Natural Language Processing,75
+STU0636,Data Structures,77
+STU0637,Data Structures,64
+STU0637,Database Management Systems,66
+STU0637,Operating Systems,68
+STU0637,Computer Networks,70
+STU0637,Software Engineering,72
+STU0638,Digital Electronics,90
+STU0638,Signals and Systems,92
+STU0638,Analog Circuits,94
+STU0638,Communication Systems,96
+STU0638,Microprocessors,98
+STU0639,Electrical Machines,89
+STU0639,Power Systems,91
+STU0639,Control Systems,93
+STU0639,Circuit Theory,95
+STU0639,Power Electronics,97
+STU0640,Web Technologies,77
+STU0640,Cloud Computing,79
+STU0640,Data Management,81
+STU0640,Computer Networks,83
+STU0640,Software Engineering,85
+STU0641,Statistics for AI,72
+STU0641,Machine Learning,74
+STU0641,Data Mining,76
+STU0641,Python for Data Science,78
+STU0641,Database Management Systems,80
+STU0642,Artificial Intelligence,72
+STU0642,Machine Learning,74
+STU0642,Deep Learning,76
+STU0642,Natural Language Processing,78
+STU0642,Data Structures,80
+STU0643,Data Structures,96
+STU0643,Database Management Systems,98
+STU0643,Operating Systems,100
+STU0643,Computer Networks,100
+STU0643,Software Engineering,100
+STU0644,Digital Electronics,82
+STU0644,Signals and Systems,84
+STU0644,Analog Circuits,86
+STU0644,Communication Systems,88
+STU0644,Microprocessors,90
+STU0645,Electrical Machines,75
+STU0645,Power Systems,77
+STU0645,Control Systems,79
+STU0645,Circuit Theory,81
+STU0645,Power Electronics,83
+STU0646,Web Technologies,63
+STU0646,Cloud Computing,65
+STU0646,Data Management,67
+STU0646,Computer Networks,69
+STU0646,Software Engineering,71
+STU0647,Statistics for AI,85
+STU0647,Machine Learning,87
+STU0647,Data Mining,89
+STU0647,Python for Data Science,91
+STU0647,Database Management Systems,93
+STU0648,Artificial Intelligence,74
+STU0648,Machine Learning,76
+STU0648,Deep Learning,78
+STU0648,Natural Language Processing,80
+STU0648,Data Structures,82
+STU0649,Data Structures,89
+STU0649,Database Management Systems,91
+STU0649,Operating Systems,93
+STU0649,Computer Networks,95
+STU0649,Software Engineering,97
+STU0650,Digital Electronics,81
+STU0650,Signals and Systems,83
+STU0650,Analog Circuits,85
+STU0650,Communication Systems,87
+STU0650,Microprocessors,89
+STU0651,Electrical Machines,56
+STU0651,Power Systems,58
+STU0651,Control Systems,60
+STU0651,Circuit Theory,62
+STU0651,Power Electronics,64
+STU0652,Web Technologies,66
+STU0652,Cloud Computing,68
+STU0652,Data Management,70
+STU0652,Computer Networks,72
+STU0652,Software Engineering,74
+STU0653,Statistics for AI,71
+STU0653,Machine Learning,73
+STU0653,Data Mining,75
+STU0653,Python for Data Science,77
+STU0653,Database Management Systems,79
+STU0654,Artificial Intelligence,58
+STU0654,Machine Learning,60
+STU0654,Deep Learning,62
+STU0654,Natural Language Processing,64
+STU0654,Data Structures,66
+STU0655,Data Structures,69
+STU0655,Database Management Systems,71
+STU0655,Operating Systems,73
+STU0655,Computer Networks,75
+STU0655,Software Engineering,77
+STU0656,Digital Electronics,88
+STU0656,Signals and Systems,90
+STU0656,Analog Circuits,92
+STU0656,Communication Systems,94
+STU0656,Microprocessors,96
+STU0657,Electrical Machines,94
+STU0657,Power Systems,96
+STU0657,Control Systems,98
+STU0657,Circuit Theory,100
+STU0657,Power Electronics,100
+STU0658,Web Technologies,80
+STU0658,Cloud Computing,82
+STU0658,Data Management,84
+STU0658,Computer Networks,86
+STU0658,Software Engineering,88
+STU0659,Statistics for AI,76
+STU0659,Machine Learning,78
+STU0659,Data Mining,80
+STU0659,Python for Data Science,82
+STU0659,Database Management Systems,84
+STU0660,Artificial Intelligence,78
+STU0660,Machine Learning,80
+STU0660,Deep Learning,82
+STU0660,Natural Language Processing,84
+STU0660,Data Structures,86
+STU0661,Data Structures,64
+STU0661,Database Management Systems,66
+STU0661,Operating Systems,68
+STU0661,Computer Networks,70
+STU0661,Software Engineering,72
+STU0662,Digital Electronics,68
+STU0662,Signals and Systems,70
+STU0662,Analog Circuits,72
+STU0662,Communication Systems,74
+STU0662,Microprocessors,76
+STU0663,Electrical Machines,76
+STU0663,Power Systems,78
+STU0663,Control Systems,80
+STU0663,Circuit Theory,82
+STU0663,Power Electronics,84
+STU0664,Web Technologies,84
+STU0664,Cloud Computing,86
+STU0664,Data Management,88
+STU0664,Computer Networks,90
+STU0664,Software Engineering,92
+STU0665,Statistics for AI,72
+STU0665,Machine Learning,74
+STU0665,Data Mining,76
+STU0665,Python for Data Science,78
+STU0665,Database Management Systems,80
+STU0666,Artificial Intelligence,85
+STU0666,Machine Learning,87
+STU0666,Deep Learning,89
+STU0666,Natural Language Processing,91
+STU0666,Data Structures,93
+STU0667,Data Structures,56
+STU0667,Database Management Systems,58
+STU0667,Operating Systems,60
+STU0667,Computer Networks,62
+STU0667,Software Engineering,64
+STU0668,Digital Electronics,71
+STU0668,Signals and Systems,73
+STU0668,Analog Circuits,75
+STU0668,Communication Systems,77
+STU0668,Microprocessors,79
+STU0669,Electrical Machines,88
+STU0669,Power Systems,90
+STU0669,Control Systems,92
+STU0669,Circuit Theory,94
+STU0669,Power Electronics,96
+STU0670,Web Technologies,70
+STU0670,Cloud Computing,72
+STU0670,Data Management,74
+STU0670,Computer Networks,76
+STU0670,Software Engineering,78
+STU0671,Statistics for AI,77
+STU0671,Machine Learning,79
+STU0671,Data Mining,81
+STU0671,Python for Data Science,83
+STU0671,Database Management Systems,85
+STU0672,Artificial Intelligence,94
+STU0672,Machine Learning,96
+STU0672,Deep Learning,98
+STU0672,Natural Language Processing,100
+STU0672,Data Structures,100
+STU0673,Data Structures,91
+STU0673,Database Management Systems,93
+STU0673,Operating Systems,95
+STU0673,Computer Networks,97
+STU0673,Software Engineering,99
+STU0674,Digital Electronics,57
+STU0674,Signals and Systems,59
+STU0674,Analog Circuits,61
+STU0674,Communication Systems,63
+STU0674,Microprocessors,65
+STU0675,Electrical Machines,96
+STU0675,Power Systems,98
+STU0675,Control Systems,100
+STU0675,Circuit Theory,100
+STU0675,Power Electronics,100
+STU0676,Web Technologies,88
+STU0676,Cloud Computing,90
+STU0676,Data Management,92
+STU0676,Computer Networks,94
+STU0676,Software Engineering,96
+STU0677,Statistics for AI,60
+STU0677,Machine Learning,62
+STU0677,Data Mining,64
+STU0677,Python for Data Science,66
+STU0677,Database Management Systems,68
+STU0678,Artificial Intelligence,93
+STU0678,Machine Learning,95
+STU0678,Deep Learning,97
+STU0678,Natural Language Processing,99
+STU0678,Data Structures,100
+STU0679,Data Structures,88
+STU0679,Database Management Systems,90
+STU0679,Operating Systems,92
+STU0679,Computer Networks,94
+STU0679,Software Engineering,96
+STU0680,Digital Electronics,61
+STU0680,Signals and Systems,63
+STU0680,Analog Circuits,65
+STU0680,Communication Systems,67
+STU0680,Microprocessors,69
+STU0681,Electrical Machines,77
+STU0681,Power Systems,79
+STU0681,Control Systems,81
+STU0681,Circuit Theory,83
+STU0681,Power Electronics,85
+STU0682,Web Technologies,62
+STU0682,Cloud Computing,64
+STU0682,Data Management,66
+STU0682,Computer Networks,68
+STU0682,Software Engineering,70
+STU0683,Statistics for AI,84
+STU0683,Machine Learning,86
+STU0683,Data Mining,88
+STU0683,Python for Data Science,90
+STU0683,Database Management Systems,92
+STU0684,Artificial Intelligence,96
+STU0684,Machine Learning,98
+STU0684,Deep Learning,100
+STU0684,Natural Language Processing,100
+STU0684,Data Structures,100
+STU0685,Data Structures,84
+STU0685,Database Management Systems,86
+STU0685,Operating Systems,88
+STU0685,Computer Networks,90
+STU0685,Software Engineering,92
+STU0686,Digital Electronics,68
+STU0686,Signals and Systems,70
+STU0686,Analog Circuits,72
+STU0686,Communication Systems,74
+STU0686,Microprocessors,76
+STU0687,Electrical Machines,70
+STU0687,Power Systems,72
+STU0687,Control Systems,74
+STU0687,Circuit Theory,76
+STU0687,Power Electronics,78
+STU0688,Web Technologies,66
+STU0688,Cloud Computing,68
+STU0688,Data Management,70
+STU0688,Computer Networks,72
+STU0688,Software Engineering,74
+STU0689,Statistics for AI,61
+STU0689,Machine Learning,63
+STU0689,Data Mining,65
+STU0689,Python for Data Science,67
+STU0689,Database Management Systems,69
+STU0690,Artificial Intelligence,71
+STU0690,Machine Learning,73
+STU0690,Deep Learning,75
+STU0690,Natural Language Processing,77
+STU0690,Data Structures,79
+STU0691,Data Structures,59
+STU0691,Database Management Systems,61
+STU0691,Operating Systems,63
+STU0691,Computer Networks,65
+STU0691,Software Engineering,67
+STU0692,Digital Electronics,61
+STU0692,Signals and Systems,63
+STU0692,Analog Circuits,65
+STU0692,Communication Systems,67
+STU0692,Microprocessors,69
+STU0693,Electrical Machines,66
+STU0693,Power Systems,68
+STU0693,Control Systems,70
+STU0693,Circuit Theory,72
+STU0693,Power Electronics,74
+STU0694,Web Technologies,84
+STU0694,Cloud Computing,86
+STU0694,Data Management,88
+STU0694,Computer Networks,90
+STU0694,Software Engineering,92
+STU0695,Statistics for AI,67
+STU0695,Machine Learning,69
+STU0695,Data Mining,71
+STU0695,Python for Data Science,73
+STU0695,Database Management Systems,75
+STU0696,Artificial Intelligence,77
+STU0696,Machine Learning,79
+STU0696,Deep Learning,81
+STU0696,Natural Language Processing,83
+STU0696,Data Structures,85
+STU0697,Data Structures,71
+STU0697,Database Management Systems,73
+STU0697,Operating Systems,75
+STU0697,Computer Networks,77
+STU0697,Software Engineering,79
+STU0698,Digital Electronics,70
+STU0698,Signals and Systems,72
+STU0698,Analog Circuits,74
+STU0698,Communication Systems,76
+STU0698,Microprocessors,78
+STU0699,Electrical Machines,80
+STU0699,Power Systems,82
+STU0699,Control Systems,84
+STU0699,Circuit Theory,86
+STU0699,Power Electronics,88
+STU0700,Web Technologies,88
+STU0700,Cloud Computing,90
+STU0700,Data Management,92
+STU0700,Computer Networks,94
+STU0700,Software Engineering,96
+STU0701,Statistics for AI,79
+STU0701,Machine Learning,81
+STU0701,Data Mining,83
+STU0701,Python for Data Science,85
+STU0701,Database Management Systems,87
+STU0702,Artificial Intelligence,67
+STU0702,Machine Learning,69
+STU0702,Deep Learning,71
+STU0702,Natural Language Processing,73
+STU0702,Data Structures,75
+STU0703,Data Structures,94
+STU0703,Database Management Systems,96
+STU0703,Operating Systems,98
+STU0703,Computer Networks,100
+STU0703,Software Engineering,100
+STU0704,Digital Electronics,77
+STU0704,Signals and Systems,79
+STU0704,Analog Circuits,81
+STU0704,Communication Systems,83
+STU0704,Microprocessors,85
+STU0705,Electrical Machines,80
+STU0705,Power Systems,82
+STU0705,Control Systems,84
+STU0705,Circuit Theory,86
+STU0705,Power Electronics,88
+STU0706,Web Technologies,71
+STU0706,Cloud Computing,73
+STU0706,Data Management,75
+STU0706,Computer Networks,77
+STU0706,Software Engineering,79
+STU0707,Statistics for AI,93
+STU0707,Machine Learning,95
+STU0707,Data Mining,97
+STU0707,Python for Data Science,99
+STU0707,Database Management Systems,100
+STU0708,Artificial Intelligence,56
+STU0708,Machine Learning,58
+STU0708,Deep Learning,60
+STU0708,Natural Language Processing,62
+STU0708,Data Structures,64
+STU0709,Data Structures,92
+STU0709,Database Management Systems,94
+STU0709,Operating Systems,96
+STU0709,Computer Networks,98
+STU0709,Software Engineering,100
+STU0710,Digital Electronics,60
+STU0710,Signals and Systems,62
+STU0710,Analog Circuits,64
+STU0710,Communication Systems,66
+STU0710,Microprocessors,68
+STU0711,Electrical Machines,67
+STU0711,Power Systems,69
+STU0711,Control Systems,71
+STU0711,Circuit Theory,73
+STU0711,Power Electronics,75
+STU0712,Web Technologies,88
+STU0712,Cloud Computing,90
+STU0712,Data Management,92
+STU0712,Computer Networks,94
+STU0712,Software Engineering,96
+STU0713,Statistics for AI,87
+STU0713,Machine Learning,89
+STU0713,Data Mining,91
+STU0713,Python for Data Science,93
+STU0713,Database Management Systems,95
+STU0714,Artificial Intelligence,85
+STU0714,Machine Learning,87
+STU0714,Deep Learning,89
+STU0714,Natural Language Processing,91
+STU0714,Data Structures,93
+STU0715,Data Structures,64
+STU0715,Database Management Systems,66
+STU0715,Operating Systems,68
+STU0715,Computer Networks,70
+STU0715,Software Engineering,72
+STU0716,Digital Electronics,81
+STU0716,Signals and Systems,83
+STU0716,Analog Circuits,85
+STU0716,Communication Systems,87
+STU0716,Microprocessors,89
+STU0717,Electrical Machines,82
+STU0717,Power Systems,84
+STU0717,Control Systems,86
+STU0717,Circuit Theory,88
+STU0717,Power Electronics,90
+STU0718,Web Technologies,64
+STU0718,Cloud Computing,66
+STU0718,Data Management,68
+STU0718,Computer Networks,70
+STU0718,Software Engineering,72
+STU0719,Statistics for AI,83
+STU0719,Machine Learning,85
+STU0719,Data Mining,87
+STU0719,Python for Data Science,89
+STU0719,Database Management Systems,91
+STU0720,Artificial Intelligence,60
+STU0720,Machine Learning,62
+STU0720,Deep Learning,64
+STU0720,Natural Language Processing,66
+STU0720,Data Structures,68
+STU0721,Data Structures,96
+STU0721,Database Management Systems,98
+STU0721,Operating Systems,100
+STU0721,Computer Networks,100
+STU0721,Software Engineering,100
+STU0722,Digital Electronics,81
+STU0722,Signals and Systems,83
+STU0722,Analog Circuits,85
+STU0722,Communication Systems,87
+STU0722,Microprocessors,89
+STU0723,Electrical Machines,68
+STU0723,Power Systems,70
+STU0723,Control Systems,72
+STU0723,Circuit Theory,74
+STU0723,Power Electronics,76
+STU0724,Web Technologies,78
+STU0724,Cloud Computing,80
+STU0724,Data Management,82
+STU0724,Computer Networks,84
+STU0724,Software Engineering,86
+STU0725,Statistics for AI,76
+STU0725,Machine Learning,78
+STU0725,Data Mining,80
+STU0725,Python for Data Science,82
+STU0725,Database Management Systems,84
+STU0726,Artificial Intelligence,82
+STU0726,Machine Learning,84
+STU0726,Deep Learning,86
+STU0726,Natural Language Processing,88
+STU0726,Data Structures,90
+STU0727,Data Structures,81
+STU0727,Database Management Systems,83
+STU0727,Operating Systems,85
+STU0727,Computer Networks,87
+STU0727,Software Engineering,89
+STU0728,Digital Electronics,85
+STU0728,Signals and Systems,87
+STU0728,Analog Circuits,89
+STU0728,Communication Systems,91
+STU0728,Microprocessors,93
+STU0729,Electrical Machines,69
+STU0729,Power Systems,71
+STU0729,Control Systems,73
+STU0729,Circuit Theory,75
+STU0729,Power Electronics,77
+STU0730,Web Technologies,74
+STU0730,Cloud Computing,76
+STU0730,Data Management,78
+STU0730,Computer Networks,80
+STU0730,Software Engineering,82
+STU0731,Statistics for AI,76
+STU0731,Machine Learning,78
+STU0731,Data Mining,80
+STU0731,Python for Data Science,82
+STU0731,Database Management Systems,84
+STU0732,Artificial Intelligence,60
+STU0732,Machine Learning,62
+STU0732,Deep Learning,64
+STU0732,Natural Language Processing,66
+STU0732,Data Structures,68
+STU0733,Data Structures,90
+STU0733,Database Management Systems,92
+STU0733,Operating Systems,94
+STU0733,Computer Networks,96
+STU0733,Software Engineering,98
+STU0734,Digital Electronics,57
+STU0734,Signals and Systems,59
+STU0734,Analog Circuits,61
+STU0734,Communication Systems,63
+STU0734,Microprocessors,65
+STU0735,Electrical Machines,70
+STU0735,Power Systems,72
+STU0735,Control Systems,74
+STU0735,Circuit Theory,76
+STU0735,Power Electronics,78
+STU0736,Web Technologies,61
+STU0736,Cloud Computing,63
+STU0736,Data Management,65
+STU0736,Computer Networks,67
+STU0736,Software Engineering,69
+STU0737,Statistics for AI,81
+STU0737,Machine Learning,83
+STU0737,Data Mining,85
+STU0737,Python for Data Science,87
+STU0737,Database Management Systems,89
+STU0738,Artificial Intelligence,87
+STU0738,Machine Learning,89
+STU0738,Deep Learning,91
+STU0738,Natural Language Processing,93
+STU0738,Data Structures,95
+STU0739,Data Structures,96
+STU0739,Database Management Systems,98
+STU0739,Operating Systems,100
+STU0739,Computer Networks,100
+STU0739,Software Engineering,100
+STU0740,Digital Electronics,71
+STU0740,Signals and Systems,73
+STU0740,Analog Circuits,75
+STU0740,Communication Systems,77
+STU0740,Microprocessors,79
+STU0741,Electrical Machines,65
+STU0741,Power Systems,67
+STU0741,Control Systems,69
+STU0741,Circuit Theory,71
+STU0741,Power Electronics,73
+STU0742,Web Technologies,62
+STU0742,Cloud Computing,64
+STU0742,Data Management,66
+STU0742,Computer Networks,68
+STU0742,Software Engineering,70
+STU0743,Statistics for AI,84
+STU0743,Machine Learning,86
+STU0743,Data Mining,88
+STU0743,Python for Data Science,90
+STU0743,Database Management Systems,92
+STU0744,Artificial Intelligence,56
+STU0744,Machine Learning,58
+STU0744,Deep Learning,60
+STU0744,Natural Language Processing,62
+STU0744,Data Structures,64
+STU0745,Data Structures,68
+STU0745,Database Management Systems,70
+STU0745,Operating Systems,72
+STU0745,Computer Networks,74
+STU0745,Software Engineering,76
+STU0746,Digital Electronics,93
+STU0746,Signals and Systems,95
+STU0746,Analog Circuits,97
+STU0746,Communication Systems,99
+STU0746,Microprocessors,100
+STU0747,Electrical Machines,65
+STU0747,Power Systems,67
+STU0747,Control Systems,69
+STU0747,Circuit Theory,71
+STU0747,Power Electronics,73
+STU0748,Web Technologies,64
+STU0748,Cloud Computing,66
+STU0748,Data Management,68
+STU0748,Computer Networks,70
+STU0748,Software Engineering,72
+STU0749,Statistics for AI,86
+STU0749,Machine Learning,88
+STU0749,Data Mining,90
+STU0749,Python for Data Science,92
+STU0749,Database Management Systems,94
+STU0750,Artificial Intelligence,69
+STU0750,Machine Learning,71
+STU0750,Deep Learning,73
+STU0750,Natural Language Processing,75
+STU0750,Data Structures,77
+STU0751,Data Structures,69
+STU0751,Database Management Systems,71
+STU0751,Operating Systems,73
+STU0751,Computer Networks,75
+STU0751,Software Engineering,77
+STU0752,Digital Electronics,62
+STU0752,Signals and Systems,64
+STU0752,Analog Circuits,66
+STU0752,Communication Systems,68
+STU0752,Microprocessors,70
+STU0753,Electrical Machines,70
+STU0753,Power Systems,72
+STU0753,Control Systems,74
+STU0753,Circuit Theory,76
+STU0753,Power Electronics,78
+STU0754,Web Technologies,62
+STU0754,Cloud Computing,64
+STU0754,Data Management,66
+STU0754,Computer Networks,68
+STU0754,Software Engineering,70
+STU0755,Statistics for AI,70
+STU0755,Machine Learning,72
+STU0755,Data Mining,74
+STU0755,Python for Data Science,76
+STU0755,Database Management Systems,78
+STU0756,Artificial Intelligence,90
+STU0756,Machine Learning,92
+STU0756,Deep Learning,94
+STU0756,Natural Language Processing,96
+STU0756,Data Structures,98
+STU0757,Data Structures,81
+STU0757,Database Management Systems,83
+STU0757,Operating Systems,85
+STU0757,Computer Networks,87
+STU0757,Software Engineering,89
+STU0758,Digital Electronics,91
+STU0758,Signals and Systems,93
+STU0758,Analog Circuits,95
+STU0758,Communication Systems,97
+STU0758,Microprocessors,99
+STU0759,Electrical Machines,72
+STU0759,Power Systems,74
+STU0759,Control Systems,76
+STU0759,Circuit Theory,78
+STU0759,Power Electronics,80
+STU0760,Web Technologies,69
+STU0760,Cloud Computing,71
+STU0760,Data Management,73
+STU0760,Computer Networks,75
+STU0760,Software Engineering,77
+STU0761,Statistics for AI,67
+STU0761,Machine Learning,69
+STU0761,Data Mining,71
+STU0761,Python for Data Science,73
+STU0761,Database Management Systems,75
+STU0762,Artificial Intelligence,63
+STU0762,Machine Learning,65
+STU0762,Deep Learning,67
+STU0762,Natural Language Processing,69
+STU0762,Data Structures,71
+STU0763,Data Structures,70
+STU0763,Database Management Systems,72
+STU0763,Operating Systems,74
+STU0763,Computer Networks,76
+STU0763,Software Engineering,78
+STU0764,Digital Electronics,92
+STU0764,Signals and Systems,94
+STU0764,Analog Circuits,96
+STU0764,Communication Systems,98
+STU0764,Microprocessors,100
+STU0765,Electrical Machines,82
+STU0765,Power Systems,84
+STU0765,Control Systems,86
+STU0765,Circuit Theory,88
+STU0765,Power Electronics,90
+STU0766,Web Technologies,94
+STU0766,Cloud Computing,96
+STU0766,Data Management,98
+STU0766,Computer Networks,100
+STU0766,Software Engineering,100
+STU0767,Statistics for AI,82
+STU0767,Machine Learning,84
+STU0767,Data Mining,86
+STU0767,Python for Data Science,88
+STU0767,Database Management Systems,90
+STU0768,Artificial Intelligence,78
+STU0768,Machine Learning,80
+STU0768,Deep Learning,82
+STU0768,Natural Language Processing,84
+STU0768,Data Structures,86
+STU0769,Data Structures,86
+STU0769,Database Management Systems,88
+STU0769,Operating Systems,90
+STU0769,Computer Networks,92
+STU0769,Software Engineering,94
+STU0770,Digital Electronics,61
+STU0770,Signals and Systems,63
+STU0770,Analog Circuits,65
+STU0770,Communication Systems,67
+STU0770,Microprocessors,69
+STU0771,Electrical Machines,68
+STU0771,Power Systems,70
+STU0771,Control Systems,72
+STU0771,Circuit Theory,74
+STU0771,Power Electronics,76
+STU0772,Web Technologies,69
+STU0772,Cloud Computing,71
+STU0772,Data Management,73
+STU0772,Computer Networks,75
+STU0772,Software Engineering,77
+STU0773,Statistics for AI,95
+STU0773,Machine Learning,97
+STU0773,Data Mining,99
+STU0773,Python for Data Science,100
+STU0773,Database Management Systems,100
+STU0774,Artificial Intelligence,90
+STU0774,Machine Learning,92
+STU0774,Deep Learning,94
+STU0774,Natural Language Processing,96
+STU0774,Data Structures,98
+STU0775,Data Structures,79
+STU0775,Database Management Systems,81
+STU0775,Operating Systems,83
+STU0775,Computer Networks,85
+STU0775,Software Engineering,87
+STU0776,Digital Electronics,87
+STU0776,Signals and Systems,89
+STU0776,Analog Circuits,91
+STU0776,Communication Systems,93
+STU0776,Microprocessors,95
+STU0777,Electrical Machines,67
+STU0777,Power Systems,69
+STU0777,Control Systems,71
+STU0777,Circuit Theory,73
+STU0777,Power Electronics,75
+STU0778,Web Technologies,94
+STU0778,Cloud Computing,96
+STU0778,Data Management,98
+STU0778,Computer Networks,100
+STU0778,Software Engineering,100
+STU0779,Statistics for AI,61
+STU0779,Machine Learning,63
+STU0779,Data Mining,65
+STU0779,Python for Data Science,67
+STU0779,Database Management Systems,69
+STU0780,Artificial Intelligence,77
+STU0780,Machine Learning,79
+STU0780,Deep Learning,81
+STU0780,Natural Language Processing,83
+STU0780,Data Structures,85
+STU0781,Data Structures,75
+STU0781,Database Management Systems,77
+STU0781,Operating Systems,79
+STU0781,Computer Networks,81
+STU0781,Software Engineering,83
+STU0782,Digital Electronics,94
+STU0782,Signals and Systems,96
+STU0782,Analog Circuits,98
+STU0782,Communication Systems,100
+STU0782,Microprocessors,100
+STU0783,Electrical Machines,80
+STU0783,Power Systems,82
+STU0783,Control Systems,84
+STU0783,Circuit Theory,86
+STU0783,Power Electronics,88
+STU0784,Web Technologies,72
+STU0784,Cloud Computing,74
+STU0784,Data Management,76
+STU0784,Computer Networks,78
+STU0784,Software Engineering,80
+STU0785,Statistics for AI,61
+STU0785,Machine Learning,63
+STU0785,Data Mining,65
+STU0785,Python for Data Science,67
+STU0785,Database Management Systems,69
+STU0786,Artificial Intelligence,77
+STU0786,Machine Learning,79
+STU0786,Deep Learning,81
+STU0786,Natural Language Processing,83
+STU0786,Data Structures,85
+STU0787,Data Structures,96
+STU0787,Database Management Systems,98
+STU0787,Operating Systems,100
+STU0787,Computer Networks,100
+STU0787,Software Engineering,100
+STU0788,Digital Electronics,92
+STU0788,Signals and Systems,94
+STU0788,Analog Circuits,96
+STU0788,Communication Systems,98
+STU0788,Microprocessors,100
+STU0789,Electrical Machines,67
+STU0789,Power Systems,69
+STU0789,Control Systems,71
+STU0789,Circuit Theory,73
+STU0789,Power Electronics,75
+STU0790,Web Technologies,90
+STU0790,Cloud Computing,92
+STU0790,Data Management,94
+STU0790,Computer Networks,96
+STU0790,Software Engineering,98
+STU0791,Statistics for AI,60
+STU0791,Machine Learning,62
+STU0791,Data Mining,64
+STU0791,Python for Data Science,66
+STU0791,Database Management Systems,68
+STU0792,Artificial Intelligence,67
+STU0792,Machine Learning,69
+STU0792,Deep Learning,71
+STU0792,Natural Language Processing,73
+STU0792,Data Structures,75
+STU0793,Data Structures,83
+STU0793,Database Management Systems,85
+STU0793,Operating Systems,87
+STU0793,Computer Networks,89
+STU0793,Software Engineering,91
+STU0794,Digital Electronics,70
+STU0794,Signals and Systems,72
+STU0794,Analog Circuits,74
+STU0794,Communication Systems,76
+STU0794,Microprocessors,78
+STU0795,Electrical Machines,76
+STU0795,Power Systems,78
+STU0795,Control Systems,80
+STU0795,Circuit Theory,82
+STU0795,Power Electronics,84
+STU0796,Web Technologies,71
+STU0796,Cloud Computing,73
+STU0796,Data Management,75
+STU0796,Computer Networks,77
+STU0796,Software Engineering,79
+STU0797,Statistics for AI,62
+STU0797,Machine Learning,64
+STU0797,Data Mining,66
+STU0797,Python for Data Science,68
+STU0797,Database Management Systems,70
+STU0798,Artificial Intelligence,61
+STU0798,Machine Learning,63
+STU0798,Deep Learning,65
+STU0798,Natural Language Processing,67
+STU0798,Data Structures,69
+STU0799,Data Structures,60
+STU0799,Database Management Systems,62
+STU0799,Operating Systems,64
+STU0799,Computer Networks,66
+STU0799,Software Engineering,68
+STU0800,Digital Electronics,60
+STU0800,Signals and Systems,62
+STU0800,Analog Circuits,64
+STU0800,Communication Systems,66
+STU0800,Microprocessors,68
+STU0801,Electrical Machines,91
+STU0801,Power Systems,93
+STU0801,Control Systems,95
+STU0801,Circuit Theory,97
+STU0801,Power Electronics,99
+STU0802,Web Technologies,84
+STU0802,Cloud Computing,86
+STU0802,Data Management,88
+STU0802,Computer Networks,90
+STU0802,Software Engineering,92
+STU0803,Statistics for AI,92
+STU0803,Machine Learning,94
+STU0803,Data Mining,96
+STU0803,Python for Data Science,98
+STU0803,Database Management Systems,100
+STU0804,Artificial Intelligence,95
+STU0804,Machine Learning,97
+STU0804,Deep Learning,99
+STU0804,Natural Language Processing,100
+STU0804,Data Structures,100
+STU0805,Data Structures,86
+STU0805,Database Management Systems,88
+STU0805,Operating Systems,90
+STU0805,Computer Networks,92
+STU0805,Software Engineering,94
+STU0806,Digital Electronics,56
+STU0806,Signals and Systems,58
+STU0806,Analog Circuits,60
+STU0806,Communication Systems,62
+STU0806,Microprocessors,64
+STU0807,Electrical Machines,70
+STU0807,Power Systems,72
+STU0807,Control Systems,74
+STU0807,Circuit Theory,76
+STU0807,Power Electronics,78
+STU0808,Web Technologies,96
+STU0808,Cloud Computing,98
+STU0808,Data Management,100
+STU0808,Computer Networks,100
+STU0808,Software Engineering,100
+STU0809,Statistics for AI,89
+STU0809,Machine Learning,91
+STU0809,Data Mining,93
+STU0809,Python for Data Science,95
+STU0809,Database Management Systems,97
+STU0810,Artificial Intelligence,81
+STU0810,Machine Learning,83
+STU0810,Deep Learning,85
+STU0810,Natural Language Processing,87
+STU0810,Data Structures,89
+STU0811,Data Structures,68
+STU0811,Database Management Systems,70
+STU0811,Operating Systems,72
+STU0811,Computer Networks,74
+STU0811,Software Engineering,76
+STU0812,Digital Electronics,62
+STU0812,Signals and Systems,64
+STU0812,Analog Circuits,66
+STU0812,Communication Systems,68
+STU0812,Microprocessors,70
+STU0813,Electrical Machines,95
+STU0813,Power Systems,97
+STU0813,Control Systems,99
+STU0813,Circuit Theory,100
+STU0813,Power Electronics,100
+STU0814,Web Technologies,66
+STU0814,Cloud Computing,68
+STU0814,Data Management,70
+STU0814,Computer Networks,72
+STU0814,Software Engineering,74
+STU0815,Statistics for AI,60
+STU0815,Machine Learning,62
+STU0815,Data Mining,64
+STU0815,Python for Data Science,66
+STU0815,Database Management Systems,68
+STU0816,Artificial Intelligence,94
+STU0816,Machine Learning,96
+STU0816,Deep Learning,98
+STU0816,Natural Language Processing,100
+STU0816,Data Structures,100
+STU0817,Data Structures,61
+STU0817,Database Management Systems,63
+STU0817,Operating Systems,65
+STU0817,Computer Networks,67
+STU0817,Software Engineering,69
+STU0818,Digital Electronics,84
+STU0818,Signals and Systems,86
+STU0818,Analog Circuits,88
+STU0818,Communication Systems,90
+STU0818,Microprocessors,92
+STU0819,Electrical Machines,85
+STU0819,Power Systems,87
+STU0819,Control Systems,89
+STU0819,Circuit Theory,91
+STU0819,Power Electronics,93
+STU0820,Web Technologies,60
+STU0820,Cloud Computing,62
+STU0820,Data Management,64
+STU0820,Computer Networks,66
+STU0820,Software Engineering,68
+STU0821,Statistics for AI,89
+STU0821,Machine Learning,91
+STU0821,Data Mining,93
+STU0821,Python for Data Science,95
+STU0821,Database Management Systems,97
+STU0822,Artificial Intelligence,75
+STU0822,Machine Learning,77
+STU0822,Deep Learning,79
+STU0822,Natural Language Processing,81
+STU0822,Data Structures,83
+STU0823,Data Structures,88
+STU0823,Database Management Systems,90
+STU0823,Operating Systems,92
+STU0823,Computer Networks,94
+STU0823,Software Engineering,96
+STU0824,Digital Electronics,94
+STU0824,Signals and Systems,96
+STU0824,Analog Circuits,98
+STU0824,Communication Systems,100
+STU0824,Microprocessors,100
+STU0825,Electrical Machines,63
+STU0825,Power Systems,65
+STU0825,Control Systems,67
+STU0825,Circuit Theory,69
+STU0825,Power Electronics,71
+STU0826,Web Technologies,76
+STU0826,Cloud Computing,78
+STU0826,Data Management,80
+STU0826,Computer Networks,82
+STU0826,Software Engineering,84
+STU0827,Statistics for AI,57
+STU0827,Machine Learning,59
+STU0827,Data Mining,61
+STU0827,Python for Data Science,63
+STU0827,Database Management Systems,65
+STU0828,Artificial Intelligence,85
+STU0828,Machine Learning,87
+STU0828,Deep Learning,89
+STU0828,Natural Language Processing,91
+STU0828,Data Structures,93
+STU0829,Data Structures,93
+STU0829,Database Management Systems,95
+STU0829,Operating Systems,97
+STU0829,Computer Networks,99
+STU0829,Software Engineering,100
+STU0830,Digital Electronics,65
+STU0830,Signals and Systems,67
+STU0830,Analog Circuits,69
+STU0830,Communication Systems,71
+STU0830,Microprocessors,73
+STU0831,Electrical Machines,79
+STU0831,Power Systems,81
+STU0831,Control Systems,83
+STU0831,Circuit Theory,85
+STU0831,Power Electronics,87
+STU0832,Web Technologies,88
+STU0832,Cloud Computing,90
+STU0832,Data Management,92
+STU0832,Computer Networks,94
+STU0832,Software Engineering,96
+STU0833,Statistics for AI,57
+STU0833,Machine Learning,59
+STU0833,Data Mining,61
+STU0833,Python for Data Science,63
+STU0833,Database Management Systems,65
+STU0834,Artificial Intelligence,72
+STU0834,Machine Learning,74
+STU0834,Deep Learning,76
+STU0834,Natural Language Processing,78
+STU0834,Data Structures,80
+STU0835,Data Structures,62
+STU0835,Database Management Systems,64
+STU0835,Operating Systems,66
+STU0835,Computer Networks,68
+STU0835,Software Engineering,70
+STU0836,Digital Electronics,94
+STU0836,Signals and Systems,96
+STU0836,Analog Circuits,98
+STU0836,Communication Systems,100
+STU0836,Microprocessors,100
+STU0837,Electrical Machines,73
+STU0837,Power Systems,75
+STU0837,Control Systems,77
+STU0837,Circuit Theory,79
+STU0837,Power Electronics,81
+STU0838,Web Technologies,58
+STU0838,Cloud Computing,60
+STU0838,Data Management,62
+STU0838,Computer Networks,64
+STU0838,Software Engineering,66
+STU0839,Statistics for AI,70
+STU0839,Machine Learning,72
+STU0839,Data Mining,74
+STU0839,Python for Data Science,76
+STU0839,Database Management Systems,78
+STU0840,Artificial Intelligence,88
+STU0840,Machine Learning,90
+STU0840,Deep Learning,92
+STU0840,Natural Language Processing,94
+STU0840,Data Structures,96
+STU0841,Data Structures,80
+STU0841,Database Management Systems,82
+STU0841,Operating Systems,84
+STU0841,Computer Networks,86
+STU0841,Software Engineering,88
+STU0842,Digital Electronics,94
+STU0842,Signals and Systems,96
+STU0842,Analog Circuits,98
+STU0842,Communication Systems,100
+STU0842,Microprocessors,100
+STU0843,Electrical Machines,67
+STU0843,Power Systems,69
+STU0843,Control Systems,71
+STU0843,Circuit Theory,73
+STU0843,Power Electronics,75
+STU0844,Web Technologies,94
+STU0844,Cloud Computing,96
+STU0844,Data Management,98
+STU0844,Computer Networks,100
+STU0844,Software Engineering,100
+STU0845,Statistics for AI,90
+STU0845,Machine Learning,92
+STU0845,Data Mining,94
+STU0845,Python for Data Science,96
+STU0845,Database Management Systems,98
+STU0846,Artificial Intelligence,94
+STU0846,Machine Learning,96
+STU0846,Deep Learning,98
+STU0846,Natural Language Processing,100
+STU0846,Data Structures,100
+STU0847,Data Structures,88
+STU0847,Database Management Systems,90
+STU0847,Operating Systems,92
+STU0847,Computer Networks,94
+STU0847,Software Engineering,96
+STU0848,Digital Electronics,61
+STU0848,Signals and Systems,63
+STU0848,Analog Circuits,65
+STU0848,Communication Systems,67
+STU0848,Microprocessors,69
+STU0849,Electrical Machines,82
+STU0849,Power Systems,84
+STU0849,Control Systems,86
+STU0849,Circuit Theory,88
+STU0849,Power Electronics,90
+STU0850,Web Technologies,74
+STU0850,Cloud Computing,76
+STU0850,Data Management,78
+STU0850,Computer Networks,80
+STU0850,Software Engineering,82
+STU0851,Statistics for AI,63
+STU0851,Machine Learning,65
+STU0851,Data Mining,67
+STU0851,Python for Data Science,69
+STU0851,Database Management Systems,71
+STU0852,Artificial Intelligence,63
+STU0852,Machine Learning,65
+STU0852,Deep Learning,67
+STU0852,Natural Language Processing,69
+STU0852,Data Structures,71
+STU0853,Data Structures,80
+STU0853,Database Management Systems,82
+STU0853,Operating Systems,84
+STU0853,Computer Networks,86
+STU0853,Software Engineering,88
+STU0854,Digital Electronics,59
+STU0854,Signals and Systems,61
+STU0854,Analog Circuits,63
+STU0854,Communication Systems,65
+STU0854,Microprocessors,67
+STU0855,Electrical Machines,81
+STU0855,Power Systems,83
+STU0855,Control Systems,85
+STU0855,Circuit Theory,87
+STU0855,Power Electronics,89
+STU0856,Web Technologies,89
+STU0856,Cloud Computing,91
+STU0856,Data Management,93
+STU0856,Computer Networks,95
+STU0856,Software Engineering,97
+STU0857,Statistics for AI,90
+STU0857,Machine Learning,92
+STU0857,Data Mining,94
+STU0857,Python for Data Science,96
+STU0857,Database Management Systems,98
+STU0858,Artificial Intelligence,88
+STU0858,Machine Learning,90
+STU0858,Deep Learning,92
+STU0858,Natural Language Processing,94
+STU0858,Data Structures,96
+STU0859,Data Structures,93
+STU0859,Database Management Systems,95
+STU0859,Operating Systems,97
+STU0859,Computer Networks,99
+STU0859,Software Engineering,100
+STU0860,Digital Electronics,80
+STU0860,Signals and Systems,82
+STU0860,Analog Circuits,84
+STU0860,Communication Systems,86
+STU0860,Microprocessors,88
+STU0861,Electrical Machines,57
+STU0861,Power Systems,59
+STU0861,Control Systems,61
+STU0861,Circuit Theory,63
+STU0861,Power Electronics,65
+STU0862,Web Technologies,61
+STU0862,Cloud Computing,63
+STU0862,Data Management,65
+STU0862,Computer Networks,67
+STU0862,Software Engineering,69
+STU0863,Statistics for AI,81
+STU0863,Machine Learning,83
+STU0863,Data Mining,85
+STU0863,Python for Data Science,87
+STU0863,Database Management Systems,89
+STU0864,Artificial Intelligence,83
+STU0864,Machine Learning,85
+STU0864,Deep Learning,87
+STU0864,Natural Language Processing,89
+STU0864,Data Structures,91
+STU0865,Data Structures,71
+STU0865,Database Management Systems,73
+STU0865,Operating Systems,75
+STU0865,Computer Networks,77
+STU0865,Software Engineering,79
+STU0866,Digital Electronics,61
+STU0866,Signals and Systems,63
+STU0866,Analog Circuits,65
+STU0866,Communication Systems,67
+STU0866,Microprocessors,69
+STU0867,Electrical Machines,78
+STU0867,Power Systems,80
+STU0867,Control Systems,82
+STU0867,Circuit Theory,84
+STU0867,Power Electronics,86
+STU0868,Web Technologies,85
+STU0868,Cloud Computing,87
+STU0868,Data Management,89
+STU0868,Computer Networks,91
+STU0868,Software Engineering,93
+STU0869,Statistics for AI,85
+STU0869,Machine Learning,87
+STU0869,Data Mining,89
+STU0869,Python for Data Science,91
+STU0869,Database Management Systems,93
+STU0870,Artificial Intelligence,92
+STU0870,Machine Learning,94
+STU0870,Deep Learning,96
+STU0870,Natural Language Processing,98
+STU0870,Data Structures,100
+STU0871,Data Structures,67
+STU0871,Database Management Systems,69
+STU0871,Operating Systems,71
+STU0871,Computer Networks,73
+STU0871,Software Engineering,75
+STU0872,Digital Electronics,59
+STU0872,Signals and Systems,61
+STU0872,Analog Circuits,63
+STU0872,Communication Systems,65
+STU0872,Microprocessors,67
+STU0873,Electrical Machines,75
+STU0873,Power Systems,77
+STU0873,Control Systems,79
+STU0873,Circuit Theory,81
+STU0873,Power Electronics,83
+STU0874,Web Technologies,68
+STU0874,Cloud Computing,70
+STU0874,Data Management,72
+STU0874,Computer Networks,74
+STU0874,Software Engineering,76
+STU0875,Statistics for AI,70
+STU0875,Machine Learning,72
+STU0875,Data Mining,74
+STU0875,Python for Data Science,76
+STU0875,Database Management Systems,78
+STU0876,Artificial Intelligence,78
+STU0876,Machine Learning,80
+STU0876,Deep Learning,82
+STU0876,Natural Language Processing,84
+STU0876,Data Structures,86
+STU0877,Data Structures,70
+STU0877,Database Management Systems,72
+STU0877,Operating Systems,74
+STU0877,Computer Networks,76
+STU0877,Software Engineering,78
+STU0878,Digital Electronics,61
+STU0878,Signals and Systems,63
+STU0878,Analog Circuits,65
+STU0878,Communication Systems,67
+STU0878,Microprocessors,69
+STU0879,Electrical Machines,77
+STU0879,Power Systems,79
+STU0879,Control Systems,81
+STU0879,Circuit Theory,83
+STU0879,Power Electronics,85
+STU0880,Web Technologies,94
+STU0880,Cloud Computing,96
+STU0880,Data Management,98
+STU0880,Computer Networks,100
+STU0880,Software Engineering,100
+STU0881,Statistics for AI,57
+STU0881,Machine Learning,59
+STU0881,Data Mining,61
+STU0881,Python for Data Science,63
+STU0881,Database Management Systems,65
+STU0882,Artificial Intelligence,86
+STU0882,Machine Learning,88
+STU0882,Deep Learning,90
+STU0882,Natural Language Processing,92
+STU0882,Data Structures,94
+STU0883,Data Structures,74
+STU0883,Database Management Systems,76
+STU0883,Operating Systems,78
+STU0883,Computer Networks,80
+STU0883,Software Engineering,82
+STU0884,Digital Electronics,71
+STU0884,Signals and Systems,73
+STU0884,Analog Circuits,75
+STU0884,Communication Systems,77
+STU0884,Microprocessors,79
+STU0885,Electrical Machines,75
+STU0885,Power Systems,77
+STU0885,Control Systems,79
+STU0885,Circuit Theory,81
+STU0885,Power Electronics,83
+STU0886,Web Technologies,72
+STU0886,Cloud Computing,74
+STU0886,Data Management,76
+STU0886,Computer Networks,78
+STU0886,Software Engineering,80
+STU0887,Statistics for AI,91
+STU0887,Machine Learning,93
+STU0887,Data Mining,95
+STU0887,Python for Data Science,97
+STU0887,Database Management Systems,99
+STU0888,Artificial Intelligence,84
+STU0888,Machine Learning,86
+STU0888,Deep Learning,88
+STU0888,Natural Language Processing,90
+STU0888,Data Structures,92
+STU0889,Data Structures,81
+STU0889,Database Management Systems,83
+STU0889,Operating Systems,85
+STU0889,Computer Networks,87
+STU0889,Software Engineering,89
+STU0890,Digital Electronics,81
+STU0890,Signals and Systems,83
+STU0890,Analog Circuits,85
+STU0890,Communication Systems,87
+STU0890,Microprocessors,89
+STU0891,Electrical Machines,64
+STU0891,Power Systems,66
+STU0891,Control Systems,68
+STU0891,Circuit Theory,70
+STU0891,Power Electronics,72
+STU0892,Web Technologies,84
+STU0892,Cloud Computing,86
+STU0892,Data Management,88
+STU0892,Computer Networks,90
+STU0892,Software Engineering,92
+STU0893,Statistics for AI,93
+STU0893,Machine Learning,95
+STU0893,Data Mining,97
+STU0893,Python for Data Science,99
+STU0893,Database Management Systems,100
+STU0894,Artificial Intelligence,60
+STU0894,Machine Learning,62
+STU0894,Deep Learning,64
+STU0894,Natural Language Processing,66
+STU0894,Data Structures,68
+STU0895,Data Structures,64
+STU0895,Database Management Systems,66
+STU0895,Operating Systems,68
+STU0895,Computer Networks,70
+STU0895,Software Engineering,72
+STU0896,Digital Electronics,73
+STU0896,Signals and Systems,75
+STU0896,Analog Circuits,77
+STU0896,Communication Systems,79
+STU0896,Microprocessors,81
+STU0897,Electrical Machines,77
+STU0897,Power Systems,79
+STU0897,Control Systems,81
+STU0897,Circuit Theory,83
+STU0897,Power Electronics,85
+STU0898,Web Technologies,78
+STU0898,Cloud Computing,80
+STU0898,Data Management,82
+STU0898,Computer Networks,84
+STU0898,Software Engineering,86
+STU0899,Statistics for AI,63
+STU0899,Machine Learning,65
+STU0899,Data Mining,67
+STU0899,Python for Data Science,69
+STU0899,Database Management Systems,71
+STU0900,Artificial Intelligence,76
+STU0900,Machine Learning,78
+STU0900,Deep Learning,80
+STU0900,Natural Language Processing,82
+STU0900,Data Structures,84
+STU0901,Data Structures,90
+STU0901,Database Management Systems,92
+STU0901,Operating Systems,94
+STU0901,Computer Networks,96
+STU0901,Software Engineering,98
+STU0902,Digital Electronics,84
+STU0902,Signals and Systems,86
+STU0902,Analog Circuits,88
+STU0902,Communication Systems,90
+STU0902,Microprocessors,92
+STU0903,Electrical Machines,95
+STU0903,Power Systems,97
+STU0903,Control Systems,99
+STU0903,Circuit Theory,100
+STU0903,Power Electronics,100
+STU0904,Web Technologies,59
+STU0904,Cloud Computing,61
+STU0904,Data Management,63
+STU0904,Computer Networks,65
+STU0904,Software Engineering,67
+STU0905,Statistics for AI,68
+STU0905,Machine Learning,70
+STU0905,Data Mining,72
+STU0905,Python for Data Science,74
+STU0905,Database Management Systems,76
+STU0906,Artificial Intelligence,63
+STU0906,Machine Learning,65
+STU0906,Deep Learning,67
+STU0906,Natural Language Processing,69
+STU0906,Data Structures,71
+STU0907,Data Structures,86
+STU0907,Database Management Systems,88
+STU0907,Operating Systems,90
+STU0907,Computer Networks,92
+STU0907,Software Engineering,94
+STU0908,Digital Electronics,91
+STU0908,Signals and Systems,93
+STU0908,Analog Circuits,95
+STU0908,Communication Systems,97
+STU0908,Microprocessors,99
+STU0909,Electrical Machines,58
+STU0909,Power Systems,60
+STU0909,Control Systems,62
+STU0909,Circuit Theory,64
+STU0909,Power Electronics,66
+STU0910,Web Technologies,66
+STU0910,Cloud Computing,68
+STU0910,Data Management,70
+STU0910,Computer Networks,72
+STU0910,Software Engineering,74
+STU0911,Statistics for AI,69
+STU0911,Machine Learning,71
+STU0911,Data Mining,73
+STU0911,Python for Data Science,75
+STU0911,Database Management Systems,77
+STU0912,Artificial Intelligence,62
+STU0912,Machine Learning,64
+STU0912,Deep Learning,66
+STU0912,Natural Language Processing,68
+STU0912,Data Structures,70
+STU0913,Data Structures,85
+STU0913,Database Management Systems,87
+STU0913,Operating Systems,89
+STU0913,Computer Networks,91
+STU0913,Software Engineering,93
+STU0914,Digital Electronics,80
+STU0914,Signals and Systems,82
+STU0914,Analog Circuits,84
+STU0914,Communication Systems,86
+STU0914,Microprocessors,88
+STU0915,Electrical Machines,72
+STU0915,Power Systems,74
+STU0915,Control Systems,76
+STU0915,Circuit Theory,78
+STU0915,Power Electronics,80
+STU0916,Web Technologies,85
+STU0916,Cloud Computing,87
+STU0916,Data Management,89
+STU0916,Computer Networks,91
+STU0916,Software Engineering,93
+STU0917,Statistics for AI,92
+STU0917,Machine Learning,94
+STU0917,Data Mining,96
+STU0917,Python for Data Science,98
+STU0917,Database Management Systems,100
+STU0918,Artificial Intelligence,80
+STU0918,Machine Learning,82
+STU0918,Deep Learning,84
+STU0918,Natural Language Processing,86
+STU0918,Data Structures,88
+STU0919,Data Structures,80
+STU0919,Database Management Systems,82
+STU0919,Operating Systems,84
+STU0919,Computer Networks,86
+STU0919,Software Engineering,88
+STU0920,Digital Electronics,82
+STU0920,Signals and Systems,84
+STU0920,Analog Circuits,86
+STU0920,Communication Systems,88
+STU0920,Microprocessors,90
+STU0921,Electrical Machines,70
+STU0921,Power Systems,72
+STU0921,Control Systems,74
+STU0921,Circuit Theory,76
+STU0921,Power Electronics,78
+STU0922,Web Technologies,82
+STU0922,Cloud Computing,84
+STU0922,Data Management,86
+STU0922,Computer Networks,88
+STU0922,Software Engineering,90
+STU0923,Statistics for AI,90
+STU0923,Machine Learning,92
+STU0923,Data Mining,94
+STU0923,Python for Data Science,96
+STU0923,Database Management Systems,98
+STU0924,Artificial Intelligence,73
+STU0924,Machine Learning,75
+STU0924,Deep Learning,77
+STU0924,Natural Language Processing,79
+STU0924,Data Structures,81
+STU0925,Data Structures,83
+STU0925,Database Management Systems,85
+STU0925,Operating Systems,87
+STU0925,Computer Networks,89
+STU0925,Software Engineering,91
+STU0926,Digital Electronics,70
+STU0926,Signals and Systems,72
+STU0926,Analog Circuits,74
+STU0926,Communication Systems,76
+STU0926,Microprocessors,78
+STU0927,Electrical Machines,70
+STU0927,Power Systems,72
+STU0927,Control Systems,74
+STU0927,Circuit Theory,76
+STU0927,Power Electronics,78
+STU0928,Web Technologies,70
+STU0928,Cloud Computing,72
+STU0928,Data Management,74
+STU0928,Computer Networks,76
+STU0928,Software Engineering,78
+STU0929,Statistics for AI,88
+STU0929,Machine Learning,90
+STU0929,Data Mining,92
+STU0929,Python for Data Science,94
+STU0929,Database Management Systems,96
+STU0930,Artificial Intelligence,67
+STU0930,Machine Learning,69
+STU0930,Deep Learning,71
+STU0930,Natural Language Processing,73
+STU0930,Data Structures,75
+STU0931,Data Structures,67
+STU0931,Database Management Systems,69
+STU0931,Operating Systems,71
+STU0931,Computer Networks,73
+STU0931,Software Engineering,75
+STU0932,Digital Electronics,80
+STU0932,Signals and Systems,82
+STU0932,Analog Circuits,84
+STU0932,Communication Systems,86
+STU0932,Microprocessors,88
+STU0933,Electrical Machines,64
+STU0933,Power Systems,66
+STU0933,Control Systems,68
+STU0933,Circuit Theory,70
+STU0933,Power Electronics,72
+STU0934,Web Technologies,86
+STU0934,Cloud Computing,88
+STU0934,Data Management,90
+STU0934,Computer Networks,92
+STU0934,Software Engineering,94
+STU0935,Statistics for AI,79
+STU0935,Machine Learning,81
+STU0935,Data Mining,83
+STU0935,Python for Data Science,85
+STU0935,Database Management Systems,87
+STU0936,Artificial Intelligence,65
+STU0936,Machine Learning,67
+STU0936,Deep Learning,69
+STU0936,Natural Language Processing,71
+STU0936,Data Structures,73
+STU0937,Data Structures,69
+STU0937,Database Management Systems,71
+STU0937,Operating Systems,73
+STU0937,Computer Networks,75
+STU0937,Software Engineering,77
+STU0938,Digital Electronics,72
+STU0938,Signals and Systems,74
+STU0938,Analog Circuits,76
+STU0938,Communication Systems,78
+STU0938,Microprocessors,80
+STU0939,Electrical Machines,82
+STU0939,Power Systems,84
+STU0939,Control Systems,86
+STU0939,Circuit Theory,88
+STU0939,Power Electronics,90
+STU0940,Web Technologies,94
+STU0940,Cloud Computing,96
+STU0940,Data Management,98
+STU0940,Computer Networks,100
+STU0940,Software Engineering,100
+STU0941,Statistics for AI,68
+STU0941,Machine Learning,70
+STU0941,Data Mining,72
+STU0941,Python for Data Science,74
+STU0941,Database Management Systems,76
+STU0942,Artificial Intelligence,91
+STU0942,Machine Learning,93
+STU0942,Deep Learning,95
+STU0942,Natural Language Processing,97
+STU0942,Data Structures,99
+STU0943,Data Structures,94
+STU0943,Database Management Systems,96
+STU0943,Operating Systems,98
+STU0943,Computer Networks,100
+STU0943,Software Engineering,100
+STU0944,Digital Electronics,85
+STU0944,Signals and Systems,87
+STU0944,Analog Circuits,89
+STU0944,Communication Systems,91
+STU0944,Microprocessors,93
+STU0945,Electrical Machines,71
+STU0945,Power Systems,73
+STU0945,Control Systems,75
+STU0945,Circuit Theory,77
+STU0945,Power Electronics,79
+STU0946,Web Technologies,86
+STU0946,Cloud Computing,88
+STU0946,Data Management,90
+STU0946,Computer Networks,92
+STU0946,Software Engineering,94
+STU0947,Statistics for AI,57
+STU0947,Machine Learning,59
+STU0947,Data Mining,61
+STU0947,Python for Data Science,63
+STU0947,Database Management Systems,65
+STU0948,Artificial Intelligence,62
+STU0948,Machine Learning,64
+STU0948,Deep Learning,66
+STU0948,Natural Language Processing,68
+STU0948,Data Structures,70
+STU0949,Data Structures,66
+STU0949,Database Management Systems,68
+STU0949,Operating Systems,70
+STU0949,Computer Networks,72
+STU0949,Software Engineering,74
+STU0950,Digital Electronics,82
+STU0950,Signals and Systems,84
+STU0950,Analog Circuits,86
+STU0950,Communication Systems,88
+STU0950,Microprocessors,90
+STU0951,Electrical Machines,80
+STU0951,Power Systems,82
+STU0951,Control Systems,84
+STU0951,Circuit Theory,86
+STU0951,Power Electronics,88
+STU0952,Web Technologies,70
+STU0952,Cloud Computing,72
+STU0952,Data Management,74
+STU0952,Computer Networks,76
+STU0952,Software Engineering,78
+STU0953,Statistics for AI,66
+STU0953,Machine Learning,68
+STU0953,Data Mining,70
+STU0953,Python for Data Science,72
+STU0953,Database Management Systems,74
+STU0954,Artificial Intelligence,85
+STU0954,Machine Learning,87
+STU0954,Deep Learning,89
+STU0954,Natural Language Processing,91
+STU0954,Data Structures,93
+STU0955,Data Structures,78
+STU0955,Database Management Systems,80
+STU0955,Operating Systems,82
+STU0955,Computer Networks,84
+STU0955,Software Engineering,86
+STU0956,Digital Electronics,68
+STU0956,Signals and Systems,70
+STU0956,Analog Circuits,72
+STU0956,Communication Systems,74
+STU0956,Microprocessors,76
+STU0957,Electrical Machines,69
+STU0957,Power Systems,71
+STU0957,Control Systems,73
+STU0957,Circuit Theory,75
+STU0957,Power Electronics,77
+STU0958,Web Technologies,76
+STU0958,Cloud Computing,78
+STU0958,Data Management,80
+STU0958,Computer Networks,82
+STU0958,Software Engineering,84
+STU0959,Statistics for AI,82
+STU0959,Machine Learning,84
+STU0959,Data Mining,86
+STU0959,Python for Data Science,88
+STU0959,Database Management Systems,90
+STU0960,Artificial Intelligence,93
+STU0960,Machine Learning,95
+STU0960,Deep Learning,97
+STU0960,Natural Language Processing,99
+STU0960,Data Structures,100
+STU0961,Data Structures,82
+STU0961,Database Management Systems,84
+STU0961,Operating Systems,86
+STU0961,Computer Networks,88
+STU0961,Software Engineering,90
+STU0962,Digital Electronics,74
+STU0962,Signals and Systems,76
+STU0962,Analog Circuits,78
+STU0962,Communication Systems,80
+STU0962,Microprocessors,82
+STU0963,Electrical Machines,89
+STU0963,Power Systems,91
+STU0963,Control Systems,93
+STU0963,Circuit Theory,95
+STU0963,Power Electronics,97
+STU0964,Web Technologies,90
+STU0964,Cloud Computing,92
+STU0964,Data Management,94
+STU0964,Computer Networks,96
+STU0964,Software Engineering,98
+STU0965,Statistics for AI,96
+STU0965,Machine Learning,98
+STU0965,Data Mining,100
+STU0965,Python for Data Science,100
+STU0965,Database Management Systems,100
+STU0966,Artificial Intelligence,91
+STU0966,Machine Learning,93
+STU0966,Deep Learning,95
+STU0966,Natural Language Processing,97
+STU0966,Data Structures,99
+STU0967,Data Structures,79
+STU0967,Database Management Systems,81
+STU0967,Operating Systems,83
+STU0967,Computer Networks,85
+STU0967,Software Engineering,87
+STU0968,Digital Electronics,63
+STU0968,Signals and Systems,65
+STU0968,Analog Circuits,67
+STU0968,Communication Systems,69
+STU0968,Microprocessors,71
+STU0969,Electrical Machines,82
+STU0969,Power Systems,84
+STU0969,Control Systems,86
+STU0969,Circuit Theory,88
+STU0969,Power Electronics,90
+STU0970,Web Technologies,67
+STU0970,Cloud Computing,69
+STU0970,Data Management,71
+STU0970,Computer Networks,73
+STU0970,Software Engineering,75
+STU0971,Statistics for AI,80
+STU0971,Machine Learning,82
+STU0971,Data Mining,84
+STU0971,Python for Data Science,86
+STU0971,Database Management Systems,88
+STU0972,Artificial Intelligence,74
+STU0972,Machine Learning,76
+STU0972,Deep Learning,78
+STU0972,Natural Language Processing,80
+STU0972,Data Structures,82
+STU0973,Data Structures,69
+STU0973,Database Management Systems,71
+STU0973,Operating Systems,73
+STU0973,Computer Networks,75
+STU0973,Software Engineering,77
+STU0974,Digital Electronics,64
+STU0974,Signals and Systems,66
+STU0974,Analog Circuits,68
+STU0974,Communication Systems,70
+STU0974,Microprocessors,72
+STU0975,Electrical Machines,62
+STU0975,Power Systems,64
+STU0975,Control Systems,66
+STU0975,Circuit Theory,68
+STU0975,Power Electronics,70
+STU0976,Web Technologies,74
+STU0976,Cloud Computing,76
+STU0976,Data Management,78
+STU0976,Computer Networks,80
+STU0976,Software Engineering,82
+STU0977,Statistics for AI,61
+STU0977,Machine Learning,63
+STU0977,Data Mining,65
+STU0977,Python for Data Science,67
+STU0977,Database Management Systems,69
+STU0978,Artificial Intelligence,94
+STU0978,Machine Learning,96
+STU0978,Deep Learning,98
+STU0978,Natural Language Processing,100
+STU0978,Data Structures,100
+STU0979,Data Structures,82
+STU0979,Database Management Systems,84
+STU0979,Operating Systems,86
+STU0979,Computer Networks,88
+STU0979,Software Engineering,90
+STU0980,Digital Electronics,61
+STU0980,Signals and Systems,63
+STU0980,Analog Circuits,65
+STU0980,Communication Systems,67
+STU0980,Microprocessors,69
+STU0981,Electrical Machines,63
+STU0981,Power Systems,65
+STU0981,Control Systems,67
+STU0981,Circuit Theory,69
+STU0981,Power Electronics,71
+STU0982,Web Technologies,57
+STU0982,Cloud Computing,59
+STU0982,Data Management,61
+STU0982,Computer Networks,63
+STU0982,Software Engineering,65
+STU0983,Statistics for AI,57
+STU0983,Machine Learning,59
+STU0983,Data Mining,61
+STU0983,Python for Data Science,63
+STU0983,Database Management Systems,65
+STU0984,Artificial Intelligence,75
+STU0984,Machine Learning,77
+STU0984,Deep Learning,79
+STU0984,Natural Language Processing,81
+STU0984,Data Structures,83
+STU0985,Data Structures,88
+STU0985,Database Management Systems,90
+STU0985,Operating Systems,92
+STU0985,Computer Networks,94
+STU0985,Software Engineering,96
+STU0986,Digital Electronics,83
+STU0986,Signals and Systems,85
+STU0986,Analog Circuits,87
+STU0986,Communication Systems,89
+STU0986,Microprocessors,91
+STU0987,Electrical Machines,81
+STU0987,Power Systems,83
+STU0987,Control Systems,85
+STU0987,Circuit Theory,87
+STU0987,Power Electronics,89
+STU0988,Web Technologies,64
+STU0988,Cloud Computing,66
+STU0988,Data Management,68
+STU0988,Computer Networks,70
+STU0988,Software Engineering,72
+STU0989,Statistics for AI,70
+STU0989,Machine Learning,72
+STU0989,Data Mining,74
+STU0989,Python for Data Science,76
+STU0989,Database Management Systems,78
+STU0990,Artificial Intelligence,73
+STU0990,Machine Learning,75
+STU0990,Deep Learning,77
+STU0990,Natural Language Processing,79
+STU0990,Data Structures,81
+STU0991,Data Structures,74
+STU0991,Database Management Systems,76
+STU0991,Operating Systems,78
+STU0991,Computer Networks,80
+STU0991,Software Engineering,82
+STU0992,Digital Electronics,85
+STU0992,Signals and Systems,87
+STU0992,Analog Circuits,89
+STU0992,Communication Systems,91
+STU0992,Microprocessors,93
+STU0993,Electrical Machines,81
+STU0993,Power Systems,83
+STU0993,Control Systems,85
+STU0993,Circuit Theory,87
+STU0993,Power Electronics,89
+STU0994,Web Technologies,69
+STU0994,Cloud Computing,71
+STU0994,Data Management,73
+STU0994,Computer Networks,75
+STU0994,Software Engineering,77
+STU0995,Statistics for AI,62
+STU0995,Machine Learning,64
+STU0995,Data Mining,66
+STU0995,Python for Data Science,68
+STU0995,Database Management Systems,70
+STU0996,Artificial Intelligence,94
+STU0996,Machine Learning,96
+STU0996,Deep Learning,98
+STU0996,Natural Language Processing,100
+STU0996,Data Structures,100
+STU0997,Data Structures,77
+STU0997,Database Management Systems,79
+STU0997,Operating Systems,81
+STU0997,Computer Networks,83
+STU0997,Software Engineering,85
+STU0998,Digital Electronics,83
+STU0998,Signals and Systems,85
+STU0998,Analog Circuits,87
+STU0998,Communication Systems,89
+STU0998,Microprocessors,91
+STU0999,Electrical Machines,65
+STU0999,Power Systems,67
+STU0999,Control Systems,69
+STU0999,Circuit Theory,71
+STU0999,Power Electronics,73
+STU1000,Web Technologies,60
+STU1000,Cloud Computing,62
+STU1000,Data Management,64
+STU1000,Computer Networks,66
+STU1000,Software Engineering,68

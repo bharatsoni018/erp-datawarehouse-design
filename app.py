@@ -1,10 +1,18 @@
 import os
+from io import BytesIO
 from functools import wraps
-import mysql.connector
-from mysql.connector import Error
-from flask import Flask, render_template, request, redirect, url_for, jsonify, flash, session
+import pandas as pd
+from flask import Flask, render_template, request, redirect, url_for, jsonify, flash, session, send_file
 
-from db_config import get_db_config, MYSQL_DATABASE, MYSQL_HOST, MYSQL_PORT, MYSQL_USER
+from db_config import DATA_MODE, get_db_config, MYSQL_DATABASE, MYSQL_HOST, MYSQL_PORT, MYSQL_USER
+from data_store import get_store
+
+try:
+    import mysql.connector
+    from mysql.connector import Error
+except ImportError:  # MySQL is optional in CSV development mode.
+    mysql = None
+    Error = Exception
 
 app = Flask(__name__)
 # Generate fresh random secret key on application startup to ensure no stale sessions persist across restarts
@@ -49,6 +57,10 @@ def login_required(f):
 # ==========================================
 def get_db_connection():
     """Establishes and returns an active MySQL 8.0 connection."""
+    if DATA_MODE != "mysql":
+        raise RuntimeError("MySQL access requested while DATA_MODE is not 'mysql'")
+    if mysql is None:
+        raise RuntimeError("mysql-connector-python is required when DATA_MODE=mysql")
     try:
         return mysql.connector.connect(**get_db_config(include_db=True))
     except Error as e:
@@ -57,6 +69,19 @@ def get_db_connection():
 
 def get_kpis():
     """Computes high-level Institutional KPIs dynamically from MySQL 8.0 tables."""
+    if DATA_MODE == "csv":
+        data = get_store()
+        kpis = data.kpis()
+        kpis.update({
+            "departments_count": len(kpis["departments"]),
+            "dept_counts": kpis["department_counts"],
+            "avg_cgpa": round(float(data.students["CGPA"].mean()), 2),
+            "total_fees": f"{kpis['total_fees']:,}",
+            "total_paid": f"{kpis['total_paid']:,}",
+            "total_pending": f"{kpis['total_pending']:,}",
+            "subjects": sorted(data.attendance["Subject"].unique().tolist()),
+        })
+        return kpis
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
     
@@ -128,6 +153,9 @@ def get_integrated_student(enrollment_no):
     Finds matching records for the common Enrollment_No across 4 independent MySQL tables
     (students, attendance, examination, fees) and combines them into a single unified student profile.
     """
+    if DATA_MODE == "csv":
+        return get_store().student(enrollment_no)
+
     enrollment_no = enrollment_no.strip().upper()
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
@@ -245,6 +273,66 @@ def get_dashboard_summary():
     Computes consolidated high-level institutional summary metrics dynamically from MySQL.
     Strictly aggregates at student/institutional level without row inflation.
     """
+    if DATA_MODE == "csv":
+        data = get_store()
+        students = data.students
+        attendance = data.attendance.merge(
+            students[["Enrollment_No", "Department"]], on="Enrollment_No", how="inner"
+        )
+        examination = data.examination
+        fees = data.fees
+        dept_attendance = attendance.groupby("Department")["Attendance_Percentage"].mean()
+        student_attendance = attendance.groupby("Enrollment_No")["Attendance_Percentage"].mean()
+        grades = examination["Grade"].value_counts()
+        departments = []
+        for department in sorted(students["Department"].unique()):
+            dept_students = students[students["Department"] == department]
+            dept_fees = fees[fees["Enrollment_No"].isin(dept_students["Enrollment_No"])]
+            departments.append({
+                "code": department,
+                "name": department,
+                "section": "Multiple",
+                "students_count": len(dept_students),
+                "avg_attendance": round(float(dept_attendance.get(department, 0)), 1),
+                "semester": int(dept_students["Semester"].dropna().iloc[0]),
+                "total_fees": int(dept_fees["Total_Fees"].sum()),
+                "pending_fees": int(dept_fees["Pending_Amount"].sum()),
+            })
+        return {
+            "student": {
+                "total": len(students),
+                "cse": int((students["Department"] == "CSE").sum()),
+                "ece": int((students["Department"] == "ECE").sum()),
+                "eee": int((students["Department"] == "EEE").sum()),
+            },
+            "attendance": {
+                "overall_avg": round(float(attendance["Attendance_Percentage"].mean()), 1),
+                "good_count": int((student_attendance >= 75).sum()),
+                "low_count": int((student_attendance < 75).sum()),
+                "cse_avg": round(float(dept_attendance.get("CSE", 0)), 1),
+                "ece_avg": round(float(dept_attendance.get("ECE", 0)), 1),
+                "eee_avg": round(float(dept_attendance.get("EEE", 0)), 1),
+            },
+            "examination": {
+                "avg_marks": round(float(examination["Total_Marks"].mean()), 1),
+                "highest_marks": int(examination["Total_Marks"].max()),
+                "lowest_marks": int(examination["Total_Marks"].min()),
+                "excellent_count": int(grades.get("O", 0) + grades.get("A+", 0)),
+                "good_count": int(grades.get("A", 0) + grades.get("B+", 0)),
+                "average_count": int(
+                    grades.get("B", 0) + grades.get("C", 0)
+                    + grades.get("D", 0) + grades.get("F", 0)
+                ),
+            },
+            "fees": {
+                "total": f"{int(fees['Total_Fees'].sum()):,}",
+                "paid": f"{int(fees['Paid_Amount'].sum()):,}",
+                "pending": f"{int(fees['Pending_Amount'].sum()):,}",
+                "pending_students": int((fees["Pending_Amount"] > 0).sum()),
+            },
+            "departments": departments,
+        }
+
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
     
@@ -397,6 +485,72 @@ def get_dashboard_summary():
         "departments": dept_overview
     }
 
+
+def _csv_module_data(kind, section_filter="", subject_filter="", status_filter="", search_q=""):
+    data = get_store()
+    students = data.students.copy()
+    if search_q:
+        q = search_q.lower()
+        students = students[
+            students["Enrollment_No"].str.lower().str.contains(q, na=False)
+            | students["Name"].str.lower().str.contains(q, na=False)
+        ]
+    if section_filter:
+        students = students[students["Section"].str.upper() == section_filter.upper()]
+    ids = set(students["Enrollment_No"])
+    frame = getattr(data, kind)
+    frame = frame[frame["Enrollment_No"].isin(ids)].copy()
+    if subject_filter and "Subject" in frame:
+        frame = frame[frame["Subject"] == subject_filter]
+    if status_filter and "Payment_Status" in frame:
+        frame = frame[frame["Payment_Status"] == status_filter]
+        if kind == "fees":
+            students = students[students["Enrollment_No"].isin(frame["Enrollment_No"])]
+    sections = []
+    for section, section_students in students.groupby("Section", dropna=False, sort=True):
+        items = []
+        for enrollment_no, student in section_students.sort_values("Enrollment_No").set_index("Enrollment_No").iterrows():
+            records = frame[frame["Enrollment_No"] == enrollment_no]
+            student_data = student.to_dict()
+            student_data["Enrollment_No"] = enrollment_no
+            item = {
+                "student": student_data,
+                "section_letter": section or "Unknown",
+                "semester": int(student["Semester"]) if pd.notna(student["Semester"]) else "Unknown",
+                "records": records.to_dict("records"),
+            }
+            if kind == "attendance":
+                item["average"] = round(float(records["Attendance_Percentage"].mean()), 1) if not records.empty else 0
+            elif kind == "examination":
+                item["average"] = round(float(records["Total_Marks"].mean()), 1) if not records.empty else 0
+            else:
+                item["fee"] = records.iloc[0].to_dict() if not records.empty else None
+            items.append(item)
+        if items:
+            sections.append({
+                "letter": section or "Unknown",
+                "dept_code": "Multiple",
+                "dept_name": "Section " + str(section or "Unknown"),
+                "students": items,
+                "student_count": len(items),
+            })
+    return students, frame, sections
+
+
+def _paginate_sections(sections, page, page_size):
+    """Paginate student cards while preserving their section grouping."""
+    all_items = [(section, item) for section in sections for item in section["students"]]
+    total = len(all_items)
+    start = (page - 1) * page_size
+    selected = all_items[start:start + page_size]
+    grouped = {}
+    for section, item in selected:
+        grouped.setdefault(section["letter"], {**section, "students": []})
+        grouped[section["letter"]]["students"].append(item)
+    for section in grouped.values():
+        section["student_count"] = len(section["students"])
+    return list(grouped.values()), total
+
 @app.route("/dashboard")
 @login_required
 def dashboard():
@@ -426,7 +580,26 @@ def search():
 @login_required
 def search_student_page():
     """Dedicated Search Student page."""
-    return render_template("search_student.html", active_page="search_student")
+    example_students = []
+    if DATA_MODE == "csv":
+        example_students = get_store().students.head(4).to_dict("records")
+    return render_template(
+        "search_student.html",
+        example_students=example_students,
+        active_page="search_student",
+    )
+
+@app.route("/student/")
+@login_required
+def student_profile_index():
+    """Report an incomplete profile URL instead of opening a general view."""
+    return render_template(
+        "student_error.html",
+        error_title="Enrollment number required",
+        error_message="A student profile URL must include an Enrollment_No.",
+        error_code=400,
+        active_page="students",
+    ), 400
 
 @app.route("/student/<enrollment_no>")
 @login_required
@@ -434,20 +607,17 @@ def student_profile(enrollment_no):
     """Displays the unified student profile integrated across all 4 MySQL tables."""
     student_data = get_integrated_student(enrollment_no)
     if not student_data:
-        flash(f"No student record found with Enrollment Number '{enrollment_no}'.", "danger")
-        return redirect(url_for("dashboard"))
-    
-    conn = get_db_connection()
-    cursor = conn.cursor(dictionary=True)
-    cursor.execute("SELECT `Enrollment_No`, `Name`, `Department` FROM `students` ORDER BY `Enrollment_No`;")
-    all_enrollments = cursor.fetchall()
-    cursor.close()
-    conn.close()
+        return render_template(
+            "student_error.html",
+            error_title="Student not found",
+            error_message=f"No student record exists for Enrollment_No '{enrollment_no}'.",
+            error_code=404,
+            active_page="students",
+        ), 404
     
     return render_template(
         "profile.html",
         data=student_data,
-        all_students=all_enrollments,
         active_page="students"
     )
 
@@ -456,12 +626,45 @@ def student_profile(enrollment_no):
 def students_page():
     """Student Management -> All Students Page (Queried from MySQL students table)."""
     kpis = get_kpis()
-    
+
     dept_filter = request.args.get("department", "").strip()
     sec_filter = request.args.get("section", "").strip()
     sem_filter = request.args.get("semester", "").strip()
     search_q = request.args.get("q", "").strip()
-    
+    page = max(request.args.get("page", 1, type=int), 1)
+    page_size = min(max(request.args.get("page_size", 50, type=int), 1), 200)
+
+    if DATA_MODE == "csv":
+        students = get_store().students.copy()
+        if dept_filter:
+            students = students[students["Department"] == dept_filter]
+        if sec_filter:
+            students = students[students["Section"] == sec_filter]
+        if sem_filter and sem_filter.isdigit():
+            students = students[students["Semester"] == int(sem_filter)]
+        if search_q:
+            query = search_q.lower()
+            students = students[
+                students["Enrollment_No"].str.lower().str.contains(query, na=False)
+                | students["Name"].str.lower().str.contains(query, na=False)
+            ]
+        students = students.sort_values("Enrollment_No")
+        total_students = len(students)
+        student_list = students.iloc[(page - 1) * page_size:page * page_size].to_dict("records")
+        return render_template(
+            "students.html",
+            students=student_list,
+            kpis=kpis,
+            selected_dept=dept_filter,
+            selected_sec=sec_filter,
+            selected_sem=sem_filter,
+            search_query=search_q,
+            page=page,
+            page_size=page_size,
+            total_students=total_students,
+            active_page="students",
+        )
+
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
     
@@ -502,6 +705,9 @@ def students_page():
         selected_sec=sec_filter,
         selected_sem=sem_filter,
         search_query=search_q,
+        page=1,
+        page_size=len(student_list) or 50,
+        total_students=len(student_list),
         active_page="students"
     )
 
@@ -537,6 +743,34 @@ def attendance_page():
     sec_filter = request.args.get("section", "").strip().upper()
     subj_filter = request.args.get("subject", "").strip()
     search_q = request.args.get("q", "").strip()
+
+    if DATA_MODE == "csv":
+        students_list, flat_records, sections_data = _csv_module_data(
+            "attendance", sec_filter, subj_filter, search_q=search_q
+        )
+        page = max(request.args.get("page", 1, type=int), 1)
+        page_size = min(max(request.args.get("page_size", 10, type=int), 1), 100)
+        sections_data, total_students = _paginate_sections(sections_data, page, page_size)
+        values = flat_records["Attendance_Percentage"] if not flat_records.empty else pd.Series(dtype=float)
+        student_avgs = flat_records.groupby("Enrollment_No")["Attendance_Percentage"].mean()
+        return render_template(
+            "attendance.html",
+            sections_data=sections_data,
+            summary_stats={
+                "overall_avg": round(float(values.mean()), 1) if not values.empty else 0,
+                "total_students": total_students,
+                "low_attendance_count": int((student_avgs < 75).sum()),
+            },
+            records=flat_records.to_dict("records"),
+            kpis=get_kpis(),
+            selected_sec=sec_filter,
+            selected_subj=subj_filter,
+            search_query=search_q,
+            page=page,
+            page_size=page_size,
+            total_students=total_students,
+            active_page="attendance",
+        )
     
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
@@ -677,6 +911,34 @@ def examination_page():
     sec_filter = request.args.get("section", "").strip().upper()
     subj_filter = request.args.get("subject", "").strip()
     search_q = request.args.get("q", "").strip()
+
+    if DATA_MODE == "csv":
+        students_list, flat_records, sections_data = _csv_module_data(
+            "examination", sec_filter, subj_filter, search_q=search_q
+        )
+        page = max(request.args.get("page", 1, type=int), 1)
+        page_size = min(max(request.args.get("page_size", 10, type=int), 1), 100)
+        sections_data, total_students = _paginate_sections(sections_data, page, page_size)
+        values = flat_records["Total_Marks"] if not flat_records.empty else pd.Series(dtype=float)
+        return render_template(
+            "examination.html",
+            sections_data=sections_data,
+            summary_stats={
+                "overall_avg": round(float(values.mean()), 1) if not values.empty else 0,
+                "highest_marks": int(values.max()) if not values.empty else 0,
+                "subjects_count": int(flat_records["Subject"].nunique()) if not flat_records.empty else 0,
+                "total_students": total_students,
+            },
+            records=flat_records.to_dict("records"),
+            kpis=get_kpis(),
+            selected_sec=sec_filter,
+            selected_subj=subj_filter,
+            search_query=search_q,
+            page=page,
+            page_size=page_size,
+            total_students=total_students,
+            active_page="examination",
+        )
     
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
@@ -822,6 +1084,34 @@ def fees_page():
     sec_filter = request.args.get("section", "").strip().upper()
     status_filter = request.args.get("status", "").strip()
     search_q = request.args.get("q", "").strip()
+
+    if DATA_MODE == "csv":
+        students_list, flat_records, sections_data = _csv_module_data(
+            "fees", section_filter=sec_filter, status_filter=status_filter, search_q=search_q
+        )
+        page = max(request.args.get("page", 1, type=int), 1)
+        page_size = min(max(request.args.get("page_size", 10, type=int), 1), 100)
+        sections_data, total_students = _paginate_sections(sections_data, page, page_size)
+        return render_template(
+            "fees.html",
+            sections_data=sections_data,
+            summary_stats={
+                "total_fees": f"{int(flat_records['Total_Fees'].sum()):,}" if not flat_records.empty else "0",
+                "total_collected": f"{int(flat_records['Paid_Amount'].sum()):,}" if not flat_records.empty else "0",
+                "total_pending": f"{int(flat_records['Pending_Amount'].sum()):,}" if not flat_records.empty else "0",
+                "pending_students": int((flat_records["Pending_Amount"] > 0).sum()) if not flat_records.empty else 0,
+                "total_students": total_students,
+            },
+            records=flat_records.to_dict("records"),
+            kpis=get_kpis(),
+            selected_sec=sec_filter,
+            selected_status=status_filter,
+            search_query=search_q,
+            page=page,
+            page_size=page_size,
+            total_students=total_students,
+            active_page="fees",
+        )
     
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
@@ -966,6 +1256,38 @@ def fees_page():
 def reports_page():
     """Institutional Reports (Calculated via SQL aggregations from MySQL)."""
     kpis = get_kpis()
+    if DATA_MODE == "csv":
+        data = get_store()
+        joined_att = data.attendance.merge(
+            data.students[["Enrollment_No", "Department"]], on="Enrollment_No"
+        )
+        dept_stats = []
+        for department, students in data.students.groupby("Department", sort=True):
+            ids = set(students["Enrollment_No"])
+            fees = data.fees[data.fees["Enrollment_No"].isin(ids)]
+            exams = data.examination[data.examination["Enrollment_No"].isin(ids)]
+            attendance = joined_att[joined_att["Enrollment_No"].isin(ids)]
+            dept_stats.append({
+                "department": department,
+                "count": len(students),
+                "avg_attendance": round(float(attendance["Attendance_Percentage"].mean()), 1),
+                "avg_cgpa": round(float(students["CGPA"].mean()), 2),
+                "total_fees": f"{int(fees['Total_Fees'].sum()):,}",
+                "paid_fees": f"{int(fees['Paid_Amount'].sum()):,}",
+                "pending_fees": f"{int(fees['Pending_Amount'].sum()):,}",
+            })
+        return render_template(
+            "reports.html",
+            kpis=kpis,
+            dept_stats=dept_stats,
+            exam_summary={
+                "avg_marks": round(float(data.examination["Total_Marks"].mean()), 1),
+                "highest_marks": int(data.examination["Total_Marks"].max()),
+                "lowest_marks": int(data.examination["Total_Marks"].min()),
+                "students_appeared": int(data.examination["Enrollment_No"].nunique()),
+            },
+            active_page="reports",
+        )
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
     
@@ -1019,6 +1341,54 @@ def reports_page():
     conn.close()
     return render_template("reports.html", kpis=kpis, dept_stats=dept_stats, exam_summary=exam_summary, active_page="reports")
 
+
+@app.route("/reports/export")
+@login_required
+def reports_export():
+    """Download a real CSV report from the configured warehouse source."""
+    report = request.args.get("report", "students").strip().lower()
+    if DATA_MODE != "csv":
+        return jsonify({"error": "Report export is currently implemented for CSV mode"}), 501
+
+    data = get_store()
+    if report in {"students", "attendance", "examination", "fees"}:
+        frame = getattr(data, report).copy()
+        filename = f"ifhe_{report}_semester5.csv"
+    elif report == "departments":
+        students = data.students
+        attendance = data.attendance.merge(
+            students[["Enrollment_No", "Department"]], on="Enrollment_No", how="inner"
+        )
+        rows = []
+        for department, group in students.groupby("Department", sort=True):
+            ids = set(group["Enrollment_No"])
+            department_attendance = attendance[attendance["Enrollment_No"].isin(ids)]
+            department_fees = data.fees[data.fees["Enrollment_No"].isin(ids)]
+            rows.append({
+                "Department": department,
+                "Students": len(group),
+                "Average_Attendance": round(float(department_attendance["Attendance_Percentage"].mean()), 1),
+                "Average_CGPA": round(float(group["CGPA"].mean()), 2),
+                "Total_Fees": int(department_fees["Total_Fees"].sum()),
+                "Paid_Amount": int(department_fees["Paid_Amount"].sum()),
+                "Pending_Amount": int(department_fees["Pending_Amount"].sum()),
+            })
+        frame = pd.DataFrame(rows)
+        filename = "ifhe_department_summary_semester5.csv"
+    else:
+        return jsonify({
+            "error": "Unsupported report",
+            "available_reports": ["students", "attendance", "examination", "fees", "departments"],
+        }), 400
+
+    payload = frame.to_csv(index=False).encode("utf-8")
+    return send_file(
+        BytesIO(payload),
+        mimetype="text/csv",
+        as_attachment=True,
+        download_name=filename,
+    )
+
 @app.route("/settings")
 @login_required
 def settings_page():
@@ -1033,6 +1403,51 @@ def api_student(enrollment_no):
     if not student_data:
         return jsonify({"error": "Student not found", "enrollment_no": enrollment_no}), 404
     return jsonify(student_data)
+
+
+@app.route("/api/kpis")
+@login_required
+def api_kpis():
+    return jsonify(get_kpis())
+
+
+@app.route("/api/students")
+@login_required
+def api_students():
+    data = get_store() if DATA_MODE == "csv" else None
+    if data is None:
+        return jsonify({"error": "Student collection API is currently available in CSV mode only"}), 501
+    query = request.args.get("q", "").strip().lower()
+    department = request.args.get("department", "").strip()
+    section = request.args.get("section", "").strip()
+    semester = request.args.get("semester", type=int)
+    page = max(request.args.get("page", 1, type=int), 1)
+    page_size = min(max(request.args.get("page_size", 50, type=int), 1), 200)
+    students = data.students
+    if query:
+        students = students[
+            students["Enrollment_No"].str.lower().str.contains(query, na=False)
+            | students["Name"].str.lower().str.contains(query, na=False)
+        ]
+    if department:
+        students = students[students["Department"] == department]
+    if section:
+        students = students[students["Section"] == section]
+    if semester is not None:
+        students = students[students["Semester"] == semester]
+    students = students.sort_values("Enrollment_No")
+    total = len(students)
+    rows = students.iloc[(page - 1) * page_size:page * page_size].to_dict("records")
+    return jsonify({"items": rows, "page": page, "page_size": page_size, "total": total})
+
+
+@app.route("/api/data-quality")
+@login_required
+def api_data_quality():
+    return jsonify(get_store().quality.as_dict() if DATA_MODE == "csv" else {
+        "mode": "mysql",
+        "message": "Quality summary is supplied by the configured MySQL warehouse",
+    })
 
 if __name__ == "__main__":
     app.run(debug=True, host="127.0.0.1", port=5000)

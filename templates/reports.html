@@ -7,9 +7,24 @@
 <div>
 
     <!-- Header -->
-    <div class="mb-2.5">
-        <h5 class="fw-bold text-dark mb-0">Institutional Reports</h5>
-        <div class="text-muted fs-xs">High-level academic and operational summary statistics across departments</div>
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-3">
+        <div>
+            <h5 class="fw-bold text-dark mb-0">Institutional Reports</h5>
+            <div class="text-muted fs-xs">High-level academic and operational summary statistics across departments</div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-download me-1"></i> Export report
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                <li><h6 class="dropdown-header">Download CSV</h6></li>
+                <li><a class="dropdown-item" href="{{ url_for('reports_export', report='departments') }}"><i class="bi bi-building me-2"></i>Department summary</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('reports_export', report='students') }}"><i class="bi bi-people me-2"></i>Student directory</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('reports_export', report='attendance') }}"><i class="bi bi-calendar-check me-2"></i>Attendance records</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('reports_export', report='examination') }}"><i class="bi bi-award me-2"></i>Examination records</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('reports_export', report='fees') }}"><i class="bi bi-wallet2 me-2"></i>Fee records</a></li>
+            </ul>
+        </div>
     </div>
 
     <!-- Department Summary Table -->

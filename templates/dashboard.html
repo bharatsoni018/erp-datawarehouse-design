@@ -1,427 +1,94 @@
 {% extends "base.html" %}
 
-{% block title %}Dashboard | Unified Academic Data Management System - IFHE Hyderabad{% endblock %}
-{% block page_title %}Dashboard{% endblock %}
+{% block title %}Overview | IFHE ERP{% endblock %}
+{% block page_title %}Overview{% endblock %}
 
 {% block content %}
-<div>
-
-    <!-- ============================================== -->
-    <!-- 1. DASHBOARD HEADER                            -->
-    <!-- ============================================== -->
-    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+<div class="dashboard-page">
+    <header class="page-heading d-flex flex-wrap justify-content-between align-items-end gap-3">
         <div>
-            <h5 class="fw-bold text-dark mb-0">Dashboard</h5>
-            <div class="text-muted fs-xs">Academic overview and key institutional statistics</div>
+            <div class="eyebrow">Institutional decision support</div>
+            <h1 class="page-heading-title">Good morning, Admin</h1>
+            <p class="page-heading-subtitle">A current view of academic performance, attendance, and fee collection.</p>
         </div>
-        <div class="d-flex align-items-center gap-2">
-            <span class="badge bg-primary-subtle text-primary border border-primary-subtle">
-                <i class="bi bi-calendar3 me-1"></i> Semester 6
-            </span>
-            <span class="badge bg-light text-dark border">
-                <i class="bi bi-building me-1"></i> IFHE Hyderabad
-            </span>
+        <div class="context-chip">
+            <i class="bi bi-calendar3"></i>
+            <span>Semester {{ kpis.semesters|join(', ') }} · 2025–2026</span>
         </div>
+    </header>
+
+    <section class="kpi-grid" aria-label="Executive indicators">
+        <a class="metric-card" href="{{ url_for('students_page') }}">
+            <div class="metric-card-top"><span class="metric-label">Students enrolled</span><i class="bi bi-people"></i></div>
+            <div class="metric-value">{{ "{:,}".format(summary.student.total) }}</div>
+            <div class="metric-meta"><span class="metric-positive"><i class="bi bi-check2"></i> Source validated</span><span>6 departments</span></div>
+        </a>
+        <a class="metric-card" href="{{ url_for('attendance_page') }}">
+            <div class="metric-card-top"><span class="metric-label">Average attendance</span><i class="bi bi-calendar-check"></i></div>
+            <div class="metric-value">{{ summary.attendance.overall_avg }}<small>%</small></div>
+            <div class="metric-meta"><span class="{% if summary.attendance.overall_avg >= 75 %}metric-positive{% else %}metric-warning{% endif %}"><i class="bi bi-activity"></i> Institutional average</span><span>{{ summary.attendance.low_count }} below 75%</span></div>
+        </a>
+        <a class="metric-card" href="{{ url_for('examination_page') }}">
+            <div class="metric-card-top"><span class="metric-label">Average examination mark</span><i class="bi bi-bar-chart"></i></div>
+            <div class="metric-value">{{ summary.examination.avg_marks }}<small>/100</small></div>
+            <div class="metric-meta"><span class="metric-positive"><i class="bi bi-graph-up"></i> 5,000 evaluations</span><span>Peak {{ summary.examination.highest_marks }}</span></div>
+        </a>
+        <a class="metric-card" href="{{ url_for('fees_page') }}">
+            <div class="metric-card-top"><span class="metric-label">Fees outstanding</span><i class="bi bi-wallet2"></i></div>
+            <div class="metric-value metric-currency">₹{{ summary.fees.pending }}</div>
+            <div class="metric-meta"><span class="metric-warning"><i class="bi bi-exclamation-circle"></i> {{ summary.fees.pending_students }} students</span><span>of ₹{{ summary.fees.total }}</span></div>
+        </a>
+    </section>
+
+    <div class="dashboard-columns">
+        <section class="panel panel-large">
+            <div class="panel-header">
+                <div><h2>Department performance</h2><p>Enrollment and attendance by department</p></div>
+                <a class="panel-link" href="{{ url_for('reports_page') }}">View report <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+            <div class="department-list">
+                {% for dept in summary.departments %}
+                <div class="department-row">
+                    <div class="department-identity">
+                        <span class="department-mark">{{ dept.code[:1] }}</span>
+                        <div><strong>{{ dept.code }}</strong><span>{{ dept.students_count }} students · Semester {{ dept.semester }}</span></div>
+                    </div>
+                    <div class="department-stat"><span>{{ dept.avg_attendance }}%</span><small>attendance</small></div>
+                    <div class="progress-track" aria-label="{{ dept.code }} attendance {{ dept.avg_attendance }} percent"><span style="width: {{ [dept.avg_attendance, 100]|min }}%"></span></div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-header">
+                <div><h2>Attention needed</h2><p>Operational thresholds</p></div>
+                <i class="bi bi-shield-exclamation panel-icon"></i>
+            </div>
+            <div class="attention-list">
+                <a href="{{ url_for('attendance_page') }}" class="attention-item"><span class="attention-icon attention-danger"><i class="bi bi-calendar-x"></i></span><span><strong>{{ summary.attendance.low_count }} students</strong><small>Below 75% attendance</small></span><i class="bi bi-chevron-right"></i></a>
+                <a href="{{ url_for('fees_page') }}" class="attention-item"><span class="attention-icon attention-warning"><i class="bi bi-cash-coin"></i></span><span><strong>{{ summary.fees.pending_students }} students</strong><small>Have outstanding fees</small></span><i class="bi bi-chevron-right"></i></a>
+                <a href="{{ url_for('examination_page') }}" class="attention-item"><span class="attention-icon attention-blue"><i class="bi bi-award"></i></span><span><strong>{{ summary.examination.lowest_marks }}/100</strong><small>Lowest recorded mark</small></span><i class="bi bi-chevron-right"></i></a>
+            </div>
+            <div class="rule-note"><i class="bi bi-info-circle"></i><span>Attention indicators use transparent thresholds, not predictive modeling.</span></div>
+        </section>
     </div>
 
-    <!-- ============================================== -->
-    <!-- 2. STUDENT SUMMARY                             -->
-    <!-- ============================================== -->
-    <div class="dashboard-section mb-4">
-        <div class="d-flex justify-content-between align-items-center mb-2.5">
-            <h6 class="fw-bold text-dark mb-0"><i class="bi bi-people-fill text-primary me-1.5"></i> Student Summary</h6>
-            <a href="{{ url_for('students_page') }}" class="text-decoration-none fs-xs fw-semibold">
-                View All Students <i class="bi bi-arrow-right"></i>
-            </a>
-        </div>
-        <div class="row g-2.5">
-            
-            <!-- Total Students -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="card kpi-card h-100">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="kpi-label">Total Students</div>
-                            <div class="kpi-value font-monospace">{{ summary.student.total }}</div>
-                            <div class="text-muted fs-xs">Enrolled Across Sections</div>
-                        </div>
-                        <div class="kpi-icon-small bg-primary-subtle text-primary">
-                            <i class="bi bi-people"></i>
-                        </div>
-                    </div>
-                </div>
+    <div class="dashboard-columns dashboard-columns-bottom">
+        <section class="panel">
+            <div class="panel-header"><div><h2>Examination distribution</h2><p>Subject-level grade bands</p></div><a class="panel-link" href="{{ url_for('examination_page') }}">Details <i class="bi bi-arrow-up-right"></i></a></div>
+            <div class="distribution">
+                <div><div class="distribution-label"><span>Outstanding / excellent</span><strong>{{ summary.examination.excellent_count }}</strong></div><div class="distribution-track"><span class="distribution-green" style="width: {{ (summary.examination.excellent_count / 5000 * 100)|round(1) }}%"></span></div></div>
+                <div><div class="distribution-label"><span>Very good / good</span><strong>{{ summary.examination.good_count }}</strong></div><div class="distribution-track"><span class="distribution-blue" style="width: {{ (summary.examination.good_count / 5000 * 100)|round(1) }}%"></span></div></div>
+                <div><div class="distribution-label"><span>Average / passing</span><strong>{{ summary.examination.average_count }}</strong></div><div class="distribution-track"><span class="distribution-slate" style="width: {{ (summary.examination.average_count / 5000 * 100)|round(1) }}%"></span></div></div>
             </div>
-
-            <!-- CSE Students -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="card kpi-card h-100">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="kpi-label">CSE Students</div>
-                            <div class="kpi-value font-monospace text-primary">{{ summary.student.cse }}</div>
-                            <div class="text-muted fs-xs">Section A &bull; Semester 6</div>
-                        </div>
-                        <div class="kpi-icon-small bg-primary-subtle text-primary">
-                            <i class="bi bi-laptop"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ECE Students -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="card kpi-card h-100">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="kpi-label">ECE Students</div>
-                            <div class="kpi-value font-monospace text-info-emphasis">{{ summary.student.ece }}</div>
-                            <div class="text-muted fs-xs">Section B &bull; Semester 6</div>
-                        </div>
-                        <div class="kpi-icon-small bg-info-subtle text-info-emphasis">
-                            <i class="bi bi-cpu"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- EEE Students -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="card kpi-card h-100">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="kpi-label">EEE Students</div>
-                            <div class="kpi-value font-monospace text-warning-emphasis">{{ summary.student.eee }}</div>
-                            <div class="text-muted fs-xs">Section C &bull; Semester 6</div>
-                        </div>
-                        <div class="kpi-icon-small bg-warning-subtle text-warning-emphasis">
-                            <i class="bi bi-lightning-charge"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        </section>
+        <section class="panel">
+            <div class="panel-header"><div><h2>Finance snapshot</h2><p>Collection performance</p></div><a class="panel-link" href="{{ url_for('fees_page') }}">Open finance <i class="bi bi-arrow-up-right"></i></a></div>
+            <div class="finance-summary"><div><span class="finance-label">Collected</span><strong>₹{{ summary.fees.paid }}</strong></div><div><span class="finance-label">Outstanding</span><strong class="text-danger">₹{{ summary.fees.pending }}</strong></div></div>
+            <div class="collection-track"><span style="width: {{ ((summary.fees.paid|replace(',', '')|int) / (summary.fees.total|replace(',', '')|int) * 100)|round(1) }}%"></span></div>
+            <div class="finance-foot"><span>Collection rate</span><strong>{{ ((summary.fees.paid|replace(',', '')|int) / (summary.fees.total|replace(',', '')|int) * 100)|round(1) }}%</strong></div>
+        </section>
     </div>
-
-    <!-- ============================================== -->
-    <!-- 3. ATTENDANCE SUMMARY                          -->
-    <!-- ============================================== -->
-    <div class="dashboard-section mb-4">
-        <div class="d-flex justify-content-between align-items-center mb-2.5">
-            <h6 class="fw-bold text-dark mb-0"><i class="bi bi-calendar-check-fill text-success me-1.5"></i> Attendance Summary</h6>
-            <a href="{{ url_for('attendance_page') }}" class="text-decoration-none fs-xs fw-semibold">
-                Attendance Details <i class="bi bi-arrow-right"></i>
-            </a>
-        </div>
-        <div class="row g-2.5 mb-2.5">
-            
-            <!-- Overall Attendance -->
-            <div class="col-sm-4">
-                <div class="card kpi-card h-100">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="kpi-label">Overall Attendance</div>
-                            <div class="kpi-value text-success font-monospace">{{ summary.attendance.overall_avg }}%</div>
-                            <div class="text-muted fs-xs">Institutional Batch Average</div>
-                        </div>
-                        <div class="kpi-icon-small bg-success-subtle text-success">
-                            <i class="bi bi-percent"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Good Attendance -->
-            <div class="col-sm-4">
-                <div class="card kpi-card h-100">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="kpi-label">Good Attendance</div>
-                            <div class="kpi-value text-success font-monospace">{{ summary.attendance.good_count }} <span class="fs-sm fw-normal text-muted">Students</span></div>
-                            <div class="text-muted fs-xs">&ge; 75% Requirement Met</div>
-                        </div>
-                        <div class="kpi-icon-small bg-success-subtle text-success">
-                            <i class="bi bi-check-circle"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Low Attendance -->
-            <div class="col-sm-4">
-                <div class="card kpi-card h-100">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="kpi-label">Low Attendance</div>
-                            <div class="kpi-value {% if summary.attendance.low_count > 0 %}text-danger{% else %}text-success{% endif %} font-monospace">
-                                {{ summary.attendance.low_count }} <span class="fs-sm fw-normal text-muted">Students</span>
-                            </div>
-                            <div class="text-muted fs-xs">&lt; 75% Requires Attention</div>
-                        </div>
-                        <div class="kpi-icon-small bg-danger-subtle text-danger">
-                            <i class="bi bi-exclamation-triangle"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Compact Department-wise Attendance Strip -->
-        <div class="card bg-white p-3">
-            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
-                <span class="fs-xs text-muted text-uppercase fw-semibold" style="letter-spacing: 0.04em;">Department-Wise Attendance</span>
-                <span class="fs-xs text-muted">Curriculum Evaluation</span>
-            </div>
-            <div class="row g-2 fs-xs">
-                <div class="col-sm-4">
-                    <div class="p-2.5 bg-light rounded border d-flex justify-content-between align-items-center">
-                        <div>
-                            <span class="fw-bold text-dark d-block">CSE (Section A)</span>
-                            <span class="text-muted">4 Students</span>
-                        </div>
-                        <span class="font-monospace fw-bold fs-md text-success">{{ summary.attendance.cse_avg }}%</span>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="p-2.5 bg-light rounded border d-flex justify-content-between align-items-center">
-                        <div>
-                            <span class="fw-bold text-dark d-block">ECE (Section B)</span>
-                            <span class="text-muted">3 Students</span>
-                        </div>
-                        <span class="font-monospace fw-bold fs-md text-success">{{ summary.attendance.ece_avg }}%</span>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="p-2.5 bg-light rounded border d-flex justify-content-between align-items-center">
-                        <div>
-                            <span class="fw-bold text-dark d-block">EEE (Section C)</span>
-                            <span class="text-muted">3 Students</span>
-                        </div>
-                        <span class="font-monospace fw-bold fs-md text-success">{{ summary.attendance.eee_avg }}%</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================== -->
-    <!-- 4. EXAMINATION SUMMARY                         -->
-    <!-- ============================================== -->
-    <div class="dashboard-section mb-4">
-        <div class="d-flex justify-content-between align-items-center mb-2.5">
-            <h6 class="fw-bold text-dark mb-0"><i class="bi bi-award-fill text-primary me-1.5"></i> Examination Summary</h6>
-            <a href="{{ url_for('examination_page') }}" class="text-decoration-none fs-xs fw-semibold">
-                Examination Results <i class="bi bi-arrow-right"></i>
-            </a>
-        </div>
-        <div class="row g-2.5 mb-2.5">
-            
-            <!-- Average Marks -->
-            <div class="col-sm-4">
-                <div class="card kpi-card h-100">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="kpi-label">Average Marks</div>
-                            <div class="kpi-value text-primary font-monospace">{{ summary.examination.avg_marks }}</div>
-                            <div class="text-muted fs-xs">Institutional Batch Mean</div>
-                        </div>
-                        <div class="kpi-icon-small bg-primary-subtle text-primary">
-                            <i class="bi bi-graph-up"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Highest Marks -->
-            <div class="col-sm-4">
-                <div class="card kpi-card h-100">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="kpi-label">Highest Marks</div>
-                            <div class="kpi-value text-success font-monospace">{{ summary.examination.highest_marks }}</div>
-                            <div class="text-muted fs-xs">Peak Score Recorded</div>
-                        </div>
-                        <div class="kpi-icon-small bg-success-subtle text-success">
-                            <i class="bi bi-trophy"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Lowest Marks -->
-            <div class="col-sm-4">
-                <div class="card kpi-card h-100">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="kpi-label">Lowest Marks</div>
-                            <div class="kpi-value text-secondary font-monospace">{{ summary.examination.lowest_marks }}</div>
-                            <div class="text-muted fs-xs">Minimum Score Recorded</div>
-                        </div>
-                        <div class="kpi-icon-small bg-secondary-subtle text-secondary">
-                            <i class="bi bi-speedometer2"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Compact Grade Distribution Overview -->
-        <div class="card bg-white p-3">
-            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
-                <span class="fs-xs text-muted text-uppercase fw-semibold" style="letter-spacing: 0.04em;">Performance &amp; Grade Overview</span>
-                <span class="fs-xs text-muted">50 Subject Evaluations</span>
-            </div>
-            <div class="row g-2 fs-xs">
-                <div class="col-sm-4">
-                    <div class="p-2.5 bg-light rounded border d-flex justify-content-between align-items-center">
-                        <div>
-                            <span class="fw-bold text-dark d-block">Outstanding / Excellent</span>
-                            <span class="text-muted">Grades O &bull; A+</span>
-                        </div>
-                        <span class="badge bg-success-subtle text-success border border-success-subtle font-monospace fs-sm">{{ summary.examination.excellent_count }}</span>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="p-2.5 bg-light rounded border d-flex justify-content-between align-items-center">
-                        <div>
-                            <span class="fw-bold text-dark d-block">Very Good / Good</span>
-                            <span class="text-muted">Grades A &bull; B+</span>
-                        </div>
-                        <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace fs-sm">{{ summary.examination.good_count }}</span>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="p-2.5 bg-light rounded border d-flex justify-content-between align-items-center">
-                        <div>
-                            <span class="fw-bold text-dark d-block">Average / Passing</span>
-                            <span class="text-muted">Grades B &bull; C &bull; D</span>
-                        </div>
-                        <span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle font-monospace fs-sm">{{ summary.examination.average_count }}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================== -->
-    <!-- 5. FEES & PAYMENTS SUMMARY                     -->
-    <!-- ============================================== -->
-    <div class="dashboard-section mb-4">
-        <div class="d-flex justify-content-between align-items-center mb-2.5">
-            <h6 class="fw-bold text-dark mb-0"><i class="bi bi-credit-card-fill text-primary me-1.5"></i> Fees &amp; Payments Summary</h6>
-            <a href="{{ url_for('fees_page') }}" class="text-decoration-none fs-xs fw-semibold">
-                Fee Breakdown <i class="bi bi-arrow-right"></i>
-            </a>
-        </div>
-        <div class="row g-2.5">
-            
-            <!-- Total Fees -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="card kpi-card h-100">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="kpi-label">Total Fees</div>
-                            <div class="kpi-value text-dark font-monospace">₹{{ summary.fees.total }}</div>
-                            <div class="text-muted fs-xs">Institutional Assessment</div>
-                        </div>
-                        <div class="kpi-icon-small bg-primary-subtle text-primary">
-                            <i class="bi bi-cash-stack"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Total Paid -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="card kpi-card h-100">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="kpi-label">Total Paid</div>
-                            <div class="kpi-value text-success font-monospace">₹{{ summary.fees.paid }}</div>
-                            <div class="text-muted fs-xs">Collected Revenue</div>
-                        </div>
-                        <div class="kpi-icon-small bg-success-subtle text-success">
-                            <i class="bi bi-check2-circle"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Total Pending -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="card kpi-card h-100">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="kpi-label">Total Pending</div>
-                            <div class="kpi-value text-danger font-monospace">₹{{ summary.fees.pending }}</div>
-                            <div class="text-muted fs-xs">Outstanding Dues</div>
-                        </div>
-                        <div class="kpi-icon-small bg-danger-subtle text-danger">
-                            <i class="bi bi-hourglass-split"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pending Students -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="card kpi-card h-100">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="kpi-label">Pending Students</div>
-                            <div class="kpi-value {% if summary.fees.pending_students > 0 %}text-danger{% else %}text-success{% endif %} font-monospace">
-                                {{ summary.fees.pending_students }} <span class="fs-sm fw-normal text-muted">Students</span>
-                            </div>
-                            <div class="text-muted fs-xs">Students with Dues</div>
-                        </div>
-                        <div class="kpi-icon-small bg-warning-subtle text-warning-emphasis">
-                            <i class="bi bi-person-exclamation"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- ============================================== -->
-    <!-- 6. DEPARTMENT OVERVIEW                         -->
-    <!-- ============================================== -->
-    <div class="dashboard-section mb-3">
-        <div class="d-flex justify-content-between align-items-center mb-2.5">
-            <h6 class="fw-bold text-dark mb-0"><i class="bi bi-building text-primary me-1.5"></i> Department Overview</h6>
-            <a href="{{ url_for('reports_page') }}" class="text-decoration-none fs-xs fw-semibold">
-                Institutional Reports <i class="bi bi-arrow-right"></i>
-            </a>
-        </div>
-        <div class="row g-2.5">
-            {% for dept in summary.departments %}
-                <div class="col-md-4">
-                    <div class="card h-100 p-3 bg-white border">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <div>
-                                <span class="badge bg-dark text-white fs-xs px-2 py-0.5 mb-1">SECTION {{ dept.section }}</span>
-                                <h6 class="fw-bold text-dark mb-0 fs-sm">{{ dept.name }}</h6>
-                            </div>
-                            <span class="badge bg-light text-dark border font-monospace">{{ dept.code }}</span>
-                        </div>
-                        <div class="pt-2 border-top d-flex justify-content-between align-items-center fs-xs">
-                            <div>
-                                <span class="text-muted d-block">Enrolled Students:</span>
-                                <span class="fw-bold text-dark font-monospace fs-sm">{{ dept.students_count }} Students</span>
-                            </div>
-                            <div class="text-end">
-                                <span class="text-muted d-block">Avg. Attendance:</span>
-                                <span class="fw-bold text-success font-monospace fs-sm">{{ dept.avg_attendance }}%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-
 </div>
 {% endblock %}

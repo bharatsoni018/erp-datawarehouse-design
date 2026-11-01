@@ -866,5 +866,72 @@ footer, .erp-main-content footer {
     margin-bottom: 24px;
 }
 
+/* Enterprise product shell and executive dashboard */
+:root {
+    --erp-navy: #172b4d;
+    --erp-blue: #2563eb;
+    --erp-canvas: #f8fafc;
+    --erp-border: #e5eaf1;
+    --erp-muted: #64748b;
+    --erp-success: #16a36a;
+    --erp-warning: #d97706;
+    --erp-danger: #dc4c4c;
+}
 
+.erp-body { background: var(--erp-canvas); color: #172033; }
+.erp-sidebar { background: var(--erp-navy); width: 248px; box-shadow: 8px 0 24px rgba(15, 23, 42, .06); }
+.sidebar-brand { min-height: 76px; padding: 22px 20px; border-bottom: 1px solid rgba(255,255,255,.1); }
+.sidebar-brand .fw-bold { letter-spacing: .08em; font-size: 15px !important; }
+.sidebar-brand .text-white-50 { color: #aebbd0 !important; font-size: 11px; }
+.nav-section-title { color: #8fa0b8; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; padding: 20px 20px 7px; }
+.erp-sidebar .nav-link { color: #b7c3d6; border-left: 2px solid transparent; margin: 2px 10px; border-radius: 6px; padding: 10px 12px; font-size: 13px; }
+.erp-sidebar .nav-link:hover { color: #fff; background: rgba(255,255,255,.08); }
+.erp-sidebar .nav-link.active { color: #fff; background: rgba(37,99,235,.25); border-left-color: #60a5fa; }
+.erp-sidebar .nav-link i { width: 22px; color: #91a4bf; }
+.erp-sidebar .nav-link.active i { color: #93c5fd; }
+.top-navbar { min-height: 64px; background: #fff; border-bottom: 1px solid var(--erp-border); }
+.erp-main-content { max-width: 1540px; width: 100%; margin: 0 auto; padding: 34px 40px 48px; }
+.page-heading { margin-bottom: 28px; }
+.eyebrow { color: var(--erp-blue); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 8px; }
+.page-heading-title { color: var(--erp-navy); font-size: 28px; font-weight: 700; letter-spacing: -.035em; margin: 0; }
+.page-heading-subtitle { color: var(--erp-muted); margin: 7px 0 0; font-size: 14px; }
+.context-chip { background: #fff; border: 1px solid var(--erp-border); border-radius: 7px; color: #475569; font-size: 12px; padding: 10px 13px; }
+.context-chip i { color: var(--erp-blue); margin-right: 7px; }
+.kpi-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-bottom: 24px; }
+.metric-card { background: #fff; border: 1px solid var(--erp-border); border-radius: 10px; padding: 19px 20px 16px; color: inherit; text-decoration: none; transition: border-color .15s, box-shadow .15s, transform .15s; }
+.metric-card:hover { color: inherit; border-color: #b9c9e8; box-shadow: 0 8px 22px rgba(23,43,77,.08); transform: translateY(-1px); }
+.metric-card-top, .metric-meta, .panel-header, .department-row, .department-identity, .department-stat, .attention-item, .distribution-label, .finance-summary, .finance-foot { display: flex; align-items: center; }
+.metric-card-top { justify-content: space-between; color: var(--erp-muted); }
+.metric-card-top i { color: #94a3b8; font-size: 17px; }
+.metric-label, .finance-label { color: var(--erp-muted); font-size: 12px; font-weight: 600; }
+.metric-value { color: var(--erp-navy); font-family: var(--font-mono); font-size: 27px; font-weight: 700; letter-spacing: -.04em; margin: 12px 0 11px; }
+.metric-value small { color: #94a3b8; font-size: 13px; font-weight: 500; letter-spacing: 0; margin-left: 3px; }
+.metric-currency { font-size: 23px; }
+.metric-meta { justify-content: space-between; border-top: 1px solid #eef2f7; padding-top: 10px; color: #94a3b8; font-size: 11px; }
+.metric-positive { color: var(--erp-success); }.metric-warning { color: var(--erp-warning); }
+.dashboard-columns { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(310px, .75fr); gap: 16px; margin-bottom: 16px; }
+.dashboard-columns-bottom { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.panel { background: #fff; border: 1px solid var(--erp-border); border-radius: 10px; padding: 22px; min-width: 0; }
+.panel-header { justify-content: space-between; margin-bottom: 21px; }
+.panel-header h2 { color: var(--erp-navy); font-size: 15px; font-weight: 700; margin: 0 0 4px; }
+.panel-header p { color: var(--erp-muted); font-size: 12px; margin: 0; }
+.panel-link { color: var(--erp-blue); font-size: 11px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.panel-link:hover { color: #1d4ed8; }.panel-icon { color: #94a3b8; font-size: 18px; }
+.department-list { display: grid; gap: 3px; }
+.department-row { min-height: 58px; border-top: 1px solid #f0f3f7; gap: 17px; }
+.department-row:first-child { border-top: 0; }
+.department-identity { width: 185px; flex: 0 0 185px; gap: 10px; }
+.department-mark { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 7px; background: #eff6ff; color: var(--erp-blue); font-size: 12px; font-weight: 700; }
+.department-identity strong { display: block; color: #24344e; font-size: 13px; }.department-identity span:not(.department-mark) { display: block; color: #94a3b8; font-size: 11px; margin-top: 3px; }
+.department-stat { flex-direction: column; align-items: flex-end; width: 68px; flex: 0 0 68px; }.department-stat span { color: #24344e; font-family: var(--font-mono); font-size: 13px; font-weight: 700; }.department-stat small { color: #94a3b8; font-size: 10px; }
+.progress-track, .distribution-track, .collection-track { background: #edf1f6; border-radius: 20px; height: 7px; overflow: hidden; flex: 1; }.progress-track span { display: block; background: var(--erp-blue); border-radius: inherit; height: 100%; }
+.attention-list { display: grid; gap: 3px; }.attention-item { color: inherit; gap: 11px; border-bottom: 1px solid #f0f3f7; padding: 11px 0; text-decoration: none; }.attention-item:last-child { border-bottom: 0; }.attention-item > span:nth-child(2) { flex: 1; }.attention-item strong, .attention-item small { display: block; }.attention-item strong { color: #24344e; font-size: 12px; }.attention-item small { color: #94a3b8; font-size: 11px; margin-top: 3px; }.attention-item > i { color: #b1bdcc; font-size: 12px; }
+.attention-icon { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 7px; font-size: 13px; }.attention-danger { background: #fff1f2; color: var(--erp-danger); }.attention-warning { background: #fff7ed; color: var(--erp-warning); }.attention-blue { background: #eff6ff; color: var(--erp-blue); }
+.rule-note { background: #f8fafc; border-radius: 6px; color: #94a3b8; display: flex; gap: 8px; font-size: 10px; line-height: 1.45; margin-top: 17px; padding: 10px; }.rule-note i { color: #94a3b8; }
+.distribution { display: grid; gap: 18px; padding-top: 3px; }.distribution-label { justify-content: space-between; color: #64748b; font-size: 12px; margin-bottom: 7px; }.distribution-label strong { color: #24344e; font-family: var(--font-mono); }.distribution-track span { display: block; border-radius: inherit; height: 100%; }.distribution-green { background: var(--erp-success); }.distribution-blue { background: var(--erp-blue); }.distribution-slate { background: #94a3b8; }
+.finance-summary { gap: 52px; margin: 7px 0 20px; }.finance-summary div { display: grid; gap: 6px; }.finance-summary strong { color: var(--erp-navy); font-family: var(--font-mono); font-size: 19px; }.collection-track { height: 9px; }.collection-track span { display: block; height: 100%; background: var(--erp-success); border-radius: inherit; }.finance-foot { justify-content: space-between; color: #94a3b8; font-size: 11px; margin-top: 9px; }.finance-foot strong { color: var(--erp-success); font-family: var(--font-mono); }
+.empty-state-card { background: #fff; border: 1px solid var(--erp-border); border-radius: 10px; margin: 48px auto; max-width: 680px; padding: 52px 28px; }
+.empty-state-icon { color: var(--erp-danger); font-size: 32px; margin-bottom: 16px; }
 
+@media (max-width: 1100px) { .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .dashboard-columns, .dashboard-columns-bottom { grid-template-columns: 1fr; } }
+@media (max-width: 767px) { .erp-main-content { padding: 24px 16px 36px; } .page-heading-title { font-size: 24px; } .kpi-grid { grid-template-columns: 1fr; gap: 10px; } .panel { padding: 17px; } .department-identity { width: 150px; flex-basis: 150px; } .department-row { gap: 8px; } .department-stat { display: none; } }

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Student profile unavailable | IFHE ERP{% endblock %}
+{% block page_title %}Student Profile{% endblock %}
+
+{% block content %}
+<div class="empty-state-card text-center">
+    <div class="empty-state-icon"><i class="bi bi-person-x"></i></div>
+    <div class="eyebrow">Student 360°</div>
+    <h1 class="page-heading-title">{{ error_title }}</h1>
+    <p class="page-heading-subtitle">{{ error_message }}</p>
+    <div class="d-flex justify-content-center gap-2 mt-4">
+        <a class="btn btn-primary" href="{{ url_for('search_student_page') }}"><i class="bi bi-search me-1"></i> Search students</a>
+        <a class="btn btn-outline-secondary" href="{{ url_for('students_page') }}">Student directory</a>
+    </div>
+</div>
+{% endblock %}
